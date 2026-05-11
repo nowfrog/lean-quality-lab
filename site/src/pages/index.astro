@@ -152,7 +152,7 @@ const t = useTranslations(lang);
           { target: 27, label: 'counter.publications', link: '/pubblicazioni' },
           { target: 4, label: 'counter.members', link: '/team' },
         ] as {target:number,label:string,link:string}[]).map((item, i) => (
-          <a href={item.link ? (lang === 'it' ? item.link : `/${lang}${item.link}`) : '#'} class={`reveal reveal-delay-${i+1} text-center p-8 rounded-2xl bg-dark-900 border border-dark-700 card-hover block`}>
+          <a href={item.link ? (lang === 'it' ? `${base}${item.link}` : `${base}/${lang}${item.link}`) : '#'} class={`reveal reveal-delay-${i+1} text-center p-8 rounded-2xl bg-dark-900 border border-dark-700 card-hover block`}>
             <div class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-dark-100 counter-value" data-target={item.target}>0</div>
             <div class="text-sm text-dark-400 mt-3 font-medium">{t(item.label as any)}</div>
           </a>
