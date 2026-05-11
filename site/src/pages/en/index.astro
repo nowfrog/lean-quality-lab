@@ -71,7 +71,7 @@ const t = useTranslations(lang);
             { name: 'Dr. Antonio', surname: 'Licastro', initials: 'AL', img: `${base}/images/team/licastro.jpg`, id: 'licastro' },
             { name: 'Dr. Andrea', surname: 'Morana', initials: 'AM', id: 'morana' },
           ]).map(m => (
-            <a href={`/en/team#${m.id}`} class="flex flex-col items-center gap-2 group">
+            <a href={`${base}/en/team#${m.id}`} class="flex flex-col items-center gap-2 group">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-dark-700 group-hover:border-neon/50 transition-all duration-300 bg-dark-800">
                 {m.img ? (
                   <img src={m.img} alt={`${m.name} ${m.surname}`} class="w-full h-full object-cover" loading="lazy" />
@@ -174,7 +174,7 @@ const t = useTranslations(lang);
           { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: 'Local development', desc: 'Local Action Group for the development of the Etna area and the Alcantara Valley.', img: `${base}/images/projects/gal-etna/header.png` },
         ]).map((p, i) => (
           <div class={`reveal reveal-delay-${i+1}`}>
-            <a href={`/en/progetti/${p.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl card-hover overflow-hidden">
+            <a href={`${base}/en/progetti/${p.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl card-hover overflow-hidden">
               <img src={p.img} alt={p.name} class="w-full h-40 object-cover" loading="lazy" />
               <div class="p-6">
                 <div class="flex items-start justify-between mb-4">

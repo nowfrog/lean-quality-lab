@@ -83,7 +83,7 @@ const langSwitchItems = [
           <div class="hidden sm:block w-px h-6 bg-dark-700"></div>
           <!-- Language switch -->
           {langSwitchItems.filter(l => l.code !== lang).map(l => (
-            <a href={getLocalePath(l.code, Astro.url.pathname.replace(/^\/(en|zh)/, '') || '/')}
+            <a href={getLocalePath(l.code, Astro.url.pathname.replace(base, '').replace(/^\/(en|zh)/, '') || '/')}
                class="px-2.5 py-1 text-xs font-mono font-bold border border-dark-600 hover:border-neon/50 rounded-md hover:bg-neon/5 hover:text-neon transition-all duration-300 text-dark-400">
               {l.label}
             </a>

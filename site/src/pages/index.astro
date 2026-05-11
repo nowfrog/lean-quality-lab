@@ -33,7 +33,7 @@ const t = useTranslations(lang);
           {t('home.cta.research')}
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
         </a>
-        <a href={lang === 'it' ? '/progetti' : `/${lang}/progetti`} class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 hover:border-neon/50 text-white hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+        <a href={lang === 'it' ? `${base}/progetti` : `${base}/${lang}/progetti`} class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 hover:border-neon/50 text-white hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
           {t('home.cta.projects')}
         </a>
       </div>
@@ -49,14 +49,14 @@ const t = useTranslations(lang);
         <span class="text-neon font-mono text-sm tracking-widest uppercase reveal">{t('home.about.label')}</span>
         <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mt-4 mb-8 reveal reveal-delay-1">{t('home.about.title')}</h2>
         <p class="text-lg text-dark-400 leading-relaxed reveal reveal-delay-2">{t('home.about.text')}</p>
-        <a href={lang === 'it' ? '/team' : `/${lang}/team`} class="inline-flex items-center gap-2 mt-6 text-sm font-mono text-neon hover:text-neon/80 transition-colors reveal reveal-delay-3">
+        <a href={lang === 'it' ? `${base}/team` : `${base}/${lang}/team`} class="inline-flex items-center gap-2 mt-6 text-sm font-mono text-neon hover:text-neon/80 transition-colors reveal reveal-delay-3">
           Scopri il team &rarr;
         </a>
 
         <!-- Team avatars -->
         <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center items-start gap-6 sm:gap-8 mt-12 reveal reveal-delay-3">
           <!-- Coordinator - larger -->
-          <a href={lang === 'it' ? '/team#ioppolo' : `/${lang}/team#ioppolo`} class="flex flex-col items-center gap-2 group">
+          <a href={lang === 'it' ? `${base}/team#ioppolo` : `${base}/${lang}/team#ioppolo`} class="flex flex-col items-center gap-2 group">
             <div class="relative">
               <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-neon/40 group-hover:border-neon transition-all duration-300 bg-dark-800 shadow-lg shadow-neon/10">
                 <img src={`${base}/images/team/ioppolo.jpg`} alt="G. Ioppolo" class="w-full h-full object-cover" loading="lazy" />
@@ -74,7 +74,7 @@ const t = useTranslations(lang);
             { name: 'Dott. Antonio', surname: 'Licastro', initials: 'AL', img: `${base}/images/team/licastro.jpg`, id: 'licastro' },
             { name: 'Dott. Andrea', surname: 'Morana', initials: 'AM', id: 'morana' },
           ]).map(m => (
-            <a href={lang === 'it' ? `/team#${m.id}` : `/${lang}/team#${m.id}`} class="flex flex-col items-center gap-2 group">
+            <a href={lang === 'it' ? `${base}/team#${m.id}` : `${base}/${lang}/team#${m.id}`} class="flex flex-col items-center gap-2 group">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-dark-700 group-hover:border-neon/50 transition-all duration-300 bg-dark-800">
                 {m.img ? (
                   <img src={m.img} alt={`${m.name} ${m.surname}`} class="w-full h-full object-cover" loading="lazy" />
@@ -89,7 +89,7 @@ const t = useTranslations(lang);
           ))}
 
           <!-- International collaboration -->
-          <a href={lang === 'it' ? '/team#szopik' : `/${lang}/team#szopik`} class="col-span-2 sm:col-span-1 justify-self-center flex flex-col items-center gap-2 group">
+          <a href={lang === 'it' ? `${base}/team#szopik` : `${base}/${lang}/team#szopik`} class="col-span-2 sm:col-span-1 justify-self-center flex flex-col items-center gap-2 group">
             <div class="relative">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-cyan/30 group-hover:border-cyan transition-all duration-300 bg-dark-800">
                 <img src={`${base}/images/team/szopik.jpg`} alt="K. Szopik-Depczyńska" class="w-full h-full object-cover" loading="lazy" />
@@ -130,7 +130,7 @@ const t = useTranslations(lang);
         ))}
       </div>
       <div class="text-center mt-10 reveal">
-        <a href={lang === 'it' ? '/laboratorio#ricerca' : `/${lang}/laboratorio#ricerca`} class="inline-flex items-center gap-2 text-sm font-mono text-neon hover:text-neon/80 transition-colors">
+        <a href={lang === 'it' ? `${base}/laboratorio#ricerca` : `${base}/${lang}/laboratorio#ricerca`} class="inline-flex items-center gap-2 text-sm font-mono text-neon hover:text-neon/80 transition-colors">
           Approfondisci le aree di ricerca &rarr;
         </a>
       </div>
@@ -177,7 +177,7 @@ const t = useTranslations(lang);
           { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: lang === 'zh' ? '地方发展' : (lang === 'en' ? 'Local development' : 'Sviluppo locale'), desc: lang === 'zh' ? '埃特纳火山和阿尔坎塔拉地区发展的地方行动小组。' : (lang === 'en' ? 'Local Action Group for the development of the Etna area and the Alcantara Valley.' : 'Gruppo di Azione Locale per lo sviluppo dell\'area etnea e della Valle dell\'Alcantara.'), img: `${base}/images/projects/gal-etna/header.png` },
         ]).map((project, i) => (
           <div class={`reveal reveal-delay-${i+1}`}>
-            <a href={`${lang === 'it' ? '' : `/${lang}`}/progetti/${project.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl card-hover overflow-hidden">
+            <a href={`${base}${lang === 'it' ? '' : `/${lang}`}/progetti/${project.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl card-hover overflow-hidden">
               <img src={project.img} alt={project.name} class="w-full h-40 object-cover" loading="lazy" />
               <div class="p-6">
                 <div class="flex items-start justify-between mb-4">
@@ -205,7 +205,7 @@ const t = useTranslations(lang);
         ))}
       </div>
       <div class="text-center mt-10 reveal">
-        <a href={lang === 'it' ? '/progetti' : `/${lang}/progetti`} class="inline-flex items-center gap-2 text-sm font-mono text-neon hover:text-neon/80 transition-colors">
+        <a href={lang === 'it' ? `${base}/progetti` : `${base}/${lang}/progetti`} class="inline-flex items-center gap-2 text-sm font-mono text-neon hover:text-neon/80 transition-colors">
           Vedi tutti i progetti &rarr;
         </a>
       </div>
@@ -219,7 +219,7 @@ const t = useTranslations(lang);
     </div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mb-8 reveal">{t('home.cta.collaborate')}</h2>
-      <a href={`${lang === 'it' ? '' : `/${lang}`}/contatti`} class="magnetic-btn inline-flex items-center gap-3 px-10 py-4 bg-neon text-dark-950 font-bold rounded-lg transition-all hover:shadow-lg hover:shadow-neon/25 text-lg reveal reveal-delay-1">
+      <a href={`${base}${lang === 'it' ? '' : `/${lang}`}/contatti`} class="magnetic-btn inline-flex items-center gap-3 px-10 py-4 bg-neon text-dark-950 font-bold rounded-lg transition-all hover:shadow-lg hover:shadow-neon/25 text-lg reveal reveal-delay-1">
         {t('home.cta.contact')}
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
       </a>

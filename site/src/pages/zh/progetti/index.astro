@@ -28,7 +28,7 @@ const projects = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((p, i) => (
           <div class={`reveal reveal-delay-${Math.min(i+1,4)}`}>
-            <a href={`/zh/progetti/${p.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl overflow-hidden card-hover h-full">
+            <a href={`${base}/zh/progetti/${p.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl overflow-hidden card-hover h-full">
               {p.img && (
                 <div class="h-40 overflow-hidden">
                   <img src={p.img} alt={p.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
