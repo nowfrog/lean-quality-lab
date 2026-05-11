@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 const lang = 'it';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Privacy Policy | LQS Lab UniME" lang={lang}>
@@ -46,7 +47,7 @@ const lang = 'it';
 
         <div>
           <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookie</h2>
-          <p>Per informazioni sull'utilizzo dei cookie, consultare la <a href="/cookie" class="text-neon hover:underline">Cookie Policy</a>.</p>
+          <p>Per informazioni sull'utilizzo dei cookie, consultare la <a href={`${base}/cookie`} class="text-neon hover:underline">Cookie Policy</a>.</p>
         </div>
 
         <p class="text-xs text-dark-500 font-mono">Ultimo aggiornamento: maggio 2026</p>

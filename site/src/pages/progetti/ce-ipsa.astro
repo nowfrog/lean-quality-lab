@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const lang = 'it';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="CE_IPSA | LQS Lab UniME" lang={lang}>
   <!-- Hero -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/ce-ipsa/header.jpg" alt="Area Industriale Fosso Imperatore" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/ce-ipsa/header.jpg`} alt="Area Industriale Fosso Imperatore" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -61,16 +62,16 @@ const lang = 'it';
         <!-- Due immagini affiancate -->
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/casestudy1.jpg" alt="Parco Industriale Fosso Imperatore - vista 1" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/casestudy1.jpg`} alt="Parco Industriale Fosso Imperatore - vista 1" class="w-full h-72 object-cover" loading="lazy" />
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/casestudy2.jpg" alt="Parco Industriale Fosso Imperatore - vista 2" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/casestudy2.jpg`} alt="Parco Industriale Fosso Imperatore - vista 2" class="w-full h-72 object-cover" loading="lazy" />
           </div>
         </div>
 
         <!-- Immagine a tutta larghezza -->
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/ce-ipsa/casestudy3.jpg" alt="Panoramica del Parco Industriale Fosso Imperatore" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/ce-ipsa/casestudy3.jpg`} alt="Panoramica del Parco Industriale Fosso Imperatore" class="w-full h-80 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Parco Industriale di Fosso Imperatore, Nocera Inferiore (SA) | area di studio del progetto CE_IPSA.</p>
           </div>
@@ -85,13 +86,13 @@ const lang = 'it';
 
         <div class="grid grid-cols-2 gap-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg" alt="Relatori al workshop stakeholder CE_IPSA" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg`} alt="Relatori al workshop stakeholder CE_IPSA" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <p class="text-xs text-dark-400 italic">Sessione plenaria del workshop con gli stakeholder del territorio.</p>
             </div>
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg" alt="Tavola rotonda sull'economia circolare CE_IPSA" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg`} alt="Tavola rotonda sull'economia circolare CE_IPSA" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <p class="text-xs text-dark-400 italic">Tavola rotonda sull'economia circolare e la simbiosi industriale.</p>
             </div>

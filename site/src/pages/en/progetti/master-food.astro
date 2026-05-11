@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'en';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Master Food, Quality & International Management | LQS Lab UniME" lang={lang}>
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/master-food/header.jpg" alt="Food Quality Management" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/master-food/header.jpg`} alt="Food Quality Management" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">

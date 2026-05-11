@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'zh';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="CE_IPSA | LQS Lab UniME" lang={lang}>
   <!-- Hero -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/ce-ipsa/header.jpg" alt="Fosso Imperatore工业园区" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/ce-ipsa/header.jpg`} alt="Fosso Imperatore工业园区" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -61,16 +62,16 @@ const lang = 'zh';
         <!-- 两张并排图片 -->
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/casestudy1.jpg" alt="Fosso Imperatore 工业园区 - 视图1" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/casestudy1.jpg`} alt="Fosso Imperatore 工业园区 - 视图1" class="w-full h-72 object-cover" loading="lazy" />
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/casestudy2.jpg" alt="Fosso Imperatore 工业园区 - 视图2" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/casestudy2.jpg`} alt="Fosso Imperatore 工业园区 - 视图2" class="w-full h-72 object-cover" loading="lazy" />
           </div>
         </div>
 
         <!-- 全宽图片 -->
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/ce-ipsa/casestudy3.jpg" alt="Fosso Imperatore 工业园区全景" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/ce-ipsa/casestudy3.jpg`} alt="Fosso Imperatore 工业园区全景" class="w-full h-80 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Fosso Imperatore 工业园区，Nocera Inferiore (SA) | CE_IPSA 项目研究区域。</p>
           </div>
@@ -85,13 +86,13 @@ const lang = 'zh';
 
         <div class="grid grid-cols-2 gap-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg" alt="CE_IPSA 利益相关者研讨会发言人" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg`} alt="CE_IPSA 利益相关者研讨会发言人" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <p class="text-xs text-dark-400 italic">利益相关者研讨会全体会议。</p>
             </div>
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg" alt="CE_IPSA 循环经济专题讨论" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg`} alt="CE_IPSA 循环经济专题讨论" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <p class="text-xs text-dark-400 italic">循环经济与产业共生专题讨论。</p>
             </div>

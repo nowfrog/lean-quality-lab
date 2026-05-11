@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'zh';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="GAL Terre dell'Etna e dell'Alcantara | LQS Lab UniME" lang={lang}>
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/gal-etna/cover-strategico-001.png" alt="" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/gal-etna/cover-strategico-001.png`} alt="" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -39,7 +40,7 @@ const lang = 'zh';
 
       <div class="reveal reveal-delay-1 mb-16">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-etna/report-04.png" alt="GAL 26个市镇地图" class="w-full" loading="lazy" />
+          <img src={`${base}/images/projects/gal-etna/report-04.png`} alt="GAL 26个市镇地图" class="w-full" loading="lazy" />
           <div class="p-4 bg-dark-900"><p class="text-xs text-dark-400 italic">GAL Terre dell'Etna e dell'Alcantara的26个合作市镇，横跨卡塔尼亚省和墨西拿省。</p></div>
         </div>
       </div>
@@ -84,7 +85,7 @@ const lang = 'zh';
         <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">住宿基础设施</h2>
         <p class="text-dark-400 leading-relaxed mb-6">旅游分析绘制了各市镇住宿设施的分布和容量地图。</p>
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-etna/mappa-turismo.png" alt="住宿设施地图" class="w-full" loading="lazy" />
+          <img src={`${base}/images/projects/gal-etna/mappa-turismo.png`} alt="住宿设施地图" class="w-full" loading="lazy" />
           <div class="p-4 bg-dark-900"><p class="text-xs text-dark-400">各GAL市镇的床位容量和设施类型。</p></div>
         </div>
       </div>
@@ -94,8 +95,8 @@ const lang = 'zh';
         <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">卓越产业链和基础设施</h2>
         <p class="text-dark-400 leading-relaxed mb-6">GAL地域拥有国际知名的农食产业链。埃特纳葡萄种植业拥有144家酒庄，分布在认证的Contrade上，代表了全球独一无二的火山土壤"英雄式"葡萄种植。</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="rounded-2xl overflow-hidden border border-dark-700"><img src="/images/projects/gal-etna/mappa-etna-doc.jpg" alt="Etna DOC葡萄酒地图" class="w-full h-72 object-cover" loading="lazy" /><div class="p-4 bg-dark-900"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Etna DOC葡萄酒</h3><p class="text-xs text-dark-400 mt-1">认证的Contrade和附加地理单元。火山风土产出国际公认的独特葡萄酒。</p></div></div>
-          <div class="rounded-2xl overflow-hidden border border-dark-700"><img src="/images/projects/gal-etna/ferrovia-alcantara.jpg" alt="阿尔坎塔拉-兰达佐铁路" class="w-full h-72 object-cover" loading="lazy" /><div class="p-4 bg-dark-900"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">阿尔坎塔拉-兰达佐铁路</h3><p class="text-xs text-dark-400 mt-1">历史铁路线（1959-1995，37公里），具有改建为自行车绿道的潜力。</p></div></div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700"><img src={`${base}/images/projects/gal-etna/mappa-etna-doc.jpg`} alt="Etna DOC葡萄酒地图" class="w-full h-72 object-cover" loading="lazy" /><div class="p-4 bg-dark-900"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Etna DOC葡萄酒</h3><p class="text-xs text-dark-400 mt-1">认证的Contrade和附加地理单元。火山风土产出国际公认的独特葡萄酒。</p></div></div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700"><img src={`${base}/images/projects/gal-etna/ferrovia-alcantara.jpg`} alt="阿尔坎塔拉-兰达佐铁路" class="w-full h-72 object-cover" loading="lazy" /><div class="p-4 bg-dark-900"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">阿尔坎塔拉-兰达佐铁路</h3><p class="text-xs text-dark-400 mt-1">历史铁路线（1959-1995，37公里），具有改建为自行车绿道的潜力。</p></div></div>
         </div>
       </div>
 
@@ -103,8 +104,8 @@ const lang = 'zh';
         <span class="text-neon font-mono text-xs tracking-widest uppercase">成果</span>
         <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">研究产出</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col"><div class="aspect-[3/4] overflow-hidden"><img src="/images/projects/gal-etna/cover-studio-page-001.png" alt="研究报告封面" class="w-full h-full object-cover object-top" loading="lazy" /></div><div class="p-4"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">科学地域研究</h3><p class="text-xs text-dark-400 mt-1">地域系统现状报告。</p></div></div>
-          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col"><div class="aspect-[3/4] overflow-hidden"><img src="/images/projects/gal-etna/cover-strategico-001.png" alt="战略计划封面" class="w-full h-full object-cover object-top" loading="lazy" /></div><div class="p-4"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">战略计划</h3><p class="text-xs text-dark-400 mt-1">阅读过去，构建未来。</p></div></div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col"><div class="aspect-[3/4] overflow-hidden"><img src={`${base}/images/projects/gal-etna/cover-studio-page-001.png`} alt="研究报告封面" class="w-full h-full object-cover object-top" loading="lazy" /></div><div class="p-4"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">科学地域研究</h3><p class="text-xs text-dark-400 mt-1">地域系统现状报告。</p></div></div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col"><div class="aspect-[3/4] overflow-hidden"><img src={`${base}/images/projects/gal-etna/cover-strategico-001.png`} alt="战略计划封面" class="w-full h-full object-cover object-top" loading="lazy" /></div><div class="p-4"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">战略计划</h3><p class="text-xs text-dark-400 mt-1">阅读过去，构建未来。</p></div></div>
         </div>
         <div class="space-y-4">
           {[{num:'2',title:'交互式报告',desc:'可导航的网络仪表板，包含每个市镇的数据和指标。'},{num:'3a',title:'综合文件',desc:'面向决策者和利益相关者的研究发现运营摘要。'},{num:'3b',title:'立场文件',desc:'基于与相邻GAL比较分析的科学建议。'},{num:'4',title:'公开演示',desc:'向GAL合作伙伴展示成果（2025年5月15日）。'}].map(item => (

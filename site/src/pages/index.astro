@@ -3,13 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { useTranslations } from '../i18n/utils';
 const lang = 'it';
 const t = useTranslations(lang);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title={t('home.title')} lang={lang}>
   <!-- Hero -->
   <section class="relative py-24 lg:py-36 overflow-hidden" id="hero">
     <div class="absolute inset-0">
-      <img src="/images/hero-economia.jpg" alt="Dipartimento di Economia, Universit&agrave; di Messina" class="w-full h-full object-cover" />
+      <img src={`${base}/images/hero-economia.jpg`} alt="Dipartimento di Economia, Universit&agrave; di Messina" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +59,7 @@ const t = useTranslations(lang);
           <a href={lang === 'it' ? '/team#ioppolo' : `/${lang}/team#ioppolo`} class="flex flex-col items-center gap-2 group">
             <div class="relative">
               <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-neon/40 group-hover:border-neon transition-all duration-300 bg-dark-800 shadow-lg shadow-neon/10">
-                <img src="/images/team/ioppolo.jpg" alt="G. Ioppolo" class="w-full h-full object-cover" loading="lazy" />
+                <img src={`${base}/images/team/ioppolo.jpg`} alt="G. Ioppolo" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-dark-900 border border-neon/30 rounded-full">
                 <span class="text-[10px] font-mono text-neon uppercase tracking-wider">Coordinatore</span>
@@ -91,7 +92,7 @@ const t = useTranslations(lang);
           <a href={lang === 'it' ? '/team#szopik' : `/${lang}/team#szopik`} class="col-span-2 sm:col-span-1 justify-self-center flex flex-col items-center gap-2 group">
             <div class="relative">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-cyan/30 group-hover:border-cyan transition-all duration-300 bg-dark-800">
-                <img src="/images/team/szopik.jpg" alt="K. Szopik-Depczyńska" class="w-full h-full object-cover" loading="lazy" />
+                <img src={`${base}/images/team/szopik.jpg`} alt="K. Szopik-Depczyńska" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-dark-900 border border-cyan/30 rounded-full">
                 <span class="text-[9px] font-mono text-cyan uppercase tracking-wider whitespace-nowrap">Internazionale</span>

@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const lang = 'it';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="GAL Tirreno Eolie | LQS Lab UniME" lang={lang}>
   <!-- Hero con copertina -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/eolie.jpg" alt="" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/eolie.jpg`} alt="" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -61,7 +62,7 @@ const lang = 'it';
 
         <!-- Foto panoramica territorio -->
         <div class="rounded-2xl overflow-hidden border border-dark-700 mb-6">
-          <img src="/images/projects/gal-tirreno/lipari-da-vulcano.jpg" alt="Panorama di Lipari e dell'arcipelago eoliano visto da Vulcano" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/lipari-da-vulcano.jpg`} alt="Panorama di Lipari e dell'arcipelago eoliano visto da Vulcano" class="w-full h-80 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Veduta panoramica dell'arcipelago eoliano e di Lipari dal cratere di Vulcano. Foto: Wikimedia Commons, CC BY-SA 3.0.</p>
           </div>
@@ -129,7 +130,7 @@ const lang = 'it';
       <!-- Foto Salina -->
       <div class="reveal mb-16">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/salina-landscape.jpg" alt="Paesaggio dell'isola di Salina con vista sulle Eolie" class="w-full h-72 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/salina-landscape.jpg`} alt="Paesaggio dell'isola di Salina con vista sulle Eolie" class="w-full h-72 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">L'isola di Salina e l'arcipelago eoliano: vegetazione mediterranea, fichi d'India e il blu del Tirreno. Foto: Wikimedia Commons, CC BY-SA 4.0.</p>
           </div>
@@ -169,13 +170,13 @@ const lang = 'it';
       <!-- Foto Eolie affiancate -->
       <div class="reveal mb-16 grid grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/stromboli-eruption.jpg" alt="Eruzione dello Stromboli di notte" class="w-full h-72 object-cover object-center" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/stromboli-eruption.jpg`} alt="Eruzione dello Stromboli di notte" class="w-full h-72 object-cover object-center" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Eruzione notturna dello Stromboli, il "faro del Mediterraneo". Foto: Wikimedia Commons, CC BY-SA 2.5.</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/eolie-mare.jpg" alt="Le Isole Eolie viste dal mare Tirreno" class="w-full h-72 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/eolie-mare.jpg`} alt="Le Isole Eolie viste dal mare Tirreno" class="w-full h-72 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Le Eolie dal mare: crocevia di rotte turistiche e sentieri escursionistici. Foto: Wikimedia Commons, CC BY-SA 4.0.</p>
           </div>
@@ -258,7 +259,7 @@ const lang = 'it';
         <div class="grid grid-cols-2 gap-6 mb-8">
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-tirreno/cover-rapporto-001.png" alt="Copertina Rapporto sullo Stato del Sistema Territoriale" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-tirreno/cover-rapporto-001.png`} alt="Copertina Rapporto sullo Stato del Sistema Territoriale" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Rapporto Territoriale</h3>
@@ -267,7 +268,7 @@ const lang = 'it';
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-tirreno/cover-psl-01.png" alt="Copertina Piano di Sviluppo Locale" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-tirreno/cover-psl-01.png`} alt="Copertina Piano di Sviluppo Locale" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Piano di Sviluppo Locale</h3>

@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'en';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="GAL Tirreno Eolie | LQS Lab UniME" lang={lang}>
   <!-- Hero -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/eolie.jpg" alt="" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/eolie.jpg`} alt="" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -61,7 +62,7 @@ const lang = 'en';
 
         <!-- Panoramic photo -->
         <div class="rounded-2xl overflow-hidden border border-dark-700 mb-6">
-          <img src="/images/projects/gal-tirreno/lipari-da-vulcano.jpg" alt="Panoramic view of the Aeolian archipelago and Lipari from Vulcano" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/lipari-da-vulcano.jpg`} alt="Panoramic view of the Aeolian archipelago and Lipari from Vulcano" class="w-full h-80 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Panoramic view of the Aeolian archipelago and Lipari from Vulcano's crater. Photo: Wikimedia Commons, CC BY-SA 3.0.</p>
           </div>
@@ -128,7 +129,7 @@ const lang = 'en';
       <!-- Salina photo -->
       <div class="reveal mb-16">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/salina-landscape.jpg" alt="Landscape of Salina island with view over the Aeolian archipelago" class="w-full h-72 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/salina-landscape.jpg`} alt="Landscape of Salina island with view over the Aeolian archipelago" class="w-full h-72 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">The island of Salina and the Aeolian archipelago: Mediterranean vegetation, prickly pears and the blue of the Tyrrhenian Sea. Photo: Wikimedia Commons, CC BY-SA 4.0.</p>
           </div>
@@ -168,13 +169,13 @@ const lang = 'en';
       <!-- Eolie photos side by side -->
       <div class="reveal mb-16 grid grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/stromboli-eruption.jpg" alt="Stromboli eruption at night" class="w-full h-72 object-cover object-center" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/stromboli-eruption.jpg`} alt="Stromboli eruption at night" class="w-full h-72 object-cover object-center" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Night eruption of Stromboli, the "lighthouse of the Mediterranean". Photo: Wikimedia Commons, CC BY-SA 2.5.</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/eolie-mare.jpg" alt="The Aeolian Islands from the Tyrrhenian Sea" class="w-full h-72 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/eolie-mare.jpg`} alt="The Aeolian Islands from the Tyrrhenian Sea" class="w-full h-72 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">The Aeolian Islands from the sea: a crossroads of tourist routes and hiking trails. Photo: Wikimedia Commons, CC BY-SA 4.0.</p>
           </div>
@@ -255,7 +256,7 @@ const lang = 'en';
         <div class="grid grid-cols-2 gap-6 mb-8">
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-tirreno/cover-rapporto-001.png" alt="Cover of Territorial System Report" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-tirreno/cover-rapporto-001.png`} alt="Cover of Territorial System Report" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Territorial Report</h3>
@@ -264,7 +265,7 @@ const lang = 'en';
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-tirreno/cover-psl-01.png" alt="Cover of Local Development Plan" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-tirreno/cover-psl-01.png`} alt="Cover of Local Development Plan" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Local Development Plan</h3>

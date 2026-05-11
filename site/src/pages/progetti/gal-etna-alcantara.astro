@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const lang = 'it';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="GAL Terre dell'Etna e dell'Alcantara | LQS Lab UniME" lang={lang}>
   <!-- Hero con copertina Piano Strategico -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/gal-etna/cover-strategico-001.png" alt="" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/gal-etna/cover-strategico-001.png`} alt="" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -56,7 +57,7 @@ const lang = 'it';
       <!-- Mappa del territorio -->
       <div class="reveal reveal-delay-1 mb-16">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-etna/report-04.png" alt="Mappa del territorio del GAL Terre dell'Etna e dell'Alcantara con i 26 comuni del partenariato" class="w-full" loading="lazy" />
+          <img src={`${base}/images/projects/gal-etna/report-04.png`} alt="Mappa del territorio del GAL Terre dell'Etna e dell'Alcantara con i 26 comuni del partenariato" class="w-full" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">I 26 comuni del partenariato del GAL Terre dell'Etna e dell'Alcantara, tra le province di Catania e Messina.</p>
           </div>
@@ -74,28 +75,28 @@ const lang = 'it';
         <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 mb-4">Le quattro zone del territorio</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
           <div class="rounded-xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/gal-etna/zona-costiera.png" alt="Zona costiera" class="w-full h-32 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/gal-etna/zona-costiera.png`} alt="Zona costiera" class="w-full h-32 object-cover" loading="lazy" />
             <div class="p-3 bg-dark-900">
               <p class="text-xs text-dark-100 font-bold">Zona Costiera</p>
               <p class="text-[10px] text-dark-400 mt-1">Da Giardini Naxos a Riposto. Turismo, infrastrutture portuali, agrumi.</p>
             </div>
           </div>
           <div class="rounded-xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/gal-etna/zona-pedemontana.png" alt="Zona pedemontana" class="w-full h-32 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/gal-etna/zona-pedemontana.png`} alt="Zona pedemontana" class="w-full h-32 object-cover" loading="lazy" />
             <div class="p-3 bg-dark-900">
               <p class="text-xs text-dark-100 font-bold">Zona Pedemontana</p>
               <p class="text-[10px] text-dark-400 mt-1">Giarre, Mascali, Piedimonte Etneo. Viticoltura, agrumicoltura, centri urbani.</p>
             </div>
           </div>
           <div class="rounded-xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/gal-etna/zona-valle.png" alt="Valle dell'Alcantara" class="w-full h-32 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/gal-etna/zona-valle.png`} alt="Valle dell'Alcantara" class="w-full h-32 object-cover" loading="lazy" />
             <div class="p-3 bg-dark-900">
               <p class="text-xs text-dark-100 font-bold">Valle dell'Alcantara</p>
               <p class="text-[10px] text-dark-400 mt-1">Francavilla, Castiglione, Randazzo. Parco Fluviale, borghi storici, enogastronomia.</p>
             </div>
           </div>
           <div class="rounded-xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/gal-etna/zona-montana.png" alt="Zona montana" class="w-full h-32 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/gal-etna/zona-montana.png`} alt="Zona montana" class="w-full h-32 object-cover" loading="lazy" />
             <div class="p-3 bg-dark-900">
               <p class="text-xs text-dark-100 font-bold">Zona Montana</p>
               <p class="text-[10px] text-dark-400 mt-1">Versanti dell'Etna e Nebrodi. Parchi naturali, escursionismo, biodiversità.</p>
@@ -145,7 +146,7 @@ const lang = 'it';
         <p class="text-dark-400 leading-relaxed mb-6">L'analisi turistica ha mappato la distribuzione e la capacità delle strutture ricettive alberghiere ed extralberghiere in ciascun comune del partenariato, evidenziando le aree a maggiore e minore concentrazione turistica.</p>
 
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-etna/mappa-turismo.png" alt="Mappa delle strutture ricettive nel territorio del GAL" class="w-full" loading="lazy" />
+          <img src={`${base}/images/projects/gal-etna/mappa-turismo.png`} alt="Mappa delle strutture ricettive nel territorio del GAL" class="w-full" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Distribuzione strutture ricettive</h3>
             <p class="text-xs text-dark-400 mt-1">Numero posti letto e tipologia strutture (alberghiere/extralberghiere) per ogni comune del GAL. I cerchi indicano il numero di strutture, i colori la capacità ricettiva.</p>
@@ -161,14 +162,14 @@ const lang = 'it';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/gal-etna/mappa-etna-doc.jpg" alt="Mappa Vini Etna DOC con Contrade" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/gal-etna/mappa-etna-doc.jpg`} alt="Mappa Vini Etna DOC con Contrade" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Vini Etna DOC</h3>
               <p class="text-xs text-dark-400 mt-1">Territorio vinicolo con Contrade e Unità Geografiche Aggiuntive certificate. Il terroir vulcanico produce vini unici riconosciuti a livello internazionale.</p>
             </div>
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/gal-etna/ferrovia-alcantara.jpg" alt="Mappa Ferrovia Alcantara-Randazzo" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/gal-etna/ferrovia-alcantara.jpg`} alt="Mappa Ferrovia Alcantara-Randazzo" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Ferrovia Alcantara-Randazzo</h3>
               <p class="text-xs text-dark-400 mt-1">Linea storica (1959-1995, 37 km) con potenziale di riconversione in greenway cicloturistica e hub escursionistico per l'Etna.</p>
@@ -187,7 +188,7 @@ const lang = 'it';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-etna/cover-studio-page-001.png" alt="Copertina Studio Scientifico Territoriale" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-etna/cover-studio-page-001.png`} alt="Copertina Studio Scientifico Territoriale" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Studio Scientifico Territoriale</h3>
@@ -196,7 +197,7 @@ const lang = 'it';
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-etna/cover-strategico-001.png" alt="Copertina Piano Strategico" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-etna/cover-strategico-001.png`} alt="Copertina Piano Strategico" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Piano Strategico</h3>

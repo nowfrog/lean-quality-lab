@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'zh';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="GAL Tirreno Eolie | LQS Lab UniME" lang={lang}>
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/eolie.jpg" alt="" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/eolie.jpg`} alt="" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -60,7 +61,7 @@ const lang = 'zh';
 
         <!-- 全景照片 -->
         <div class="rounded-2xl overflow-hidden border border-dark-700 mb-6">
-          <img src="/images/projects/gal-tirreno/lipari-da-vulcano.jpg" alt="从武尔卡诺火山口俯瞰伊奥利亚群岛和利帕里全景" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/lipari-da-vulcano.jpg`} alt="从武尔卡诺火山口俯瞰伊奥利亚群岛和利帕里全景" class="w-full h-80 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">从武尔卡诺火山口俯瞰伊奥利亚群岛和利帕里全景。照片来源：维基共享资源，CC BY-SA 3.0。</p>
           </div>
@@ -127,7 +128,7 @@ const lang = 'zh';
       <!-- 萨利纳照片 -->
       <div class="reveal mb-16">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/salina-landscape.jpg" alt="萨利纳岛景观，远眺伊奥利亚群岛" class="w-full h-72 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/salina-landscape.jpg`} alt="萨利纳岛景观，远眺伊奥利亚群岛" class="w-full h-72 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">萨利纳岛与伊奥利亚群岛：地中海植被、仙人掌和第勒尼安海的蔚蓝。照片来源：维基共享资源，CC BY-SA 4.0。</p>
           </div>
@@ -167,13 +168,13 @@ const lang = 'zh';
       <!-- 伊奥利亚照片并排 -->
       <div class="reveal mb-16 grid grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/stromboli-eruption.jpg" alt="斯特龙博利火山夜间喷发" class="w-full h-72 object-cover object-center" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/stromboli-eruption.jpg`} alt="斯特龙博利火山夜间喷发" class="w-full h-72 object-cover object-center" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">斯特龙博利火山夜间喷发, , "地中海的灯塔"。照片来源：维基共享资源，CC BY-SA 2.5。</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/gal-tirreno/eolie-mare.jpg" alt="从第勒尼安海远眺伊奥利亚群岛" class="w-full h-72 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/gal-tirreno/eolie-mare.jpg`} alt="从第勒尼安海远眺伊奥利亚群岛" class="w-full h-72 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">从海上远眺伊奥利亚群岛：旅游航线和徒步路线的交汇点。照片来源：维基共享资源，CC BY-SA 4.0。</p>
           </div>
@@ -254,7 +255,7 @@ const lang = 'zh';
         <div class="grid grid-cols-2 gap-6 mb-8">
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-tirreno/cover-rapporto-001.png" alt="领土体系状况报告封面" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-tirreno/cover-rapporto-001.png`} alt="领土体系状况报告封面" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">领土报告</h3>
@@ -263,7 +264,7 @@ const lang = 'zh';
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
             <div class="aspect-[3/4] overflow-hidden">
-              <img src="/images/projects/gal-tirreno/cover-psl-01.png" alt="地方发展计划封面" class="w-full h-full object-cover object-top" loading="lazy" />
+              <img src={`${base}/images/projects/gal-tirreno/cover-psl-01.png`} alt="地方发展计划封面" class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
             <div class="p-4">
               <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">地方发展计划</h3>

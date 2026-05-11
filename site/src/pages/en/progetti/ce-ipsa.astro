@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'en';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="CE_IPSA | LQS Lab UniME" lang={lang}>
   <!-- Hero -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/ce-ipsa/header.jpg" alt="Fosso Imperatore Industrial Park" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/ce-ipsa/header.jpg`} alt="Fosso Imperatore Industrial Park" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -61,16 +62,16 @@ const lang = 'en';
         <!-- Two side-by-side images -->
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/casestudy1.jpg" alt="Fosso Imperatore Industrial Park - view 1" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/casestudy1.jpg`} alt="Fosso Imperatore Industrial Park - view 1" class="w-full h-72 object-cover" loading="lazy" />
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/casestudy2.jpg" alt="Fosso Imperatore Industrial Park - view 2" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/casestudy2.jpg`} alt="Fosso Imperatore Industrial Park - view 2" class="w-full h-72 object-cover" loading="lazy" />
           </div>
         </div>
 
         <!-- Full width image -->
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/ce-ipsa/casestudy3.jpg" alt="Panoramic view of Fosso Imperatore Industrial Park" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/ce-ipsa/casestudy3.jpg`} alt="Panoramic view of Fosso Imperatore Industrial Park" class="w-full h-80 object-cover" loading="lazy" />
           <div class="p-4 bg-dark-900">
             <p class="text-xs text-dark-400 italic">Fosso Imperatore Industrial Park, Nocera Inferiore (SA) | study area of the CE_IPSA project.</p>
           </div>
@@ -85,13 +86,13 @@ const lang = 'en';
 
         <div class="grid grid-cols-2 gap-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg" alt="CE_IPSA stakeholder workshop speakers" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg`} alt="CE_IPSA stakeholder workshop speakers" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <p class="text-xs text-dark-400 italic">Plenary session of the stakeholder workshop.</p>
             </div>
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg" alt="CE_IPSA circular economy panel discussion" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg`} alt="CE_IPSA circular economy panel discussion" class="w-full h-72 object-cover" loading="lazy" />
             <div class="p-4 bg-dark-900">
               <p class="text-xs text-dark-400 italic">Panel discussion on circular economy and industrial symbiosis.</p>
             </div>

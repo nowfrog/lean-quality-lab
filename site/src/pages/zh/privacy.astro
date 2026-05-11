@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 const lang = 'zh';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="隐私政策 | LQS Lab UniME" lang={lang}>
@@ -46,7 +47,7 @@ const lang = 'zh';
 
         <div>
           <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookie</h2>
-          <p>有关Cookie使用的信息，请参阅我们的<a href="/zh/cookie" class="text-neon hover:underline">Cookie政策</a>。</p>
+          <p>有关Cookie使用的信息，请参阅我们的<a href={`${base}/zh/cookie`} class="text-neon hover:underline">Cookie政策</a>。</p>
         </div>
 
         <p class="text-xs text-dark-500 font-mono">最后更新：2026年5月</p>

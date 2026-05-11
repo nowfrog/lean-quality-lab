@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 const lang = 'en';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="H-SMA-CE | LQS Lab UniME" lang={lang}>
   <!-- Hero -->
   <section class="relative py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/projects/h-sma-ce/header.jpg" alt="Taurasi historical town" class="w-full h-full object-cover" />
+      <img src={`${base}/images/projects/h-sma-ce/header.jpg`} alt="Taurasi historical town" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
@@ -61,17 +62,17 @@ const lang = 'en';
         <!-- Taurasi photo grid -->
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/h-sma-ce/taurasi1.jpg" alt="Panoramic view of Taurasi" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/h-sma-ce/taurasi1.jpg`} alt="Panoramic view of Taurasi" class="w-full h-72 object-cover" loading="lazy" />
           </div>
           <div class="rounded-2xl overflow-hidden border border-dark-700">
-            <img src="/images/projects/h-sma-ce/taurasi2.jpg" alt="Taurasi historic centre" class="w-full h-72 object-cover" loading="lazy" />
+            <img src={`${base}/images/projects/h-sma-ce/taurasi2.jpg`} alt="Taurasi historic centre" class="w-full h-72 object-cover" loading="lazy" />
           </div>
         </div>
         <p class="text-xs text-dark-400 italic mb-6">Taurasi, medieval hill town in Irpinia (Campania)</p>
 
         <!-- Full-width photo -->
         <div class="rounded-2xl overflow-hidden border border-dark-700">
-          <img src="/images/projects/h-sma-ce/taurasi3.jpg" alt="Taurasi vineyards and landscape" class="w-full h-80 object-cover" loading="lazy" />
+          <img src={`${base}/images/projects/h-sma-ce/taurasi3.jpg`} alt="Taurasi vineyards and landscape" class="w-full h-80 object-cover" loading="lazy" />
         </div>
       </div>
 
