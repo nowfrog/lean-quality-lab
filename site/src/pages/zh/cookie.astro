@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+const lang = 'zh';
+---
+
+<BaseLayout title="Cookie政策 | LQS Lab UniME" lang={lang}>
+  <PageHero label="法律" title="Cookie政策" />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-dark-400 leading-relaxed">
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">什么是Cookie</h2>
+          <p>Cookie是网站在用户浏览期间发送到浏览器的小型文本文件。它们存储在设备上，并在后续访问时重新传输到网站。</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">本网站使用的Cookie</h2>
+          <p>本网站仅使用正常运行所必需的<strong class="text-dark-100">技术性Cookie</strong>，根据适用的欧盟法规无需用户事先同意。</p>
+
+          <div class="mt-4 bg-dark-900 border border-dark-700 rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-700">
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Cookie</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">类型</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">持续时间</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">用途</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-dark-800">
+                  <td class="p-3 font-mono text-neon/70">cookie-consent</td>
+                  <td class="p-3">技术性</td>
+                  <td class="p-3">持久</td>
+                  <td class="p-3">存储对Cookie横幅的确认</td>
+                </tr>
+                <tr class="border-b border-dark-800">
+                  <td class="p-3 font-mono text-neon/70">theme</td>
+                  <td class="p-3">技术性</td>
+                  <td class="p-3">持久</td>
+                  <td class="p-3">存储明暗主题偏好</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">第三方Cookie</h2>
+          <p>本网站<strong class="text-dark-100">不使用</strong>分析Cookie、第三方跟踪Cookie或广告Cookie。联系页面的地图通过OpenStreetMap（iframe嵌入）提供，不会在用户设备上安装Cookie。</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">如何禁用Cookie</h2>
+          <p>用户可以直接在浏览器设置中管理Cookie偏好。禁用技术性Cookie可能影响网站部分功能（例如，所选主题将不会被保留）。</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">法律参考</h2>
+          <ul class="list-disc list-inside space-y-1">
+            <li>欧盟法规2016/679（GDPR）</li>
+            <li>意大利第196/2003号立法令（隐私法典）</li>
+            <li>意大利数据保护局关于Cookie的指南 | 2021年6月10日</li>
+          </ul>
+        </div>
+
+        <p class="text-xs text-dark-500 font-mono">最后更新：2026年5月</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

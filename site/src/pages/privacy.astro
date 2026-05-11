@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+const lang = 'it';
+---
+
+<BaseLayout title="Privacy Policy | LQS Lab UniME" lang={lang}>
+  <PageHero label="Legal" title="Privacy Policy" />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose-dark">
+      <div class="space-y-8 text-dark-400 leading-relaxed">
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Titolare del trattamento</h2>
+          <p>Università degli Studi di Messina | Dipartimento di Economia<br/>
+          Piazza Pugliatti, 1 | 98122 Messina (ME), Italia<br/>
+          Email: <a href="mailto:giuseppe.ioppolo@unime.it" class="text-neon hover:underline">giuseppe.ioppolo@unime.it</a></p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Tipologia di dati raccolti</h2>
+          <p>Questo sito web non raccoglie dati personali in modo automatico. I dati personali eventualmente forniti dall'utente tramite il modulo di contatto (nome, email, messaggio) vengono trattati esclusivamente per rispondere alla richiesta e non vengono ceduti a terzi.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Base giuridica del trattamento</h2>
+          <p>Il trattamento dei dati forniti tramite il modulo di contatto si basa sul consenso dell'interessato (art. 6, par. 1, lett. a del GDPR), espresso con l'invio volontario del messaggio.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Conservazione dei dati</h2>
+          <p>I dati forniti tramite il modulo di contatto vengono conservati per il tempo strettamente necessario a evadere la richiesta e successivamente cancellati.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Diritti dell'interessato</h2>
+          <p>Ai sensi degli artt. 15-22 del Regolamento UE 2016/679 (GDPR), l'interessato ha diritto di:</p>
+          <ul class="list-disc list-inside space-y-1 mt-2">
+            <li>Accedere ai propri dati personali</li>
+            <li>Richiederne la rettifica o la cancellazione</li>
+            <li>Limitare o opporsi al trattamento</li>
+            <li>Richiedere la portabilità dei dati</li>
+            <li>Revocare il consenso in qualsiasi momento</li>
+            <li>Proporre reclamo all'Autorità Garante per la protezione dei dati personali</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookie</h2>
+          <p>Per informazioni sull'utilizzo dei cookie, consultare la <a href="/cookie" class="text-neon hover:underline">Cookie Policy</a>.</p>
+        </div>
+
+        <p class="text-xs text-dark-500 font-mono">Ultimo aggiornamento: maggio 2026</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

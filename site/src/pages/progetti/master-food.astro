@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'it';
+---
+
+<BaseLayout title="Master Food, Quality & International Management | LQS Lab UniME" lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/master-food/header.jpg" alt="Food Quality Management" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">Master I Livello | UniME</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-4 leading-tight">Master Food, Quality &amp;<br/>International Management</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">Un approccio integrato allo studio e alla valutazione dei processi e dei prodotti agroalimentari secondo una logica di gestione della qualit&agrave; dell'intera filiera</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Info box -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Tipo</span>
+            <p class="text-dark-100 font-mono mt-1">Master I Livello</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Durata</span>
+            <p class="text-dark-100 font-mono mt-1">12 mesi</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Lingua</span>
+            <p class="text-dark-100 font-mono mt-1">Inglese</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Edizioni</span>
+            <p class="text-dark-100 font-mono mt-1">3 (dal 2021)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Il Master -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Il Master</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Formazione integrata per la filiera agroalimentare</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">Il Master in <strong class="text-dark-100">Food, Quality and International Management</strong>, diretto dal Prof. Giuseppe Ioppolo presso il Dipartimento di Economia dell'Universit&agrave; di Messina, offre un approccio integrato allo studio e alla valutazione dei processi e dei prodotti agroalimentari secondo una logica di gestione della qualit&agrave;.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">Il programma combina <strong class="text-dark-100">scienze sociali, innovazione digitale e biologia</strong>, preparando professionisti capaci di operare nei mercati globali con competenze avanzate in food quality, safety management, sostenibilit&agrave; ed economia circolare.</p>
+        <p class="text-dark-400 leading-relaxed">La didattica &egrave; caratterizzata da un modello pratico e dinamico: sessioni teoriche si alternano a <strong class="text-dark-100">workshop, case study, project work e stage</strong> presso aziende partner del settore agroalimentare.</p>
+      </div>
+
+      <!-- Obiettivi -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Obiettivi Formativi</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Competenze chiave</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { title: 'Quality Management', desc: 'Gestione della qualit&agrave; lungo l\'intera filiera agroalimentare, dal campo alla tavola, con strumenti di TQM e Lean Thinking applicati al settore food.' },
+            { title: 'Food Safety & Standards', desc: 'Conoscenza approfondita degli standard internazionali di sicurezza alimentare (ISO 22000, HACCP, BRC, IFS) e delle normative europee.' },
+            { title: 'International Management', desc: 'Competenze manageriali per l\'internazionalizzazione delle imprese agroalimentari, con focus su export, marketing e strategie di ingresso nei mercati esteri.' },
+            { title: 'Innovation & Food 5.0', desc: 'Tecnologie emergenti e innovazione digitale applicate al settore alimentare: tracciabilit&agrave;, blockchain, IoT e sostenibilit&agrave; della supply chain.' },
+          ].map(obj => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{obj.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{obj.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Edizioni -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Edizioni</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Tre edizioni dal 2021</h2>
+        <div class="space-y-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-neon font-mono text-sm font-bold">I</span>
+              <div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A.A. 2021/2022</h3>
+                <p class="text-sm text-dark-400">Prima edizione del Master, con studenti italiani e internazionali.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-cyan font-mono text-sm font-bold">II</span>
+              <div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A.A. 2022/2023</h3>
+                <p class="text-sm text-dark-400">Seconda edizione, lanciata con il supporto di Camera di Commercio e ICE per l'internazionalizzazione.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-gold font-mono text-sm font-bold">III</span>
+              <div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A.A. 2023/2024</h3>
+                <p class="text-sm text-dark-400">Terza edizione con partner aziendali ampliati e focus su Food 5.0.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">3</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Edizioni</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-cyan">12</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Mesi</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">EN</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Lingua</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">I&deg;</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Livello</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link -->
+      <div class="reveal reveal-delay-2">
+        <a href="https://www.unime.it/didattica/post-laurea/master-e-corsi-di-perfezionamento/total-quality-international-management-food" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          Pagina ufficiale UniME
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

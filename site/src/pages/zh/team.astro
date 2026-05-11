@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { useTranslations } from '../../i18n/utils';
+const lang = 'zh';
+const t = useTranslations(lang);
+
+const members = [
+  {
+    id: 'ioppolo',
+    name: 'Giuseppe Ioppolo',
+    role: t('team.coordinator'),
+    subtitle: '正教授 | ECON-10/A 商品学',
+    dept: '经济学系 | 墨西拿大学',
+    bio: 'Giuseppe Ioppolo是一位专注于可持续性和环境管理的环境土木工程师，现任墨西拿大学经济学系商品学正教授，讲授生产周期技术和全面质量管理课程。他是经济学、管理学和统计学博士学院成员，同时担任校长授权的地方企业关系代表。作为Sustainability期刊主编, , 可持续性领域领先的国际期刊之一，他在众多国际会议科学委员会中担任意大利和欧洲的评审。作为访问教授，他曾在清华大学（北京）、北京交通大学MBA（北京）、东京大学（东京）和圣巴巴拉大学（加利福尼亚）授课。他是多个国际项目的PI，在中国尤为活跃。他参与了Interreg和Horizon等国内外研究项目。此外，他在意大利（如埃奥利群岛、撒丁岛、阿格罗山谷等）和海外（突尼斯、克罗地亚等）的工程和空间规划项目中开展了过程协调活动。',
+    tags: ['循环经济', '产业生态学', '可持续发展', '环境管理', '区域规划'],
+    initials: 'GI',
+    img: '/images/team/ioppolo.jpg',
+    links: [
+      { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=36097581800' },
+      { label: 'ORCID', url: 'https://orcid.org/0000-0003-0262-8435' },
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=u0gVgvQAAAAJ&hl=en' },
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Giuseppe-Ioppolo' },
+    ]
+  },
+  {
+    id: 'dalessandro',
+    name: "Carlotta D'Alessandro",
+    role: t('team.researcher.f'),
+    subtitle: '博士 | 第XXXVI周期 EMS',
+    dept: '经济学系 | 墨西拿大学',
+    bio: '在墨西拿大学获得经济学、管理学和统计学博士学位，研究方向为可持续性与循环经济。她的研究致力于解决可持续性中的关键问题，推动循环经济实践，朝着更可持续和循环的未来努力。目前担任一家国际科学期刊的客座编辑。',
+    tags: ['可持续性', '循环经济', '可持续发展', '可持续创新管理', '产业生态学'],
+    initials: 'CD',
+    img: '/images/team/dalessandro.jpg',
+    links: [
+      { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=58534571400' },
+      { label: 'ORCID', url: 'https://orcid.org/0000-0002-7361-4201' },
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=6wedFFkAAAAJ&hl=it&oi=ao' },
+    ]
+  },
+  {
+    id: 'licastro',
+    name: 'Antonio Licastro',
+    role: t('team.researcher'),
+    subtitle: '经济学、管理学和统计学博士',
+    dept: '经济学系 | 墨西拿大学',
+    bio: '目前在那不勒斯"东方"大学人文社会科学系担任研究员。2025年在墨西拿大学经济学系以优异成绩获得博士学位。研究领域包括计量经济学、生命周期评估（LCA）、产业生态学和可持续发展科学，重点关注农业和区域系统中的关键环境挑战。当前研究方向包括开发小型社区可持续转型的可达评估方法论、在环境监测系统中整合数字技术，以及推进循环经济在农业领域应用的理论基础。',
+    tags: ['计量经济学', '生命周期评估', '产业生态学', '可持续发展科学', '循环经济'],
+    initials: 'AL',
+    img: '/images/team/licastro.jpg',
+    links: [
+      { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=57278726700' },
+      { label: 'ORCID', url: 'https://orcid.org/0000-0002-4735-6237' },
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?hl=it&user=icXhf2EAAAAJ' },
+    ]
+  },
+  {
+    id: 'morana',
+    name: 'Andrea Morana',
+    role: t('team.phd'),
+    subtitle: '博士生',
+    dept: '经济学系 | 墨西拿大学',
+    initials: 'AM',
+    links: []
+  },
+];
+
+const collaborators = [
+  {
+    id: 'szopik',
+    name: 'Katarzyna Szopik-Depczyńska',
+    role: '国际合作',
+    subtitle: '副教授 | 管理与质量科学',
+    dept: '什切青大学 | 波兰',
+    bio: '波兰什切青大学管理学副教授，担任H-SMA-CE项目可持续创新管理高级研究员。她的工作聚焦于技术创新分析、循环经济方法论以及历史小城镇的环境评估工具，支持决策支持系统的开发与测试。Ioppolo教授的频繁合作者，在Journal of Cleaner Production、Land Use Policy、Ecological Indicators等期刊发表约170篇论文。"Total Quality Management and Lean Thinking 5.0"一书的合著者（Routledge, 2024）。',
+    tags: ['创新管理', '研发', '可持续性', '企业社会责任'],
+    initials: 'KS',
+    img: '/images/team/szopik.jpg',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.pl/citations?user=lL4k3n0AAAAJ&hl=pl' },
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Katarzyna-Szopik-Depczynska' },
+    ]
+  },
+];
+---
+
+<BaseLayout title={t('team.title')} lang={lang}>
+  <PageHero label={t('team.label')} title={t('team.h1')} subtitle={t('team.subtitle')} />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-6">
+        {members.map((m, i) => (
+          <div id={m.id} class={`reveal reveal-delay-${Math.min(i+1,3)} group bg-dark-900 border border-dark-700 rounded-2xl overflow-hidden card-hover scroll-mt-24`}>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-4">
+                  {m.img ? (
+                    <img src={m.img} alt={m.name} class="w-14 h-14 rounded-full object-cover ring-2 ring-neon/20 shrink-0" loading="lazy" />
+                  ) : (
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-dark-800 to-dark-700 ring-2 ring-dark-600 shrink-0">
+                      <span class="font-[family-name:var(--font-display)] text-lg font-bold text-dark-500 group-hover:text-neon/30 transition-colors duration-500">{m.initials}</span>
+                    </div>
+                  )}
+                  <div>
+                    <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100">{m.name}</h3>
+                    <p class="text-xs text-dark-400 mt-0.5">{m.subtitle}</p>
+                    <p class="text-xs text-dark-500 font-mono">{m.dept}</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 text-[10px] font-mono bg-dark-800 border border-neon/20 rounded-md text-neon uppercase tracking-wider shrink-0">{m.role}</span>
+              </div>
+              {m.bio && <p class="text-sm text-dark-400 mt-3 leading-relaxed">{m.bio}</p>}
+              {m.tags && m.tags.length > 0 && (
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                  {m.tags.map(tag => (
+                    <span class="px-2 py-0.5 text-[10px] rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">{tag}</span>
+                  ))}
+                </div>
+              )}
+              {m.links && m.links.length > 0 && (
+                <div class="flex flex-wrap gap-3 mt-3 pt-3 border-t border-dark-700/50">
+                  {m.links.map(link => (
+                    <a href={link.url} target="_blank" rel="noopener" class="text-xs text-dark-400 hover:text-neon transition-colors font-mono tracking-wide">{link.label}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16">
+        <span class="text-cyan font-mono text-sm tracking-widest uppercase reveal">国际合作</span>
+        <div class="space-y-6 mt-6">
+          {collaborators.map((m, i) => (
+            <div id={m.id} class={`reveal reveal-delay-1 group bg-dark-900 border border-cyan/20 rounded-2xl overflow-hidden card-hover scroll-mt-24`}>
+              <div class="p-5">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-4">
+                    {m.img ? (
+                      <img src={m.img} alt={m.name} class="w-14 h-14 rounded-full object-cover ring-2 ring-cyan/20 shrink-0" loading="lazy" />
+                    ) : (
+                      <div class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-dark-800 to-dark-700 ring-2 ring-dark-600 shrink-0">
+                        <span class="font-[family-name:var(--font-display)] text-lg font-bold text-dark-500 group-hover:text-cyan/30 transition-colors duration-500">{m.initials}</span>
+                      </div>
+                    )}
+                    <div>
+                      <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100">{m.name}</h3>
+                      <p class="text-xs text-dark-400 mt-0.5">{m.subtitle}</p>
+                      <p class="text-xs text-dark-500 font-mono">{m.dept}</p>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 text-[10px] font-mono bg-dark-800 border border-cyan/20 rounded-md text-cyan uppercase tracking-wider shrink-0">{m.role}</span>
+                </div>
+                {m.bio && <p class="text-sm text-dark-400 mt-3 leading-relaxed">{m.bio}</p>}
+                {m.tags && m.tags.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    {m.tags.map(tag => (
+                      <span class="px-2 py-0.5 text-[10px] rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">{tag}</span>
+                    ))}
+                  </div>
+                )}
+                {m.links && m.links.length > 0 && (
+                  <div class="flex flex-wrap gap-3 mt-3 pt-3 border-t border-dark-700/50">
+                    {m.links.map(link => (
+                      <a href={link.url} target="_blank" rel="noopener" class="text-xs text-dark-400 hover:text-cyan transition-colors font-mono tracking-wide">{link.label}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

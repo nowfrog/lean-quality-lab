@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { useTranslations } from '../../i18n/utils';
+const lang = 'en';
+const t = useTranslations(lang);
+
+const publications = [
+  { title: 'A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns: The H-SMA-CE Project', authors: 'Ioppolo G., Calabrò G., Caristi G., Ciliberto C., Russo I., De Simone L., Lopes A., Arbolino R.', journal: 'Sustainability (Switzerland)', year: '2026', doi: '10.3390/su18073302', type: t('pubs.article'), area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'The Circular Economy Transition Within Historical Small Town: Preliminary Results', authors: 'Ioppolo G., Caristi G., D\'Alessandro C., Calabrò G., Szopik-Depczyńska K.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-031-78623-5_38', type: 'Proceedings', area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'Digital Revolution in Pharmaceutical Industry: A Network Analysis of Industry 5.0 Technologies', authors: 'Erim M.M., D\'Alessandro C., Szopik-Depczyńska K., Ioppolo G.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-032-09066-9_25', type: 'Proceedings', area: 'Industry 5.0' },
+  { title: 'Smart Transition in Historical Small Towns: First Insights from a Digital Material Flow Assessment in the Italian Case Study of Taurasi', authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-032-09066-9_20', type: 'Proceedings', area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'Industrial Symbiosis Networks in Italian Industrial Parks: The Case of Fosso Imperatore', authors: "D'Alessandro C., Ioppolo G., Calabrò G., Caristi G.", journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-032-09062-1_10', type: 'Proceedings', area: 'Circular Economy', project: 'CE_IPSA' },
+  { title: 'Governance and Local Development: The Tirreno-Eolie Management Plan', authors: 'Ioppolo G., Caristi G., D\'Alessandro C., Bongiorno A., Szopik-Depczyńska K.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-031-78623-5_46', type: 'Proceedings', area: 'Local Development', project: 'GAL Tirreno Eolie' },
+  { title: 'Emotional AI in Human Digital Twin: Enhancing Human-Machine Interaction and Management Strategies', authors: 'Erim M.M., D\'Alessandro C., Licastro A., Szopik-Depczyńska K., Ioppolo G.', journal: 'Lecture Notes in Networks and Systems', year: '2026', doi: '10.1007/978-3-032-06611-4_17', type: 'Proceedings', area: 'Industry 5.0' },
+  { title: 'Tackling Environmental Impact: A New Support Tool for Sustainable Healthcare Waste Management', authors: "D'Alessandro C., Szopik-Depczyńska K., Taddeo R., Cheba K., Ioppolo G.", journal: 'Corporate Social Responsibility and Environmental Management', year: '2025', doi: '10.1002/csr.3191', type: t('pubs.article'), area: 'Healthcare Sustainability' },
+  { title: 'Sustainable Futures: Navigating Environmental Challenges Through Local Governance in the Tirreno-Eolie Area', authors: "D'Alessandro C., Ioppolo G., Bongiorno A., Caristi G., Szopik-Depczyńska K.", journal: 'Contemporary Studies in Economic and Financial Analysis', year: '2025', doi: '10.1108/S1569-375920250000117003', type: 'Proceedings', area: 'Local Development', project: 'GAL Tirreno Eolie' },
+  { title: 'A Circular Land Use Model for Reconciling Industrial Expansion with Agricultural Heritage in Italian Industrial Parks', authors: "D'Alessandro C., Licastro A., Arbolino R., Calabrò G., Ioppolo G.", journal: 'Sustainability (Switzerland)', year: '2025', doi: '10.3390/su17198830', type: t('pubs.article'), area: 'Circular Economy', project: 'CE_IPSA' },
+  { title: 'Ten years of Industry 4.0 adoption: external and internal perspective in a systemic model towards Industry 5.0', authors: 'Piccarozzi M., Silvestri C., Rossi F., Szopik-Depczyńska K., Ioppolo G.', journal: 'European Journal of Innovation Management', year: '2025', doi: '10.1108/EJIM-12-2023-1099', type: t('pubs.article'), area: 'Industry 5.0' },
+  { title: "Unveiling Taurasi's Hidden Potential: A Wine Culture-Centered Framework for Sustainable Development and Circular Economy Transition in Historic Small Towns", authors: 'Ciliberto C., Calabrò G., Caristi G., Arbolino R., Ioppolo G.', journal: 'Sustainability (Switzerland)', year: '2025', doi: '10.3390/su17135704', type: t('pubs.article'), area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'From Data Scarcity to Strategic Action: A Managerial Framework for Circular Economy Implementation in Mediterranean Small Towns', authors: 'Licastro A., D\'Alessandro C., Szopik-Depczyńska K., Arbolino R., Ioppolo G.', journal: 'Sustainability (Switzerland)', year: '2025', doi: '10.3390/su17146474', type: t('pubs.article'), area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'Analysing Italian Historical Small Towns: A Cultural and Geographic Mosaic of Identity', authors: 'Ciliberto C., Ioppolo G., Caristi G., Calabrò G.', journal: 'FEMIB 2025 Proceedings', year: '2025', doi: '10.5220/0013426600003956', type: 'Proceedings', area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'Digital Transformation for Circular Economy: Business Process Innovation in Historic Small Towns - The Taurasi Case Study', authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'Springer Proceedings (Forthcoming)', year: '2025', type: 'Proceedings', area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: "Sustainable Circularity: Tracing Taurasi's Historical Small Town Resilience", authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'XXXII Congresso Nazionale di Scienze Merceologiche', year: '2024', type: 'Proceedings', area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'A Multi-Criteria Decision-Making Analysis of Waste Management Practices in Historical Small Towns: The Taurasi Case Study', authors: 'Ioppolo G., Calabrò G.', journal: 'Atti della Accademia Peloritana dei Pericolanti', year: '2025', type: 'Proceedings', area: 'Circular Economy', project: 'H-SMA-CE' },
+  { title: 'A Development Model for Circular Economy Between Industrial Parks and Surroundings Areas (CE_IPSA): The Reverse Logistics Strategic Approach', authors: "D'Alessandro C., Ioppolo G., Calabrò G., Caristi G.", journal: 'Springer Proceedings in Business and Economics', year: '2025', doi: '10.1007/978-3-031-80692-6_24', type: 'Proceedings', area: 'Circular Economy', project: 'CE_IPSA' },
+  { title: 'Territorial Development Domain Versus Digital Transformation and Society 5.0: The Tirreno-Eolie LAG Experience', authors: "D'Alessandro C., Szopik-Depczyńska K., Bongiorno A., Caristi G., Ioppolo G.", journal: 'Springer Proceedings in Business and Economics', year: '2025', doi: '10.1007/978-3-031-80692-6_30', type: 'Proceedings', area: 'Local Development', project: 'GAL Tirreno Eolie' },
+  { title: 'Circular economy convergence across European Union: Evidence on the role policy diffusion and domestic mechanisms', authors: 'Arbolino R., Boffardi R., De Simone L., Ioppolo G., Lopes A.', journal: 'Socio-Economic Planning Sciences', year: '2024', doi: '10.1016/j.seps.2024.102051', type: t('pubs.article'), area: 'Circular Economy' },
+  { title: 'Exploring Circular Economy Practices in the Healthcare Sector: A Systematic Review and Bibliometric Analysis', authors: "D'Alessandro C., Szopik-Depczyńska K., Tarczyńska-Łuniewska M., Silvestri C., Ioppolo G.", journal: 'Sustainability (Switzerland)', year: '2024', doi: '10.3390/su16010401', type: t('pubs.review'), area: 'Healthcare Sustainability' },
+  { title: 'Industry 4.0 technologies as a lever for sustainability in the communication of large companies to stakeholders', authors: 'Piccarozzi M., Stefanoni A., Silvestri C., Ioppolo G.', journal: 'European Journal of Innovation Management', year: '2024', doi: '10.1108/EJIM-11-2022-0641', type: t('pubs.article'), area: 'Industry 5.0' },
+  { title: 'Sustainable Tourism: A Decision Support System Proposal for Policymaking', authors: "Boffardi R., D'Alessandro C., De Simone L.", journal: 'The Need for Sustainable Tourism in an Era of Global Climate Change', year: '2024', doi: '10.1108/978-1-83608-668-020241037', type: 'Chapter', area: 'Sustainable Tourism' },
+  { title: 'Total Quality Management and Lean Thinking 5.0: Theories and Methods', authors: 'Ioppolo G., Ciliberto C., Szopik-Depczyńska K.', journal: 'Routledge', year: '2024', doi: '10.4324/9781032726748', type: 'Book', area: 'Lean & TQM' },
+  { title: 'Decision-Making Approach in Sustainability Assessment in Steel Manufacturing Companies — Systematic Literature Review', authors: "Depczyński R., Secka J., Cheba K., D'Alessandro C., Szopik-Depczyńska K.", journal: 'Sustainability (Switzerland)', year: '2023', doi: '10.3390/su151511614', type: t('pubs.review'), area: 'Industrial Sustainability' },
+  { title: 'Governance Structures in Digital Entrepreneurial Ecosystems: The Impact on Strategic Choices', authors: "Bongiorno A., Szopik-Depczyńska K., D'Alessandro C., Cinici M.C.", journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-032-09062-1_14', type: 'Proceedings', area: 'Industry 5.0' },
+  { title: 'How to promote green energy transition in the age of geopolitical crises and international shocks: Evidence from the EU-27', authors: "Boffardi R., D'Alessandro C., De Simone L., Szopik-Depczyńska K.", journal: 'Environmental Science and Policy', year: '2025', doi: '10.1016/j.envsci.2025.104007', type: t('pubs.article'), area: 'Sustainable Energy' },
+];
+
+const years = [...new Set(publications.map(p => p.year))].sort((a, b) => Number(b) - Number(a));
+---
+
+<BaseLayout title={t('pubs.title')} lang={lang}>
+  <PageHero label={t('pubs.label')} title={t('pubs.h1')} subtitle={t('pubs.subtitle')} />
+  <!-- Featured Book -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-8 items-center">
+        <div class="flex-shrink-0">
+          <img src="/images/publications/tqm-lean-5.jpg" alt="Total Quality Management and Lean Thinking 5.0" class="w-40 rounded-lg shadow-lg border border-dark-600" />
+        </div>
+        <div class="flex-1">
+          <span class="text-gold font-mono text-xs tracking-widest uppercase">Book</span>
+          <h3 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mt-2">Total Quality Management and Lean Thinking 5.0: Theories and Methods</h3>
+          <p class="text-sm text-dark-400 mt-2">Ioppolo G., Ciliberto C., Szopik-Depczyńska K.</p>
+          <p class="text-sm text-dark-400 mt-1"><span class="text-cyan italic">Routledge</span> &middot; 2024 &middot; ISBN 978-1-032-72673-1</p>
+          <p class="text-sm text-dark-400 mt-3">An integrated approach to quality management combining TQM and Lean Thinking principles, covering Lean 4.0, Six Sigma, QFD, risk management and case studies.</p>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <a href="https://doi.org/10.4324/9781032726748" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon rounded-lg transition-all hover:bg-neon/5">DOI</a>
+            <a href="https://www.amazon.com/Total-Quality-Management-Lean-Thinking/dp/1032726733" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono border border-dark-600 hover:border-gold/50 text-dark-300 hover:text-gold rounded-lg transition-all hover:bg-gold/5">Amazon</a>
+            <a href="https://www.routledge.com/Total-Quality-Management-and-Lean-Thinking-50-Theories-and-Methods/Ioppolo-Ciliberto-Szopik-Depczynska/p/book/9781032726731" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono border border-dark-600 hover:border-cyan/50 text-dark-300 hover:text-cyan rounded-lg transition-all hover:bg-cyan/5">Routledge</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Encyclopedia -->
+  <section class="pb-16 lg:pb-20 -mt-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-8 items-center">
+        <div class="flex-shrink-0">
+          <img src="/images/publications/elgar-encyclopedia.jpg" alt="Elgar Encyclopedia of Life Cycle Sustainability Assessment" class="w-40 rounded-lg shadow-lg border border-dark-600" />
+        </div>
+        <div class="flex-1">
+          <span class="text-gold font-mono text-xs tracking-widest uppercase">Encyclopedia</span>
+          <h3 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mt-2">Elgar Encyclopedia of Life Cycle Sustainability Assessment</h3>
+          <p class="text-sm text-dark-400 mt-2">Edited by Traverso M., Backes J.G. &middot; Contribution by Ioppolo G.</p>
+          <p class="text-sm text-dark-400 mt-1"><span class="text-cyan italic">Edward Elgar Publishing</span> &middot; 2026 &middot; ISBN 978-1-03530-988-7</p>
+          <p class="text-sm text-dark-400 mt-3">Prof. Ioppolo is the sole author of the entries: <strong class="text-dark-200">Closed loop</strong>, <strong class="text-dark-200">Urban metabolism</strong>, <strong class="text-dark-200">Urban resource harvesting</strong>. The encyclopedia gathers 195 entries from top international experts on life cycle sustainability assessment.</p>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <a href="https://www.e-elgar.com/shop/usd/elgar-encyclopedia-of-life-cycle-sustainability-assessment-9781035309887.html" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono border border-dark-600 hover:border-cyan/50 text-dark-300 hover:text-cyan rounded-lg transition-all hover:bg-cyan/5">Edward Elgar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 lg:py-32 -mt-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-2 mb-10 reveal">
+        <button class="px-4 py-2 text-sm font-mono rounded-lg bg-neon text-dark-950 font-bold">{t('pubs.all')}</button>
+        {years.map(y => (
+          <button class="px-4 py-2 text-sm font-mono rounded-lg border border-dark-600 text-dark-400 hover:border-neon/50 hover:text-neon transition-all">{y}</button>
+        ))}
+      </div>
+      <div class="space-y-4">
+        {publications.map((pub, i) => (
+          <div class={`reveal reveal-delay-${Math.min(i+1,3)} group bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all duration-300`}>
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 group-hover:text-neon transition-colors duration-300">{pub.title}</h3>
+            <p class="text-sm text-dark-400 mt-2">{pub.authors}</p>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">{pub.journal}</span>
+              <span class="text-xs font-mono text-dark-500">{pub.year}</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">{pub.type}</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-neon/5 border border-neon/10 text-neon/70 font-mono">{pub.area}</span>
+              {pub.project && <span class="px-2 py-0.5 text-xs rounded-md bg-cyan/5 border border-cyan/10 text-cyan/70 font-mono">{pub.project}</span>}
+            </div>
+            {pub.doi && (
+              <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+                DOI: {pub.doi}
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

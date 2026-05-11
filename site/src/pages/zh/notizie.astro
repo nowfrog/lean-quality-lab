@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+const lang = 'zh';
+
+const news = [
+  { date: '2026年4月', title: '2026年世界最佳科学家', text: 'Ioppolo教授入选Research.com 2026年"商业与管理"世界最佳科学家：D-Index 44，国家排名31，世界排名1364。', tag: '荣誉', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7451248875392192512' },
+  { date: '2026年4月', title: 'RII Forum 2026 — 雅典', text: 'LQS实验室团队在雅典研究与创新论坛2026上展示了各活跃项目的最新研究成果。Ioppolo教授是指导委员会成员。', tag: '会议', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7394985924255875072', img: '/images/news/riiforum-2026.jpg', imgPos: 'top' },
+  { date: '2026年4月', title: 'Elgar生命周期可持续性评估百科全书', text: 'Elgar百科全书已出版。Ioppolo教授是以下条目的唯一作者：闭环、城市代谢、城市资源收获。', tag: '出版', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7446176476632219648', img: '/images/news/elgar-encyclopedia.jpg', imgPos: 'top' },
+  { date: '2026年3月', title: 'H-SMA-CE最终论文发表于Sustainability', text: '以开放获取方式发表PRIN H-SMA-CE项目最终论文："意大利历史小镇可持续循环经济转型决策支持系统"。', tag: '出版', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7444066705527660544', img: '/images/news/hsmace-paper.jpg', imgPos: 'top' },
+  { date: '2026年3月', title: 'Nebrodi项目 — 内陆地区', text: 'Ioppolo教授和Limosani教授接受Brolo市长邀请，为Nebrodi内陆地区（29个市镇）开发研究项目：城市代谢、循环经济和社会包容。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441121931229044736', },
+  { date: '2026年2月', title: 'H-SMA-CE网站和PRIN 2022', text: '展示PRIN 22 H-SMA-CE项目，PI Ioppolo教授和co-PI Arbolino教授。项目网站上线。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7422696323801341952', img: '/images/news/hsmace-sito.jpg', imgPos: 'top' },
+  { date: '2025年12月', title: 'DMO Taormina-Peloritani划界规划', text: '展示了战略划界规划，这是成立Taormina-Peloritani目的地管理组织的准备文件。该规划定义了未来DMO的领土边界和治理策略。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7400614901959888896', img: '/images/news/dmo-taormina.jpg', imgPos: 'top' },
+  { date: '2025年11月', title: 'MeTa Costa Blu — DMO', text: 'MeTaBlue DMO诞生 — Messina Taormina Costa Blu。在创新与传统之间的可持续地方发展模式。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7386861913437024256', img: '/images/news/metablue.jpg' },
+  { date: '2025年11月', title: 'GAL Taormina-Peloritani战略规划', text: 'CNR-IRIB展示了"卓越生态系统"区域战略规划，在运营项目1/2023框架内与墨西拿大学合作开发。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7382763610885767168' },
+  { date: '2025年9月', title: '墨西拿海峡技术委员会', text: 'Ioppolo教授被任命为墨西拿海峡动态穿越部长级技术委员会的专家成员。', tag: '任命', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7371567425328136193' },
+  { date: '2025年8月', title: 'GAL Etna-Alcantara和Tirreno-Eolie最终成果', text: 'LQS实验室展示了两个GAL项目的最终成果。Ioppolo教授是两者的PI：社会文化、经济和环境可持续性评估。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7367526770520002560', img: '/images/news/gal-risultati.jpg' },
+  { date: '2025年5月', title: 'DTS Conference 2025 — 巴黎', text: 'UniME-Szczecin团队在巴黎数字转型社会会议上展示了PRIN和GAL项目的科研成果。', tag: '会议', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7332384258772176896', img: '/images/news/dts-2025.jpg' },
+  { date: '2025年4月', title: 'RII Forum 2025 — 巴塞罗那', text: '实验室团队在巴塞罗那RII论坛展示研究成果。Ioppolo教授参加圆桌辩论。', tag: '会议', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7323533342933434368', img: '/images/news/riiforum-2025.jpg' },
+  { date: '2024年10月', title: '什切青研究周', text: '与什切青大学合作10年后的研究和流动周：会见校长、博士学院、航天技术园区、海事大学和SGH华沙。', tag: '会议', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7253791100128157697' },
+  { date: '2024年9月', title: 'AISME 2024 — PRIN和GAL团队', text: '在意大利商品科学院22年。PRIN PNRR 22、PRIN 22和GAL 23团队由D\'Alessandro、Licastro和Bongiorno代表。', tag: '会议' },
+  { date: '2024年7月', title: '校长代表 UniME', text: 'Ioppolo教授被任命为墨西拿大学企业和区域关系校长代表。', tag: '任命', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7206605488812093440' },
+  { date: '2024年5月', title: 'DTS Conference 2024 — 巴黎', text: '数字转型社会会议：展示PRIN和GAL项目的进展成果。', tag: '会议', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7202228696747823105' },
+  { date: '2024年1月', title: 'PRIN PNRR CE_IPSA获批', text: '与Arbolino教授（PI）和Ioppolo教授（co-PI）一起赢得PRIN PNRR CE_IPSA：工业园区与周边地区循环经济发展模式。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7092906861577826304' },
+  { date: '2023年12月', title: 'PRIN 2022 H-SMA-CE获批', text: 'Ioppolo教授（PI）和Arbolino教授（co-PI）赢得PRIN 22："H-SMA-CE：历史小镇循环经济转型决策支持系统"。', tag: '项目', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7083366175581061120' },
+  { date: '2023年5月', title: 'Master Food第二届与商会和ICE合作', text: '在商会和ICE国际化支持下启动"食品、质量与国际管理"硕士第二届。', tag: '教育', link: 'https://www.linkedin.com/feed/update/urn:li:activity:6934492898407141377' },
+];
+---
+
+<BaseLayout title="新闻 | LQS Lab UniME" lang={lang}>
+  <PageHero label="新闻" title="实验室新闻" subtitle="精益与质量解决方案实验室的活动、事件、出版物和里程碑" />
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative">
+        <div class="absolute left-4 top-0 bottom-0 w-px bg-dark-700"></div>
+        <div class="space-y-8">
+          {news.map((item, i) => (
+            <div class={`reveal reveal-delay-${Math.min(i % 3 + 1, 3)} relative pl-12`}>
+              <div class="absolute left-2.5 top-1.5 w-3 h-3 rounded-full border-2 bg-dark-400 border-dark-400"></div>
+              <div class="bg-dark-900 border border-dark-700 rounded-xl overflow-hidden hover:border-dark-600 transition-colors">
+                {item.img && (
+                  <img src={item.img} alt={item.title} class={`w-full h-48 object-cover ${item.imgPos === 'top' ? 'object-top' : ''}`} loading="lazy" />
+                )}
+                <div class="p-5">
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                  <span class="text-xs font-mono text-dark-500">{item.date}</span>
+                  <span class="px-2 py-0.5 text-xs rounded-md font-mono bg-dark-800 border border-dark-700 text-dark-400">{item.tag}</span>
+                </div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{item.title}</h3>
+                <p class="text-sm text-dark-400 mt-2">{item.text}</p>
+                {item.link && (
+                  <a href={item.link} target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+                    在LinkedIn上查看 &rarr;
+                  </a>
+                )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

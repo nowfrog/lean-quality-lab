@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'zh';
+---
+
+<BaseLayout title="H-SMA-CE | LQS Lab UniME" lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/h-sma-ce/header.jpg" alt="Taurasi历史小镇" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">PRIN 2022 | NextGenerationEU</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">H-SMA-CE</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">意大利历史小镇可持续循环经济转型决策支持系统</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 信息框 -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">项目编号</span>
+            <p class="text-dark-100 font-mono mt-1">2022JZLL7J</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">预算</span>
+            <p class="text-dark-100 font-mono mt-1">&euro;250,000</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">项目周期</span>
+            <p class="text-dark-100 font-mono mt-1">2024-2027</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">CUP</span>
+            <p class="text-dark-100 font-mono mt-1 text-xs">UniMe J53D23009390006<br/>UniOr C53D23004860006</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目概述 -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">项目概述</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">面向历史小镇的循环经济</h2>
+        <p class="text-dark-400 leading-relaxed mb-4"><strong class="text-dark-100">H-SMA-CE</strong>项目（PRIN 2022，由意大利大学与研究部MUR和NextGenerationEU资助）专门为意大利历史小镇（即<em>borghi</em>）开发循环经济（CE）模型。项目的核心目标是设计一套决策支持系统（DSS），使地方决策者能够规划和模拟其辖区的循环转型。</p>
+        <p class="text-dark-400 leading-relaxed mb-4">研究围绕<strong class="text-dark-100">三个宏观阶段</strong>展开：<span class="text-neon font-mono text-xs">理解</span>（RA1 + RA2），通过物质流分析、利益相关者映射、SWOT分析和系统文献综述对Taurasi案例进行实证调查；<span class="text-cyan font-mono text-xs">评估</span>（RA3），构建复合循环指数并对废弃物、能源、水资源、农业和历史建筑遗产流进行多目标优化；<span class="text-gold font-mono text-xs">模拟</span>（RA4），开发基于电子表格的DSS，供决策者直接使用。</p>
+        <p class="text-dark-400 leading-relaxed">该项目采用跨学科方法，整合管理工程、区域经济学、环境分析和社会科学，旨在弥合循环经济学术研究与其在中小型城镇实际应用之间的差距。</p>
+      </div>
+
+      <!-- 案例研究：Taurasi -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">案例研究</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Taurasi：伊尔皮尼亚的中世纪山城</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">案例研究聚焦于<strong class="text-dark-100">Taurasi</strong>，这是一座位于伊尔皮尼亚（坎帕尼亚大区，阿韦利诺省）海拔398米的中世纪山城。其历史中心以<em>侯爵城堡</em>（Castello Marchionale）为标志，这座伦巴第时期的要塞见证了数百年的历史积淀。Taurasi以其DOCG葡萄酒闻名于世,这是坎帕尼亚首个DOCG认证，于1993年获得,由<strong class="text-dark-100">17家活跃酒庄</strong>使用Aglianico葡萄酿造。产区规定最低陈酿期为36个月，酒体呈现黑樱桃和甘草的风味。除葡萄种植外，橄榄栽培（Ravece品种）构成了完整的农业景观。该镇每年举办葡萄酒博览会和电影节，这些活动推动了以葡萄酒文化为核心的可持续发展框架。</p>
+
+        <!-- Taurasi 照片网格 -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/h-sma-ce/taurasi1.jpg" alt="Taurasi全景" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/h-sma-ce/taurasi2.jpg" alt="Taurasi历史中心" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+        </div>
+        <p class="text-xs text-dark-400 italic mb-6">Taurasi，伊尔皮尼亚（坎帕尼亚）的中世纪山城</p>
+
+        <!-- 全宽照片 -->
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/h-sma-ce/taurasi3.jpg" alt="Taurasi葡萄园与风景" class="w-full h-80 object-cover" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- 研究活动 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">研究活动</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">四项研究活动</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { code: 'RA1', title: '背景分析', desc: '对Taurasi地区的实证调查：一手和二手数据收集、物质流分析（MFA）、利益相关者映射和SWOT分析。为循环转型构建知识基础。' },
+            { code: 'RA2', title: '系统综述与框架', desc: '关于历史小镇循环经济的系统文献综述。定义概念框架并识别适用于borghi的国际最佳实践。' },
+            { code: 'RA3', title: '循环指数与优化', desc: '开发复合循环指数和多目标优化模型。对废弃物、能源、水资源、农业和历史建筑遗产流进行综合分析。' },
+            { code: 'RA4', title: '决策支持系统', desc: '为地方决策者设计和实施基于电子表格的DSS。模拟循环转型情景，提供绩效指标和权衡分析。' },
+          ].map(ra => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{ra.code}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{ra.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{ra.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- 战略 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">战略</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">循环转型的三大支柱</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">项目战略基于三个互补支柱，每个支柱针对历史小镇循环经济转型的一个关键维度。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">领土与受保护遗产</h3>
+            <p class="text-sm text-dark-400 mt-2">分析和提升历史建筑遗产和农业景观，特别关注borghi的保护和传统生产链作为循环经济的驱动力。</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-cyan/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">循环指数与优化</h3>
+            <p class="text-sm text-dark-400 mt-2">构建衡量区域循环水平的复合指标和多目标优化模型，以平衡环境、经济和社会可持续性。</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-gold/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">面向决策者的DSS</h3>
+            <p class="text-sm text-dark-400 mt-2">一个基于电子表格的操作工具，使决策者能够模拟情景、评估权衡并规划针对每个borgo具体实际的循环经济干预措施。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 数据统计 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">&euro;25万</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">资金</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-cyan">2</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">研究单位</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">8</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">研究人员</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">9</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">发表论文</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 出版物 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">成果</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">学术出版物</h2>
+        <div class="space-y-4">
+          {[
+            { title: 'A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns: The H-SMA-CE Project', authors: 'Ioppolo G., Calabrò G., Caristi G., Ciliberto C., Russo I., De Simone L., Lopes A., Arbolino R.', journal: 'Sustainability', year: '2026', doi: '10.3390/su18073302' },
+            { title: 'The Circular Economy Transition Within Historical Small Town: Preliminary Results', authors: 'Ioppolo G., Caristi G., D\'Alessandro C., Calabrò G., Szopik-Depczyńska K.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-031-78623-5_38' },
+            { title: 'Smart Transition in Historical Small Towns: First Insights from a Digital Material Flow Assessment in the Italian Case Study of Taurasi', authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-032-09066-9_20' },
+            { title: "Unveiling Taurasi's Hidden Potential: A Wine Culture-Centered Framework for Sustainable Development and Circular Economy Transition in Historic Small Towns", authors: 'Ciliberto C., Calabrò G., Caristi G., Arbolino R., Ioppolo G.', journal: 'Sustainability', year: '2025', doi: '10.3390/su17135704' },
+            { title: 'From Data Scarcity to Strategic Action: A Managerial Framework for Circular Economy Implementation in Mediterranean Small Towns', authors: 'Licastro A., D\'Alessandro C., Szopik-Depczyńska K., Arbolino R., Ioppolo G.', journal: 'Sustainability', year: '2025', doi: '10.3390/su17146474' },
+            { title: 'Analysing Italian Historical Small Towns: A Cultural and Geographic Mosaic of Identity', authors: 'Ciliberto C., Ioppolo G., Caristi G., Calabrò G.', journal: 'FEMIB 2025 Proceedings', year: '2025', doi: '10.5220/0013426600003956' },
+            { title: 'Digital Transformation for Circular Economy: Business Process Innovation in Historic Small Towns - The Taurasi Case Study', authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'Springer Proceedings (即将出版)', year: '2025' },
+            { title: "Sustainable Circularity: Tracing Taurasi's Historical Small Town Resilience", authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'XXXII Congresso Nazionale di Scienze Merceologiche', year: '2024' },
+            { title: 'A Multi-Criteria Decision-Making Analysis of Waste Management Practices in Historical Small Towns: The Taurasi Case Study', authors: 'Ioppolo G., Calabrò G.', journal: 'Atti della Accademia Peloritana dei Pericolanti', year: '2025' },
+          ].map(pub => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+              <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{pub.title}</h4>
+              <p class="text-sm text-dark-400 mt-2">{pub.authors}</p>
+              <div class="flex flex-wrap items-center gap-3 mt-3">
+                <span class="text-sm text-cyan italic">{pub.journal}</span>
+                <span class="text-xs font-mono text-dark-500">{pub.year}</span>
+              </div>
+              {pub.doi && (
+                <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+                  DOI: {pub.doi}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- 团队 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">团队</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">项目团队</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">墨西拿大学, 牵头单位</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-dark-400">
+              <li><span class="text-neon font-mono text-xs">PI</span> Giuseppe Ioppolo</li>
+              <li>Grazia Calabr&ograve;</li>
+              <li>Giuseppe Caristi</li>
+              <li>Cristina Ciliberto</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">那不勒斯东方大学</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-dark-400">
+              <li><span class="text-cyan font-mono text-xs">co-PI</span> Roberta Arbolino</li>
+              <li>Antonio Lopes</li>
+              <li>Luisa De Simone</li>
+              <li>Ilaria Russo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 bg-dark-900 border border-dark-700 rounded-xl p-5">
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">顾问委员会</h3>
+          <p class="text-sm text-dark-400 mt-2"><span class="text-gold font-mono text-xs">顾问</span> Katarzyna Szopik-Depczy&#324;ska, 什切青大学，波兰</p>
+        </div>
+      </div>
+
+      <!-- 链接 -->
+      <div class="reveal reveal-delay-2">
+        <a href="https://hsmaceprin22.github.io" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          访问H-SMA-CE专属网站
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { useTranslations } from '../../i18n/utils';
+const lang = 'en';
+const t = useTranslations(lang);
+
+const members = [
+  {
+    id: 'ioppolo',
+    name: 'Giuseppe Ioppolo',
+    role: t('team.coordinator'),
+    subtitle: 'Full Professor | Commodity Science (ECON-10/A)',
+    dept: 'Department of Economics | UniME',
+    bio: 'Giuseppe Ioppolo is a Civil Engineer for Environment with a focus on sustainability and environmental management, he is a Full Professor of Commodities Science, and a Lecturer in the Technology of Production Cycles and TQM, Department of Economics, University of Messina. He is a member of the Doctoral School of Economics, Management, and Statistics. He is Delegate of the Rector for Relations with Local Enterprises. As Editor-in-Chief of the journal Sustainability, one of the leading international journals on the topic of sustainability, he has served as a referee for Italy and Europe in numerous scientific committees at international conferences. As a Visiting Professor, he has lectured at Tsinghua University (Beijing, China), BJTU MBA (Beijing, China), Tokyo University (Tokyo, Japan), and Santa Barbara University (California, USA). He is the PI for several international programs and is particularly active in China. He has participated in national and international research programs such as Interreg and Horizon. Finally, he has carried out process coordination activities in engineering and spatial planning projects, both in Italy (such as the Aeolian Islands, Sardinia, Valle d\'Agrò, etc.) and abroad (Tunisia, Croatia, etc.).',
+    tags: ['Circular Economy', 'Industrial Ecology', 'Sustainable Development', 'Environmental Management', 'Regional Planning'],
+    initials: 'GI',
+    img: '/images/team/ioppolo.jpg',
+    links: [
+      { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=36097581800' },
+      { label: 'ORCID', url: 'https://orcid.org/0000-0003-0262-8435' },
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=u0gVgvQAAAAJ&hl=en' },
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Giuseppe-Ioppolo' },
+    ]
+  },
+  {
+    id: 'dalessandro',
+    name: "Carlotta D'Alessandro",
+    role: t('team.researcher.f'),
+    subtitle: 'PhD | XXXVI Cycle EMS',
+    dept: 'Department of Economics | UniME',
+    bio: 'Carlotta D\'Alessandro holds a Ph.D. in Economics, Management and Statistics with a focus on Sustainability and Circular Economy from the University of Messina. Her research is dedicated to addressing critical issues in sustainability and promoting circular economy practices, working towards a more sustainable and circular future. She is currently serving as a Guest Editor for an international scientific journal.',
+    tags: ['Sustainability', 'Circular Economy', 'Sustainable Development', 'Sustainable Innovation Management', 'Industrial Ecology'],
+    initials: 'CD',
+    img: '/images/team/dalessandro.jpg',
+    links: [
+      { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=58534571400' },
+      { label: 'ORCID', url: 'https://orcid.org/0000-0002-7361-4201' },
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?user=6wedFFkAAAAJ&hl=it&oi=ao' },
+    ]
+  },
+  {
+    id: 'licastro',
+    name: 'Antonio Licastro',
+    role: t('team.researcher'),
+    subtitle: 'PhD in Economics, Management and Statistics',
+    dept: 'Department of Economics | UniME',
+    bio: 'Antonio Licastro is currently employed as a research fellow at the Department of Human and Social Sciences, University of Naples "L\'Orientale". He completed his PhD with laude in 2025 at the University of Messina, Department of Economics. His areas of expertise are econometrics, Life Cycle Assessment (LCA), industrial ecology, and sustainability science, with focus on critical environmental challenges in agricultural and territorial systems. Current research interests include developing accessible assessment methodologies for sustainability transitions in small communities, integrating digital technologies in environmental monitoring systems, and advancing the theoretical foundations of circular economy applications in agricultural contexts.',
+    tags: ['Econometrics', 'Life Cycle Assessment', 'Industrial Ecology', 'Sustainability Science', 'Circular Economy'],
+    initials: 'AL',
+    img: '/images/team/licastro.jpg',
+    links: [
+      { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=57278726700' },
+      { label: 'ORCID', url: 'https://orcid.org/0000-0002-4735-6237' },
+      { label: 'Scholar', url: 'https://scholar.google.com/citations?hl=it&user=icXhf2EAAAAJ' },
+    ]
+  },
+  {
+    id: 'morana',
+    name: 'Andrea Morana',
+    role: t('team.phd'),
+    subtitle: 'PhD Student',
+    dept: 'Department of Economics | UniME',
+    initials: 'AM',
+    links: []
+  },
+];
+
+const collaborators = [
+  {
+    id: 'szopik',
+    name: 'Katarzyna Szopik-Depczyńska',
+    role: 'International collaboration',
+    subtitle: 'Associate Professor | Management and Quality Sciences',
+    dept: 'University of Szczecin | Poland',
+    bio: 'Associate Professor in Management at the University of Szczecin (Poland), serves as Senior Researcher in Sustainable Innovation Management for the H-SMA-CE project. Her work focuses on technological innovation analysis, circular economy methodologies, and environmental assessment tools for Historical Small Towns, supporting DSS development and testing. Frequent co-author with Prof. Ioppolo, with around 170 publications in Journal of Cleaner Production, Land Use Policy, Ecological Indicators. Co-author of "Total Quality Management and Lean Thinking 5.0" (Routledge, 2024).',
+    tags: ['Innovation Management', 'R&D', 'Sustainability', 'CSR'],
+    initials: 'KS',
+    img: '/images/team/szopik.jpg',
+    links: [
+      { label: 'Scholar', url: 'https://scholar.google.pl/citations?user=lL4k3n0AAAAJ&hl=pl' },
+      { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Katarzyna-Szopik-Depczynska' },
+    ]
+  },
+];
+---
+
+<BaseLayout title={t('team.title')} lang={lang}>
+  <PageHero label={t('team.label')} title={t('team.h1')} subtitle={t('team.subtitle')} />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-6">
+        {members.map((m, i) => (
+          <div id={m.id} class={`reveal reveal-delay-${Math.min(i+1,3)} group bg-dark-900 border border-dark-700 rounded-2xl overflow-hidden card-hover scroll-mt-24`}>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-4">
+                  {m.img ? (
+                    <img src={m.img} alt={m.name} class="w-14 h-14 rounded-full object-cover ring-2 ring-neon/20 shrink-0" loading="lazy" />
+                  ) : (
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-dark-800 to-dark-700 ring-2 ring-dark-600 shrink-0">
+                      <span class="font-[family-name:var(--font-display)] text-lg font-bold text-dark-500 group-hover:text-neon/30 transition-colors duration-500">{m.initials}</span>
+                    </div>
+                  )}
+                  <div>
+                    <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100">{m.name}</h3>
+                    <p class="text-xs text-dark-400 mt-0.5">{m.subtitle}</p>
+                    <p class="text-xs text-dark-500 font-mono">{m.dept}</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 text-[10px] font-mono bg-dark-800 border border-neon/20 rounded-md text-neon uppercase tracking-wider shrink-0">{m.role}</span>
+              </div>
+              {m.bio && <p class="text-sm text-dark-400 mt-3 leading-relaxed">{m.bio}</p>}
+              {m.tags && m.tags.length > 0 && (
+                <div class="flex flex-wrap gap-1.5 mt-3">
+                  {m.tags.map(tag => (
+                    <span class="px-2 py-0.5 text-[10px] rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">{tag}</span>
+                  ))}
+                </div>
+              )}
+              {m.links && m.links.length > 0 && (
+                <div class="flex flex-wrap gap-3 mt-3 pt-3 border-t border-dark-700/50">
+                  {m.links.map(link => (
+                    <a href={link.url} target="_blank" rel="noopener" class="text-xs text-dark-400 hover:text-neon transition-colors font-mono tracking-wide">{link.label}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16">
+        <span class="text-cyan font-mono text-sm tracking-widest uppercase reveal">International collaboration</span>
+        <div class="space-y-6 mt-6">
+          {collaborators.map((m, i) => (
+            <div id={m.id} class={`reveal reveal-delay-1 group bg-dark-900 border border-cyan/20 rounded-2xl overflow-hidden card-hover scroll-mt-24`}>
+              <div class="p-5">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-4">
+                    {m.img ? (
+                      <img src={m.img} alt={m.name} class="w-14 h-14 rounded-full object-cover ring-2 ring-cyan/20 shrink-0" loading="lazy" />
+                    ) : (
+                      <div class="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-dark-800 to-dark-700 ring-2 ring-dark-600 shrink-0">
+                        <span class="font-[family-name:var(--font-display)] text-lg font-bold text-dark-500 group-hover:text-cyan/30 transition-colors duration-500">{m.initials}</span>
+                      </div>
+                    )}
+                    <div>
+                      <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100">{m.name}</h3>
+                      <p class="text-xs text-dark-400 mt-0.5">{m.subtitle}</p>
+                      <p class="text-xs text-dark-500 font-mono">{m.dept}</p>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 text-[10px] font-mono bg-dark-800 border border-cyan/20 rounded-md text-cyan uppercase tracking-wider shrink-0">{m.role}</span>
+                </div>
+                {m.bio && <p class="text-sm text-dark-400 mt-3 leading-relaxed">{m.bio}</p>}
+                {m.tags && m.tags.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5 mt-3">
+                    {m.tags.map(tag => (
+                      <span class="px-2 py-0.5 text-[10px] rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">{tag}</span>
+                    ))}
+                  </div>
+                )}
+                {m.links && m.links.length > 0 && (
+                  <div class="flex flex-wrap gap-3 mt-3 pt-3 border-t border-dark-700/50">
+                    {m.links.map(link => (
+                      <a href={link.url} target="_blank" rel="noopener" class="text-xs text-dark-400 hover:text-cyan transition-colors font-mono tracking-wide">{link.label}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

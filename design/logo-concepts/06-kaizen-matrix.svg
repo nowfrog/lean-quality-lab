@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LQS Lab — Kaizen Matrix">
+  <title>LQS Lab — Kaizen Matrix</title>
+  <!--
+    Concept: griglia 4x4 di punti. La diagonale ascendente (bottom-left → top-right)
+    è piena in emerald — richiamo al "trend up" del miglioramento continuo / Kaizen.
+    Gli altri 12 punti sono outline in antracite: spazio di miglioramento potenziale.
+    Molto distintivo, funziona nitido anche a 16px.
+  -->
+  <g fill="none" stroke="#0f172a" stroke-width="3">
+    <!-- Row 1 (top) -->
+    <circle cx="60"  cy="60" r="8"/>
+    <circle cx="100" cy="60" r="8"/>
+    <circle cx="140" cy="60" r="8"/>
+    <!-- Row 2 -->
+    <circle cx="60"  cy="100" r="8"/>
+    <circle cx="100" cy="100" r="8"/>
+    <circle cx="180" cy="100" r="8"/>
+    <!-- Row 3 -->
+    <circle cx="60"  cy="140" r="8"/>
+    <circle cx="140" cy="140" r="8"/>
+    <circle cx="180" cy="140" r="8"/>
+    <!-- Row 4 (bottom) -->
+    <circle cx="100" cy="180" r="8"/>
+    <circle cx="140" cy="180" r="8"/>
+    <circle cx="180" cy="180" r="8"/>
+  </g>
+  <!-- Ascending diagonal (filled emerald) -->
+  <g fill="#0ea968">
+    <circle cx="60"  cy="180" r="12"/>
+    <circle cx="100" cy="140" r="12"/>
+    <circle cx="140" cy="100" r="12"/>
+    <circle cx="180" cy="60"  r="12"/>
+  </g>
+</svg>

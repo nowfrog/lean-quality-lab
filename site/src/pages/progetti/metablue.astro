@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'it';
+---
+
+<BaseLayout title="MeTaBlue - Messina Taormina Costa Blu | LQS Lab UniME" lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/metablue/taormina-panorama.jpg" alt="Taormina panorama" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">Destination Management Organization</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">MeTaBlue</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">Messina Taormina Costa Blu &mdash; Un modello unitario di sviluppo sostenibile, dalla Costa Blu alla Sicilia in miniatura</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Info box -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Tipo</span>
+            <p class="text-dark-100 font-mono mt-1">DMO</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Area</span>
+            <p class="text-dark-100 font-mono mt-1">Messina &ndash; Taormina</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Anno</span>
+            <p class="text-dark-100 font-mono mt-1">2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Il progetto -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Il Progetto</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Un distretto turistico tra innovazione e tradizione</h2>
+        <p class="text-dark-400 leading-relaxed mb-4"><strong class="text-dark-100">MeTaBlue &mdash; Messina Taormina Costa Blu</strong> &egrave; una nuova Destination Management Organization (DMO) che unisce tutti i comuni tra Giardini Naxos e Messina. L'assemblea costitutiva si &egrave; tenuta il 18 ottobre 2025 presso il Palazzo Duchi di Santo Stefano a Taormina, su iniziativa del Comune di Taormina.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">Il progetto &egrave; l'evoluzione naturale del lavoro intrapreso negli anni precedenti per promuovere il brand <strong class="text-dark-100">Costa Blu</strong> come marchio di eccellenza, con la visione di una rete di comuni capaci di condividere strategie, strumenti e risorse per innalzare gli standard di servizio, promuovere la sostenibilit&agrave; e costruire un brand territoriale forte, riconoscibile e competitivo.</p>
+        <p class="text-dark-400 leading-relaxed">Il Prof. Ioppolo &egrave; stato incaricato, insieme al Prof. Michele Limosani, di sviluppare il modello di sviluppo sostenibile a scala locale che guida la strategia del distretto.</p>
+      </div>
+
+      <!-- Foto -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/metablue/header.jpg" alt="Assemblea costitutiva MeTaBlue a Taormina" class="w-full h-80 object-cover" loading="lazy" />
+        </div>
+        <p class="text-xs text-dark-400 italic mt-2">Assemblea costitutiva del DMO MeTaBlue, Palazzo Duchi di Santo Stefano, Taormina (ottobre 2025)</p>
+      </div>
+
+      <!-- Obiettivi -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Obiettivi</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Strategie chiave</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Integrazione turistica</h3>
+            <p class="text-sm text-dark-400 mt-2">Creazione di percorsi e pacchetti che collegano costa e collina: turismo culturale, sportivo, enogastronomico e naturalistico.</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-cyan/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Mobilit&agrave; sostenibile</h3>
+            <p class="text-sm text-dark-400 mt-2">Sentieri escursionistici, piste ciclabili, aree attrezzate e mobilit&agrave; turistica con veicoli ibridi elettrico-idrogeno.</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-gold/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Brand territoriale</h3>
+            <p class="text-sm text-dark-400 mt-2">Standard di qualit&agrave; urbana uniformi, certificazioni Bandiera Blu e promozione di un brand Costa Blu riconoscibile a livello internazionale.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rassegna stampa -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Rassegna Stampa</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Il progetto nei media</h2>
+        <div class="space-y-3">
+          {[
+            { title: 'Nasce "METAblue": Messina e Taormina unite per il rilancio turistico', source: 'Tempostretto', url: 'https://www.tempostretto.it/news/nasce-metablue-messina-taormina-unite-rilancio-turistico.html' },
+            { title: 'Costituzione del DMO "MeTaBlue – Messina Taormina Costa Blu"', source: 'Il Sicilia', url: 'https://ilsicilia.it/costituzione-del-distretto-turistico-territoriale-metablue-messina-taormina-costa-blu-de-luca-modello-unitario-di-sviluppo-dalla-costa-blu-alla-sicilia-in-miniatura/' },
+            { title: 'Distretto turistico "Messina-Taormina Costa Blu", si parte', source: 'SikilyNews', url: 'https://www.sikilynews.it/attualita/distretto-turistico-messina-taormina-costa-blu-si-parte-con-un-incarico-da-50mila-euro/20627' },
+            { title: 'De Luca costituisce il DMO Taormina-Messina-Costa Blu', source: 'Taormina News 24', url: 'https://taorminanews24.com/de-luca-costituisce-il-distretto-turistico-taormina-messina-costa-blu-incarico-da-50-mila-euro-ad-un-tecnico-di-messina/' },
+          ].map(article => (
+            <a href={article.url} target="_blank" rel="noopener" class="block bg-dark-900 border border-dark-700 rounded-xl p-4 hover:border-neon/20 transition-all group">
+              <p class="font-[family-name:var(--font-display)] font-bold text-dark-100 group-hover:text-neon transition-colors">{article.title}</p>
+              <p class="text-xs text-dark-500 font-mono mt-1">{article.source}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

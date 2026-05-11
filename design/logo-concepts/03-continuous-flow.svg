@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Lean &amp; Quality Solutions Lab - Continuous Flow">
+  <!--
+    CONCEPT 3 · "CONTINUOUS FLOW"
+    Quattro frecce curve si inseguono in un cerchio continuo (PDCA cycle / Kaizen).
+    Ogni freccia è un quadrante ~80° con punta, separato da gap sottile.
+    Lettura: Plan → Do → Check → Act = miglioramento continuo.
+    Forma minimale, iconica, riconoscibile anche in favicon 16x16.
+  -->
+  <defs>
+    <style>
+      .petal { fill: #1B4332; }
+      .petal-accent { fill: #D4A017; }
+    </style>
+  </defs>
+
+  <g transform="translate(120 120)">
+    <!--
+      Ogni "petalo" è un arco con punta.
+      Costruito come path chiuso: arco esterno → punta → arco interno.
+    -->
+
+    <!-- Quadrante 1 (alto-destra) - ACCENT -->
+    <path class="petal-accent" transform="rotate(0)"
+      d="M 20 -78
+         A 80 80 0 0 1 78 -20
+         L 66 -4
+         A 68 68 0 0 0 4 -66
+         Z"/>
+
+    <!-- Quadrante 2 (basso-destra) -->
+    <path class="petal" transform="rotate(90)"
+      d="M 20 -78
+         A 80 80 0 0 1 78 -20
+         L 66 -4
+         A 68 68 0 0 0 4 -66
+         Z"/>
+
+    <!-- Quadrante 3 (basso-sinistra) -->
+    <path class="petal" transform="rotate(180)"
+      d="M 20 -78
+         A 80 80 0 0 1 78 -20
+         L 66 -4
+         A 68 68 0 0 0 4 -66
+         Z"/>
+
+    <!-- Quadrante 4 (alto-sinistra) -->
+    <path class="petal" transform="rotate(270)"
+      d="M 20 -78
+         A 80 80 0 0 1 78 -20
+         L 66 -4
+         A 68 68 0 0 0 4 -66
+         Z"/>
+
+    <!-- Nodo centrale -->
+    <circle cx="0" cy="0" r="18" fill="#FAFAFA"/>
+    <circle cx="0" cy="0" r="10" fill="#1B4332"/>
+  </g>
+</svg>

@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'en';
+---
+
+<BaseLayout title="GAL Terre dell'Etna e dell'Alcantara | LQS Lab UniME" lang={lang}>
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/gal-etna/cover-strategico-001.png" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">Local development</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">GAL Terre dell'Etna<br/>e dell'Alcantara</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">Reading the past to build the future. Local Development Plan for the 26 municipalities of the partnership.</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div><span class="text-xs font-mono text-dark-500 uppercase">Type</span><p class="text-dark-100 font-mono mt-1">LAG / LEADER</p></div>
+          <div><span class="text-xs font-mono text-dark-500 uppercase">Municipalities</span><p class="text-dark-100 font-mono mt-1">26</p></div>
+          <div><span class="text-xs font-mono text-dark-500 uppercase">Population</span><p class="text-dark-100 font-mono mt-1">175,278</p></div>
+          <div><span class="text-xs font-mono text-dark-500 uppercase">Area</span><p class="text-dark-100 font-mono mt-1">965.52 km²</p></div>
+        </div>
+      </div>
+
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">The Project</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Development Plan for the Partnership Municipalities</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">GAL Terre dell'Etna e dell'Alcantara S.c.c.a.r.l. is a Local Action Group operating within the LEADER intervention of the Sicily PSP, promoting integrated local development in an extraordinary territory: the eastern slopes of Etna, the Alcantara Valley, and the coastline from Giardini Naxos to Riposto.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">The Lean & Quality Solutions Lab was commissioned to prepare the <strong class="text-dark-100">Local Development Plan (PSL)</strong> under Operational Project No. 1/2023, approved by Board Resolution No. 142 of December 30, 2023, entitled <em>"Project for the Future of the Etna and Alcantara Lands"</em>.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">The project produced a multilevel scientific territorial study involving all 26 municipalities of the partnership, with an in-depth analysis of the environmental, socioeconomic, historical-cultural, and infrastructural context.</p>
+        <p class="text-dark-400 leading-relaxed">The Plan outlines a comprehensive, broad, and unified vision for territorial development in the medium-long term, defining growth hypotheses unified in a shared strategic design. It identifies intervention lines, actions, and projects, establishing a scale of priorities.</p>
+      </div>
+
+      <div class="reveal reveal-delay-1 mb-16">
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/gal-etna/report-04.png" alt="Map of the 26 GAL municipalities" class="w-full" loading="lazy" />
+          <div class="p-4 bg-dark-900"><p class="text-xs text-dark-400 italic">The 26 partnership municipalities of GAL Terre dell'Etna e dell'Alcantara, across the provinces of Catania and Messina.</p></div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">The Territory</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">A unique heritage between volcano and river</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">The GAL territory covers 965.52 km² on the eastern side of Sicily, with a predominantly mountainous-hilly terrain. It encompasses the entire Alcantara River hydrographic basin and the North, East, and South slopes of Mount Etna, Europe's tallest active volcano.</p>
+        <p class="text-dark-400 leading-relaxed mb-6">The area hosts an exceptional natural heritage: <strong class="text-dark-100">3 Regional Parks</strong> (Etna Park, Nebrodi Mountains Park, Alcantara River Park), <strong class="text-dark-100">2 Nature Reserves</strong>, and <strong class="text-dark-100">22 SCI and SPA sites</strong>, covering 46,460 hectares of protected surface (48% of total territory).</p>
+        <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 mb-4">The four territorial zones</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {[{img:'zona-costiera.png',name:'Coastal Zone',desc:'From Giardini Naxos to Riposto. Tourism, port infrastructure, citrus farming.'},{img:'zona-pedemontana.png',name:'Foothill Zone',desc:'Giarre, Mascali, Piedimonte Etneo. Viticulture, citrus farming, urban centers.'},{img:'zona-valle.png',name:'Alcantara Valley',desc:'Francavilla, Castiglione, Randazzo. River Park, historic villages, food & wine.'},{img:'zona-montana.png',name:'Mountain Zone',desc:'Etna and Nebrodi slopes. Natural parks, hiking, biodiversity.'}].map(z => (
+            <div class="rounded-xl overflow-hidden border border-dark-700">
+              <img src={`/images/projects/gal-etna/${z.img}`} alt={z.name} class="w-full h-32 object-cover" loading="lazy" />
+              <div class="p-3 bg-dark-900"><p class="text-xs text-dark-100 font-bold">{z.name}</p><p class="text-[10px] text-dark-400 mt-1">{z.desc}</p></div>
+            </div>
+          ))}
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Province of Catania (17)</h3><p class="text-xs text-dark-400 mt-2">Calatabiano, Castiglione di Sicilia, Fiumefreddo di Sicilia, Giarre, Linguaglossa, Mascali, Milo, Nicolosi, Pedara, Piedimonte Etneo, Randazzo, Riposto, Sant'Alfio, Santa Venerina, Trecastagni, Viagrande, Zafferana Etnea</p></div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Province of Messina (9)</h3><p class="text-xs text-dark-400 mt-2">Francavilla di Sicilia, Gaggi, Giardini-Naxos, Graniti, Malvagna, Moio Alcantara, Motta Camastra, Roccella Valdemone, Santa Domenica Vittoria</p></div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Methodology</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Multilevel scientific approach</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">The study adopts a rigorous territorial analysis methodology structured in four complementary dimensions, aligned with international sustainable development frameworks (Agenda 2030, European Green Deal, CAP 2023-2027).</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[{icon:'01',title:'Territory & Environment',desc:'Urban planning, transport infrastructure, historic architecture, mapping of abandoned villages, protected areas census, biodiversity assessment.'},{icon:'02',title:'Productive Fabric',desc:'Complete enterprise census by sector (agriculture, industry, services), with tourism deep-dive: accommodation capacity, tourist services by category.'},{icon:'03',title:'Socioeconomic Framework',desc:'Economic analysis through labor market and business indicators. Population study through demographic and socioeconomic indices. Territory mapping by Local Labour Systems.'},{icon:'04',title:'History & Traditions',desc:'Historical economic and social evolution of the Etna and Alcantara territories. Focus on ancient crafts and traditions, analysis of place identity.'}].map(item => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{item.icon}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{item.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Tourism</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Accommodation infrastructure</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">The tourism analysis mapped the distribution and capacity of accommodation facilities in each municipality.</p>
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/gal-etna/mappa-turismo.png" alt="Accommodation map" class="w-full" loading="lazy" />
+          <div class="p-4 bg-dark-900"><p class="text-xs text-dark-400">Bed capacity and facility types for each GAL municipality.</p></div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Excellence</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Excellence supply chains and infrastructure</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">The GAL territory hosts internationally renowned agri-food supply chains. Etna viticulture, with 144 wineries across certified contrade, represents a globally unique case of "heroic" viticulture on volcanic soils.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="rounded-2xl overflow-hidden border border-dark-700"><img src="/images/projects/gal-etna/mappa-etna-doc.jpg" alt="Etna DOC Wine Map" class="w-full h-72 object-cover" loading="lazy" /><div class="p-4 bg-dark-900"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Etna DOC Wines</h3><p class="text-xs text-dark-400 mt-1">Certified Contrade and Additional Geographic Units. Volcanic terroir producing internationally recognized wines.</p></div></div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700"><img src="/images/projects/gal-etna/ferrovia-alcantara.jpg" alt="Alcantara-Randazzo Railway" class="w-full h-72 object-cover" loading="lazy" /><div class="p-4 bg-dark-900"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Alcantara-Randazzo Railway</h3><p class="text-xs text-dark-400 mt-1">Historic line (1959-1995, 37 km) with potential for cycling greenway conversion.</p></div></div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Output</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Research products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col"><div class="aspect-[3/4] overflow-hidden"><img src="/images/projects/gal-etna/cover-studio-page-001.png" alt="Study Cover" class="w-full h-full object-cover object-top" loading="lazy" /></div><div class="p-4"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Scientific Territorial Study</h3><p class="text-xs text-dark-400 mt-1">Report on the State of the Territorial System.</p></div></div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col"><div class="aspect-[3/4] overflow-hidden"><img src="/images/projects/gal-etna/cover-strategico-001.png" alt="Strategic Plan Cover" class="w-full h-full object-cover object-top" loading="lazy" /></div><div class="p-4"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Strategic Plan</h3><p class="text-xs text-dark-400 mt-1">Reading the past to build the future.</p></div></div>
+        </div>
+        <div class="space-y-4">
+          {[{num:'2',title:'Interactive Report',desc:'Navigable web dashboard with data and indicators for each municipality.'},{num:'3a',title:'Summary Document',desc:'Operational summary for policymakers and stakeholders.'},{num:'3b',title:'Position Paper',desc:'Scientific recommendations based on comparative analysis with neighboring LAGs.'},{num:'4',title:'Public Presentation',desc:'Results presented to GAL partnership (May 15, 2025).'}].map(item => (
+            <div class="flex gap-4 items-start bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-dark-800 border border-neon/20 flex items-center justify-center shrink-0"><span class="text-neon font-mono text-xs font-bold">{item.num}</span></div>
+              <div><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{item.title}</h3><p class="text-sm text-dark-400 mt-1">{item.desc}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Strategy</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Community-Led Local Development Strategy</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">The strategy is structured around three fundamental axes.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Competitive territory</h3><p class="text-sm text-dark-400 mt-2">Local production chains enhancement, SME innovation, investment attraction, service digitalization.</p></div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Sustainable territory</h3><p class="text-sm text-dark-400 mt-2">UNESCO Etna heritage protection, ecological transition, circular economy, sustainable water management.</p></div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors"><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Liveable territory</h3><p class="text-sm text-dark-400 mt-2">Quality of life, countering depopulation, abandoned village regeneration, sustainable mobility.</p></div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Team</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Working group</h2>
+        <div class="bg-dark-900 border border-dark-700 rounded-xl p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">Scientific coordination</h3><ul class="space-y-2 text-sm text-dark-400"><li><span class="text-neon font-mono text-xs">Coord.</span> Prof. Giuseppe Ioppolo</li><li>Prof. Michele Limosani</li><li>Prof. Giuseppe Caristi</li><li>Prof. Roberta Arbolino</li><li>Prof. Katarzyna Szopik-Depczyńska</li></ul></div>
+            <div><h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">Researchers</h3><ul class="space-y-2 text-sm text-dark-400"><li>Dr. Carlotta D'Alessandro</li><li>Dr. Pietro Di Pietro</li><li>Dr. Andrea Morana</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <a href="https://galetnaalcantara.org" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">GAL website <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

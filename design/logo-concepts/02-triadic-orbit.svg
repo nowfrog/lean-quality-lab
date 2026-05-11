@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Lean &amp; Quality Solutions Lab - Triadic Orbit">
+  <!--
+    CONCEPT 2 · "TRIADIC ORBIT"
+    Tre ellissi ruotate a 60° una dall'altra si intersecano in un nodo centrale.
+    Rappresenta: Lean + Quality + Sustainability che convergono nell'innovazione.
+    Nodo centrale oro = il lab come punto d'incontro delle tre discipline.
+    Look astratto, dinamico, scientifico/tecnologico.
+  -->
+  <defs>
+    <style>
+      .orbit { fill: none; stroke: #1B4332; stroke-width: 6; }
+    </style>
+  </defs>
+
+  <g transform="translate(120 120)">
+    <!-- Orbita 1 (Lean) - orizzontale -->
+    <ellipse class="orbit" cx="0" cy="0" rx="85" ry="35" transform="rotate(0)"/>
+    <!-- Orbita 2 (Quality) - 60° -->
+    <ellipse class="orbit" cx="0" cy="0" rx="85" ry="35" transform="rotate(60)"/>
+    <!-- Orbita 3 (Sustainability) - 120° -->
+    <ellipse class="orbit" cx="0" cy="0" rx="85" ry="35" transform="rotate(120)"/>
+
+    <!-- Nodo centrale -->
+    <circle cx="0" cy="0" r="14" fill="#D4A017"/>
+    <circle cx="0" cy="0" r="6" fill="#1B4332"/>
+  </g>
+</svg>

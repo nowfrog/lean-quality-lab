@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+const lang = 'en';
+---
+
+<BaseLayout title="Privacy Policy | LQS Lab UniME" lang={lang}>
+  <PageHero label="Legal" title="Privacy Policy" />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-dark-400 leading-relaxed">
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Data Controller</h2>
+          <p>University of Messina | Department of Economics<br/>
+          Piazza Pugliatti, 1 | 98122 Messina (ME), Italy<br/>
+          Email: <a href="mailto:giuseppe.ioppolo@unime.it" class="text-neon hover:underline">giuseppe.ioppolo@unime.it</a></p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Types of data collected</h2>
+          <p>This website does not automatically collect personal data. Any personal data voluntarily provided by the user through the contact form (name, email, message) is processed solely to respond to the request and is not shared with third parties.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Legal basis for processing</h2>
+          <p>The processing of data provided through the contact form is based on the data subject's consent (Art. 6(1)(a) GDPR), expressed by the voluntary submission of the message.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Data retention</h2>
+          <p>Data provided through the contact form is retained only for the time strictly necessary to fulfill the request and is subsequently deleted.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Data subject rights</h2>
+          <p>Under Articles 15-22 of Regulation (EU) 2016/679 (GDPR), data subjects have the right to:</p>
+          <ul class="list-disc list-inside space-y-1 mt-2">
+            <li>Access their personal data</li>
+            <li>Request rectification or erasure</li>
+            <li>Restrict or object to processing</li>
+            <li>Request data portability</li>
+            <li>Withdraw consent at any time</li>
+            <li>Lodge a complaint with the Italian Data Protection Authority (Garante)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookies</h2>
+          <p>For information on cookie usage, please refer to our <a href="/en/cookie" class="text-neon hover:underline">Cookie Policy</a>.</p>
+        </div>
+
+        <p class="text-xs text-dark-500 font-mono">Last updated: May 2026</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

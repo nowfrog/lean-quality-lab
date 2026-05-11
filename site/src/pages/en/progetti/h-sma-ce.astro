@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'en';
+---
+
+<BaseLayout title="H-SMA-CE | LQS Lab UniME" lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/h-sma-ce/header.jpg" alt="Taurasi historical town" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">PRIN 2022 | NextGenerationEU</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">H-SMA-CE</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Info box -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Project Code</span>
+            <p class="text-dark-100 font-mono mt-1">2022JZLL7J</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Budget</span>
+            <p class="text-dark-100 font-mono mt-1">&euro;250,000</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Period</span>
+            <p class="text-dark-100 font-mono mt-1">2024-2027</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">CUP</span>
+            <p class="text-dark-100 font-mono mt-1 text-xs">UniMe J53D23009390006<br/>UniOr C53D23004860006</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Project -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">The Project</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Circular Economy for Historical Small Towns</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">The <strong class="text-dark-100">H-SMA-CE</strong> project (PRIN 2022, funded by MUR and NextGenerationEU) develops a Circular Economy (CE) model specifically designed for Italian historical small towns, known as <em>borghi</em>. The main objective is to design a Decision Support System (DSS) enabling local policymakers to plan and simulate the circular transition of their territory.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">The research is structured around <strong class="text-dark-100">three macro-phases</strong>: <span class="text-neon font-mono text-xs">Understanding</span> (RA1 + RA2), consisting of empirical investigation of the Taurasi case study through Material Flow Analysis, stakeholder mapping, SWOT analysis, and systematic literature review; <span class="text-cyan font-mono text-xs">Evaluating</span> (RA3), involving the construction of composite circularity indexes and multi-objective optimization applied to waste, energy, water, agriculture, and building heritage flows; <span class="text-gold font-mono text-xs">Simulating</span> (RA4), developing a spreadsheet-based DSS directly usable by policymakers.</p>
+        <p class="text-dark-400 leading-relaxed">The project adopts an interdisciplinary approach integrating management engineering, territorial economics, environmental analysis, and social sciences, aiming to bridge the gap between academic research on circular economy and its practical application in minor urban contexts.</p>
+      </div>
+
+      <!-- Case Study: Taurasi -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Case Study</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Taurasi: a Medieval Hill Town in Irpinia</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">The case study focuses on <strong class="text-dark-100">Taurasi</strong>, a medieval hill town located at 398 m a.s.l. in Irpinia (Campania, province of Avellino). The historic centre is dominated by the <em>Castello Marchionale</em>, a Lombard-era fortress that bears witness to centuries of historical layering. Taurasi is internationally renowned for its DOCG wine, the first from Campania, awarded in 1993, produced from Aglianico grapes by <strong class="text-dark-100">17 active wineries</strong>. The production regulations require a minimum aging of 36 months, yielding notes of black cherry and licorice. Alongside viticulture, olive cultivation (Ravece variety) completes the agrarian landscape. The town hosts an annual Wine Fair and Film Festival, events that fuel a wine culture-centred framework for sustainable development.</p>
+
+        <!-- Taurasi photo grid -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/h-sma-ce/taurasi1.jpg" alt="Panoramic view of Taurasi" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/h-sma-ce/taurasi2.jpg" alt="Taurasi historic centre" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+        </div>
+        <p class="text-xs text-dark-400 italic mb-6">Taurasi, medieval hill town in Irpinia (Campania)</p>
+
+        <!-- Full-width photo -->
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/h-sma-ce/taurasi3.jpg" alt="Taurasi vineyards and landscape" class="w-full h-80 object-cover" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Research Activities -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Research Activities</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">The Four Research Activities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { code: 'RA1', title: 'Context Analysis', desc: 'Empirical investigation of the Taurasi territory: primary and secondary data collection, Material Flow Analysis (MFA), stakeholder mapping, and SWOT analysis. Building the knowledge base for the circular transition.' },
+            { code: 'RA2', title: 'Systematic Review & Framework', desc: 'Systematic literature review on circular economy in historical small towns. Definition of a conceptual framework and identification of international best practices applicable to borghi.' },
+            { code: 'RA3', title: 'Circularity Indexes & Optimization', desc: 'Development of composite circularity indexes and multi-objective optimization models. Integrated analysis of waste, energy, water, agriculture, and historic building heritage flows.' },
+            { code: 'RA4', title: 'Decision Support System', desc: 'Design and implementation of a spreadsheet-based DSS for local policymakers. Simulation of circular transition scenarios with performance indicators and trade-off analysis.' },
+          ].map(ra => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{ra.code}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{ra.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{ra.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Strategy -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Strategy</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Three Pillars of Circular Transition</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">The project strategy rests on three complementary pillars, each addressing a key dimension of the circular economy transition in historical small towns.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Territory &amp; Protected Heritage</h3>
+            <p class="text-sm text-dark-400 mt-2">Analysis and enhancement of historical-architectural heritage and agrarian landscape, with special attention to the conservation of borghi and traditional production chains as drivers for circularity.</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-cyan/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Circularity Indexes &amp; Optimization</h3>
+            <p class="text-sm text-dark-400 mt-2">Construction of composite indicators measuring the territorial circularity level and multi-objective optimization models to balance environmental, economic, and social sustainability.</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-gold/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">DSS for Policymakers</h3>
+            <p class="text-sm text-dark-400 mt-2">An operational spreadsheet-based tool enabling policymakers to simulate scenarios, evaluate trade-offs, and plan circular economy interventions tailored to the specific reality of each borgo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">&euro;250K</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Funding</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-cyan">2</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Research Units</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">8</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Researchers</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">9</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">Publications</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Output</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Publications</h2>
+        <div class="space-y-4">
+          {[
+            { title: 'A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns: The H-SMA-CE Project', authors: 'Ioppolo G., Calabrò G., Caristi G., Ciliberto C., Russo I., De Simone L., Lopes A., Arbolino R.', journal: 'Sustainability', year: '2026', doi: '10.3390/su18073302' },
+            { title: 'The Circular Economy Transition Within Historical Small Town: Preliminary Results', authors: 'Ioppolo G., Caristi G., D\'Alessandro C., Calabrò G., Szopik-Depczyńska K.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-031-78623-5_38' },
+            { title: 'Smart Transition in Historical Small Towns: First Insights from a Digital Material Flow Assessment in the Italian Case Study of Taurasi', authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-032-09066-9_20' },
+            { title: "Unveiling Taurasi's Hidden Potential: A Wine Culture-Centered Framework for Sustainable Development and Circular Economy Transition in Historic Small Towns", authors: 'Ciliberto C., Calabrò G., Caristi G., Arbolino R., Ioppolo G.', journal: 'Sustainability', year: '2025', doi: '10.3390/su17135704' },
+            { title: 'From Data Scarcity to Strategic Action: A Managerial Framework for Circular Economy Implementation in Mediterranean Small Towns', authors: 'Licastro A., D\'Alessandro C., Szopik-Depczyńska K., Arbolino R., Ioppolo G.', journal: 'Sustainability', year: '2025', doi: '10.3390/su17146474' },
+            { title: 'Analysing Italian Historical Small Towns: A Cultural and Geographic Mosaic of Identity', authors: 'Ciliberto C., Ioppolo G., Caristi G., Calabrò G.', journal: 'FEMIB 2025 Proceedings', year: '2025', doi: '10.5220/0013426600003956' },
+            { title: 'Digital Transformation for Circular Economy: Business Process Innovation in Historic Small Towns - The Taurasi Case Study', authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'Springer Proceedings (Forthcoming)', year: '2025' },
+            { title: "Sustainable Circularity: Tracing Taurasi's Historical Small Town Resilience", authors: 'Ciliberto C., Calabrò G., Caristi G., Ioppolo G.', journal: 'XXXII Congresso Nazionale di Scienze Merceologiche', year: '2024' },
+            { title: 'A Multi-Criteria Decision-Making Analysis of Waste Management Practices in Historical Small Towns: The Taurasi Case Study', authors: 'Ioppolo G., Calabrò G.', journal: 'Atti della Accademia Peloritana dei Pericolanti', year: '2025' },
+          ].map(pub => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+              <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{pub.title}</h4>
+              <p class="text-sm text-dark-400 mt-2">{pub.authors}</p>
+              <div class="flex flex-wrap items-center gap-3 mt-3">
+                <span class="text-sm text-cyan italic">{pub.journal}</span>
+                <span class="text-xs font-mono text-dark-500">{pub.year}</span>
+              </div>
+              {pub.doi && (
+                <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+                  DOI: {pub.doi}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Team</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Project Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">UniME, Lead Unit</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-dark-400">
+              <li><span class="text-neon font-mono text-xs">PI</span> Giuseppe Ioppolo</li>
+              <li>Grazia Calabr&ograve;</li>
+              <li>Giuseppe Caristi</li>
+              <li>Cristina Ciliberto</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">University of Naples "L'Orientale"</h3>
+            <ul class="mt-3 space-y-1.5 text-sm text-dark-400">
+              <li><span class="text-cyan font-mono text-xs">co-PI</span> Roberta Arbolino</li>
+              <li>Antonio Lopes</li>
+              <li>Luisa De Simone</li>
+              <li>Ilaria Russo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 bg-dark-900 border border-dark-700 rounded-xl p-5">
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Advisory Board</h3>
+          <p class="text-sm text-dark-400 mt-2"><span class="text-gold font-mono text-xs">Advisor</span> Katarzyna Szopik-Depczy&#324;ska, University of Szczecin, Poland</p>
+        </div>
+      </div>
+
+      <!-- Link -->
+      <div class="reveal reveal-delay-2">
+        <a href="https://hsmaceprin22.github.io" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          Visit the H-SMA-CE website
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

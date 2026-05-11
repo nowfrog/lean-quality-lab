@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LQS Lab — Quality Bars">
+  <title>LQS Lab — Quality Bars</title>
+  <!--
+    Concept: un "quality gauge" astratto. Tre barre crescenti dentro un rounded
+    square — metafora diretta di misurazione + miglioramento continuo. La barra
+    più alta in emerald come "target raggiunto / stato ottimo".
+    Palette: emerald #0ea968 + antracite #0f172a.
+    Si legge a 16px (favicon) quanto a 200px (header).
+  -->
+  <rect x="20" y="20" width="200" height="200" rx="48" ry="48"
+        fill="none" stroke="#0f172a" stroke-width="14"/>
+  <rect x="70"  y="150" width="22" height="50"  fill="#0f172a"/>
+  <rect x="109" y="118" width="22" height="82"  fill="#0f172a"/>
+  <rect x="148" y="78"  width="22" height="122" fill="#0ea968"/>
+</svg>

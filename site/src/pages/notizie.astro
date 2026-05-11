@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+const lang = 'it';
+
+const news = [
+  { date: 'Aprile 2026', title: 'World\'s Best Scientists 2026', text: 'Il Prof. Ioppolo \u00e8 incluso nella classifica World\'s Best Scientists 2026 "Business and Management" di Research.com: D-Index 44, Ranking Nazionale 31, Ranking Mondiale 1364.', tag: 'Riconoscimento', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7451248875392192512' },
+  { date: 'Aprile 2026', title: 'RII Forum 2026 \u2014 Atene', text: 'Il team del LQS Lab ha presentato i recenti risultati di ricerca sui vari progetti attivi al Research and Innovation Forum 2026 ad Atene. Il Prof. Ioppolo \u00e8 membro dello steering committee.', tag: 'Conferenza', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7394985924255875072', img: '/images/news/riiforum-2026.jpg', imgPos: 'top' },
+  { date: 'Aprile 2026', title: 'Elgar Encyclopedia of Life Cycle Sustainability Assessment', text: 'Pubblicata l\'enciclopedia Elgar. Il Prof. Ioppolo \u00e8 autore unico delle voci: Closed loop, Urban metabolism, Urban resource harvesting.', tag: 'Pubblicazione', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7446176476632219648', img: '/images/news/elgar-encyclopedia.jpg', imgPos: 'top' },
+  { date: 'Marzo 2026', title: 'Paper finale H-SMA-CE su Sustainability', text: 'Pubblicato in open access il paper finale del progetto PRIN H-SMA-CE: "A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns".', tag: 'Pubblicazione', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7444066705527660544', img: '/images/news/hsmace-paper.jpg', imgPos: 'top' },
+  { date: 'Marzo 2026', title: 'Progetto Nebrodi \u2014 Area Interna', text: 'Il Prof. Ioppolo e il Prof. Limosani hanno raccolto l\'invito del Sindaco di Brolo per sviluppare un progetto di ricerca sull\'Area Interna dei Nebrodi (29 comuni): metabolismo urbano, circolarit\u00e0 e inclusione sociale.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441121931229044736', },
+  { date: 'Febbraio 2026', title: 'Sito H-SMA-CE e PRIN 2022', text: 'Presentazione del progetto PRIN 22 H-SMA-CE, con il PI Prof. Ioppolo e la co-PI Prof. Arbolino. Lanciato il sito web del progetto.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7422696323801341952', img: '/images/news/hsmace-sito.jpg', imgPos: 'top' },
+  { date: 'Dicembre 2025', title: 'Piano di Perimetrazione DMO Taormina-Peloritani', text: 'Presentato il Piano Strategico di Perimetrazione, documento propedeutico alla costituzione della Destination Management Organization del sistema Taormina-Peloritani. Il piano definisce i confini territoriali e le strategie di governance del futuro DMO.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7400614901959888896', img: '/images/news/dmo-taormina.jpg', imgPos: 'top' },
+  { date: 'Novembre 2025', title: 'MeTa Costa Blu \u2014 DMO', text: 'Nasce la DMO MeTaBlue \u2014 Messina Taormina Costa Blu. Un modello di sviluppo sostenibile a scala locale, tra innovazione e tradizione.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7386861913437024256', img: '/images/news/metablue.jpg' },
+  { date: 'Novembre 2025', title: 'Piano Strategico GAL Taormina-Peloritani', text: 'Il CNR-IRIB ha presentato il Piano Strategico Territoriale "Ecosistema di Eccellenza", sviluppato con il supporto di UniME nell\'ambito del Progetto Operativo n. 1/2023.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7382763610885767168' },
+  { date: 'Settembre 2025', title: 'Tavolo Tecnico Stretto di Messina', text: 'Il Prof. Ioppolo \u00e8 stato nominato esperto componente del Tavolo Tecnico ministeriale per l\'attraversamento dinamico dello Stretto di Messina.', tag: 'Incarico', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7371567425328136193' },
+  { date: 'Agosto 2025', title: 'Risultati finali GAL Etna-Alcantara e Tirreno-Eolie', text: 'Il LQS Lab ha presentato i risultati finali per entrambi i progetti GAL. Il Prof. Ioppolo \u00e8 PI di entrambi: valutazione degli aspetti di sostenibilit\u00e0 socio-culturale, economica e ambientale.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7367526770520002560', img: '/images/news/gal-risultati.jpg' },
+  { date: 'Maggio 2025', title: 'DTS Conference 2025 \u2014 Parigi', text: 'Il team UniME-Szczecin ha presentato contributi scientifici alla Digital Transformation Society conference a Parigi, con paper dai progetti PRIN e GAL.', tag: 'Conferenza', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7332384258772176896', img: '/images/news/dts-2025.jpg' },
+  { date: 'Aprile 2025', title: 'RII Forum 2025 \u2014 Barcellona', text: 'Il team del lab ha presentato i risultati di ricerca al RII Forum di Barcellona. Il Prof. Ioppolo ha partecipato come panelista alla Round-Table Debate.', tag: 'Conferenza', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7323533342933434368', img: '/images/news/riiforum-2025.jpg' },
+  { date: 'Ottobre 2024', title: 'Settimana di ricerca a Szczecin', text: 'Dopo 10 anni di cooperazione con l\'Universit\u00e0 di Szczecin, settimana di mobilit\u00e0 e ricerca: incontri con Rettore, Doctoral School, Space Technology Park, Maritime University e SGH Warsaw.', tag: 'Conferenza', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7253791100128157697' },
+  { date: 'Settembre 2024', title: 'AISME 2024 \u2014 Team PRIN e GAL', text: '22 anni nell\'Accademia Italiana di Scienze Merceologiche. Il team PRIN PNRR 22, PRIN 22 e GAL 23 rappresentato da D\'Alessandro, Licastro e Bongiorno.', tag: 'Conferenza' },
+  { date: 'Luglio 2024', title: 'Rector Delegate UniME', text: 'Il Prof. Ioppolo \u00e8 stato nominato Delegato del Rettore per i rapporti con le imprese e il territorio dell\'Universit\u00e0 di Messina.', tag: 'Incarico', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7206605488812093440' },
+  { date: 'Maggio 2024', title: 'DTS Conference 2024 \u2014 Parigi', text: 'Digital Transformation Society conference: presentati i risultati in corso dei progetti PRIN e GAL, con Szopik-Depczy\u0144ska, Arbolino e D\'Alessandro.', tag: 'Conferenza', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7202228696747823105' },
+  { date: 'Gennaio 2024', title: 'Vittoria PRIN PNRR CE_IPSA', text: 'Con la Prof. Arbolino (PI) e il Prof. Ioppolo (co-PI), vinto il PRIN PNRR CE_IPSA: modello di sviluppo per l\'Economia Circolare tra parchi industriali e aree circostanti.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7092906861577826304' },
+  { date: 'Dicembre 2023', title: 'Vittoria PRIN 2022 H-SMA-CE', text: 'Il Prof. Ioppolo (PI) e la Prof. Arbolino (co-PI) hanno vinto il PRIN 22: "H-SMA-CE: a decision support system for circular economy transition" nei borghi storici italiani.', tag: 'Progetto', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7083366175581061120' },
+  { date: 'Maggio 2023', title: 'Master Food II Edizione con Camera di Commercio e ICE', text: 'Lancio della seconda edizione del Master in "Food, Quality and International Management" con il supporto di Camera di Commercio e ICE per l\'internazionalizzazione.', tag: 'Formazione', link: 'https://www.linkedin.com/feed/update/urn:li:activity:6934492898407141377' },
+];
+---
+
+<BaseLayout title="Notizie | LQS Lab UniME" lang={lang}>
+  <PageHero label="News" title="Notizie dal Lab" subtitle="Attivit&agrave;, eventi, pubblicazioni e traguardi del Lean &amp; Quality Solutions Lab" />
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-4 top-0 bottom-0 w-px bg-dark-700"></div>
+
+        <div class="space-y-8">
+          {news.map((item, i) => (
+            <div class={`reveal reveal-delay-${Math.min(i % 3 + 1, 3)} relative pl-12`}>
+              <!-- Timeline dot -->
+              <div class={`absolute left-2.5 top-1.5 w-3 h-3 rounded-full border-2 ${
+                item.tag === 'Pubblicazione' ? 'bg-neon border-neon' :
+                item.tag === 'Progetto' ? 'bg-cyan border-cyan' :
+                item.tag === 'Conferenza' ? 'bg-gold border-gold' :
+                item.tag === 'Riconoscimento' ? 'bg-neon border-neon' :
+                item.tag === 'Incarico' ? 'bg-dark-400 border-dark-400' :
+                item.tag === 'Formazione' ? 'bg-cyan border-cyan' :
+                'bg-dark-400 border-dark-400'
+              }`}></div>
+
+              <div class="bg-dark-900 border border-dark-700 rounded-xl overflow-hidden hover:border-dark-600 transition-colors">
+                {item.img && (
+                  <img src={item.img} alt={item.title} class={`w-full h-48 object-cover ${item.imgPos === 'top' ? 'object-top' : ''}`} loading="lazy" />
+                )}
+                <div class="p-5">
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                  <span class="text-xs font-mono text-dark-500">{item.date}</span>
+                  <span class={`px-2 py-0.5 text-xs rounded-md font-mono ${
+                    item.tag === 'Pubblicazione' ? 'bg-neon/5 border border-neon/10 text-neon/70' :
+                    item.tag === 'Progetto' ? 'bg-cyan/5 border border-cyan/10 text-cyan/70' :
+                    item.tag === 'Conferenza' ? 'bg-gold/5 border border-gold/10 text-gold/70' :
+                    item.tag === 'Riconoscimento' ? 'bg-neon/5 border border-neon/10 text-neon/70' :
+                    item.tag === 'Incarico' ? 'bg-dark-800 border border-dark-700 text-dark-400' :
+                    item.tag === 'Formazione' ? 'bg-cyan/5 border border-cyan/10 text-cyan/70' :
+                    'bg-dark-800 border border-dark-700 text-dark-400'
+                  }`}>{item.tag}</span>
+                </div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{item.title}</h3>
+                <p class="text-sm text-dark-400 mt-2">{item.text}</p>
+                {item.link && (
+                  <a href={item.link} target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+                    Vedi su LinkedIn &rarr;
+                  </a>
+                )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

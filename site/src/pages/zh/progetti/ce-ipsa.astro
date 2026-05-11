@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'zh';
+---
+
+<BaseLayout title="CE_IPSA | LQS Lab UniME" lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/ce-ipsa/header.jpg" alt="Fosso Imperatore工业园区" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">PRIN 2022 PNRR | NextGenerationEU</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">CE_IPSA</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">工业园区与周边地区之间循环经济的发展模式</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 信息框 -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">项目编号</span>
+            <p class="text-dark-100 font-mono mt-1">P20227NFA4</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">预算</span>
+            <p class="text-dark-100 font-mono mt-1">&euro;266,000</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">期限</span>
+            <p class="text-dark-100 font-mono mt-1">24个月 (2023-2026)</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">CUP</span>
+            <p class="text-dark-100 font-mono mt-1 text-xs">UniOr C53D23008770001<br/>UniMe J53D23016630001</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目介绍 -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">项目介绍</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">循环经济与产业共生</h2>
+        <p class="text-dark-400 leading-relaxed mb-4"><strong class="text-dark-100">CE_IPsa</strong> 项目研究产业共生 (IS) 和循环经济 (CE) 的实施，旨在提高生产区域的资源效率、环境与社会可持续性以及经济竞争力。</p>
+        <p class="text-dark-400 leading-relaxed mb-4">CE_IPsa 为工业园区 (IP) 构建<strong class="text-dark-100">发展模式</strong>，将<em class="text-dark-200">扎根理论</em>与成本效益分析和多目标优化相结合。工业园区成为资源流入和流出的参考主体；周边地区成为二次原材料的潜在供应者和副产品的目的地（再利用与处置）。</p>
+        <p class="text-dark-400 leading-relaxed">研究路径分为五个操作步骤（RA1-RA5），从理论文献综述到为政策制定者和企业家开发决策支持系统 (DSS)。</p>
+      </div>
+
+      <!-- 案例研究：Fosso Imperatore -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">案例研究</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Fosso Imperatore 工业园区</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">案例研究为坎帕尼亚大区 Nocera Inferiore 的工业园区，由 <strong class="text-dark-100">Fosso Imperatore 企业联合体</strong> 管理。这是研究地理有限区域内产业共生和循环经济的理想背景：在小型、界定明确的环境中关闭生产循环比在全国范围内更为可行。</p>
+
+        <!-- 两张并排图片 -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/casestudy1.jpg" alt="Fosso Imperatore 工业园区 - 视图1" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/casestudy2.jpg" alt="Fosso Imperatore 工业园区 - 视图2" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- 全宽图片 -->
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/ce-ipsa/casestudy3.jpg" alt="Fosso Imperatore 工业园区全景" class="w-full h-80 object-cover" loading="lazy" />
+          <div class="p-4 bg-dark-900">
+            <p class="text-xs text-dark-400 italic">Fosso Imperatore 工业园区，Nocera Inferiore (SA) | CE_IPSA 项目研究区域。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 研讨会/利益相关者 -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">参与互动</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">研讨会与利益相关者参与</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">项目包括与地方利益相关者的直接互动活动，通过研讨会、圆桌会议以及与企业家、管理者和研究人员的讨论会，共同设计循环发展模式。</p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg" alt="CE_IPSA 利益相关者研讨会发言人" class="w-full h-72 object-cover" loading="lazy" />
+            <div class="p-4 bg-dark-900">
+              <p class="text-xs text-dark-400 italic">利益相关者研讨会全体会议。</p>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg" alt="CE_IPSA 循环经济专题讨论" class="w-full h-72 object-cover" loading="lazy" />
+            <div class="p-4 bg-dark-900">
+              <p class="text-xs text-dark-400 italic">循环经济与产业共生专题讨论。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 研究活动 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">研究活动</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">五个操作步骤</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { code: 'RA1', title: '理论文献综述', desc: '对产业共生和循环经济文献的系统综述：工业园区干预措施的规划、监测和评估。' },
+            { code: 'RA2', title: '背景分析', desc: '绘制选定工业园区及周边地区的生产结构图：资源流、经济主体、基础设施和潜在协同效应。' },
+            { code: 'RA3', title: '发展模式定义', desc: '构建整合扎根理论、成本效益分析和多目标优化的发展模式，促进工业园区的循环转型。' },
+            { code: 'RA4', title: '发展计划定义', desc: '制定实施地区循环转型的操作性发展计划，包括目标、时间表和绩效指标。' },
+            { code: 'RA5', title: '决策支持系统开发', desc: '为政策制定者和企业家开发决策支持系统 (DSS)，支持循环经济实施的战略决策。' },
+          ].map(ra => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{ra.code}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{ra.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{ra.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- 统计数据 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">&euro;266K</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">预算</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-cyan">2</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">研究单位</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">10</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">研究人员</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">9</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">出版物</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 成果/出版物 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">成果</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">出版物</h2>
+        <div class="space-y-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+            <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Industrial Symbiosis Networks in Italian Industrial Parks: The Case of Fosso Imperatore</h4>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">Springer</span>
+              <span class="text-xs font-mono text-dark-500">2026</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">书籍章节</span>
+            </div>
+            <a href="https://doi.org/10.1007/978-3-032-09062-1_10" target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+              DOI: 10.1007/978-3-032-09062-1_10
+            </a>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+            <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A Circular Land Use Model for Reconciling Industrial Expansion with Agricultural Heritage</h4>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">Sustainability</span>
+              <span class="text-xs font-mono text-dark-500">2025</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">期刊文章</span>
+            </div>
+            <a href="https://doi.org/10.3390/su17198830" target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+              DOI: 10.3390/su17198830
+            </a>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+            <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A Development Model for Circular Economy Between Industrial Parks and Surroundings Areas: The Reverse Logistics Strategic Approach</h4>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">Springer</span>
+              <span class="text-xs font-mono text-dark-500">2025</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">书籍章节</span>
+            </div>
+            <a href="https://doi.org/10.1007/978-3-031-80692-6_24" target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+              DOI: 10.1007/978-3-031-80692-6_24
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 团队 -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">团队</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">研究团队</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">那不勒斯东方大学（牵头单位）</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li><span class="text-neon font-mono text-xs">PI</span> Roberta Arbolino</li>
+              <li>Alessandra De Chiara</li>
+              <li>Antonio Lopes</li>
+              <li>Luisa De Simone</li>
+              <li><span class="text-dark-500 font-mono text-xs">招聘</span> Antonio Licastro</li>
+              <li><span class="text-dark-500 font-mono text-xs">招聘</span> Maria Coscia</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">墨西拿大学</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li><span class="text-cyan font-mono text-xs">co-PI</span> Giuseppe Ioppolo</li>
+              <li>Grazia Calabr&ograve;</li>
+              <li>Giuseppe Caristi</li>
+              <li><span class="text-dark-500 font-mono text-xs">招聘</span> Carlotta D'Alessandro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 链接 -->
+      <div class="reveal reveal-delay-2">
+        <a href="https://ceipsapnrr.github.io" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          访问项目网站
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

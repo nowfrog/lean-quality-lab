@@ -1,0 +1,22 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  subtitle?: string;
+}
+const { label, title, subtitle } = Astro.props;
+---
+
+<section class="relative py-20 lg:py-28 overflow-hidden noise">
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-neon/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-cyan/5 rounded-full blur-[100px]"></div>
+  </div>
+  <div class="absolute inset-0 grid-bg"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <span class="text-neon font-mono text-sm tracking-widest uppercase">{label}</span>
+    <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-dark-100 mt-4 leading-tight">{title}</h1>
+    {subtitle && <p class="text-lg text-dark-400 mt-6 max-w-2xl">{subtitle}</p>}
+  </div>
+</section>
+<div class="gradient-line"></div>

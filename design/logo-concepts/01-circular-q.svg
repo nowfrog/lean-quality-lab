@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Lean &amp; Quality Solutions Lab - Circular Q">
+  <!--
+    CONCEPT 1 · "CIRCULAR Q"
+    Una Q stilizzata: cerchio = economia circolare / ciclo di qualità.
+    La coda diventa una freccia che esce dal cerchio = lean flow / miglioramento continuo.
+    Il punto centrale oro = target, precisione, qualità.
+    Lettura: ciclo → uscita → nuovo ciclo migliorato.
+  -->
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Arco principale (quasi cerchio, con gap in basso a destra per creare la Q) -->
+  <path
+    d="M 170 170
+       A 70 70 0 1 1 170 70"
+    fill="none"
+    stroke="url(#g1)"
+    stroke-width="16"
+    stroke-linecap="round"/>
+
+  <!-- Coda a freccia lean (flusso in uscita) -->
+  <line x1="170" y1="170" x2="210" y2="210"
+        stroke="url(#g1)" stroke-width="16" stroke-linecap="round"/>
+  <polyline points="196,210 210,210 210,196"
+        fill="none" stroke="url(#g1)" stroke-width="16"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Punto centrale oro (quality target) -->
+  <circle cx="120" cy="120" r="9" fill="#D4A017"/>
+</svg>

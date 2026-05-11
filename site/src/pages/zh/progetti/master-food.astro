@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'zh';
+---
+
+<BaseLayout title="Master Food, Quality & International Management | LQS Lab UniME" lang={lang}>
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/master-food/header.jpg" alt="食品质量管理" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">一级硕士 | UniME</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-4 leading-tight">Master Food, Quality &amp;<br/>International Management</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">以质量管理逻辑为核心，整合研究和评估农食产品及其全产业链流程的综合方法</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">类型</span>
+            <p class="text-dark-100 font-mono mt-1">一级硕士</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">学制</span>
+            <p class="text-dark-100 font-mono mt-1">12个月</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">语言</span>
+            <p class="text-dark-100 font-mono mt-1">英语</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">届数</span>
+            <p class="text-dark-100 font-mono mt-1">3届（自2021年）</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">硕士项目</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">农食产业链综合培训</h2>
+        <p class="text-dark-400 leading-relaxed mb-4"><strong class="text-dark-100">食品、质量与国际管理</strong>硕士项目由墨西拿大学经济系Giuseppe Ioppolo教授主持，提供以质量管理逻辑为核心的农食产品及流程综合研究方法。</p>
+        <p class="text-dark-400 leading-relaxed mb-4">课程融合<strong class="text-dark-100">社会科学、数字创新和生物学</strong>，培养具备食品质量、安全管理、可持续性和循环经济高级能力的全球市场专业人才。</p>
+        <p class="text-dark-400 leading-relaxed">教学采用实践与动态相结合的模式：理论课程与<strong class="text-dark-100">研讨会、案例研究、项目实践和企业实习</strong>交替进行。</p>
+      </div>
+
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">培养目标</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">核心能力</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { title: '质量管理', desc: '从农场到餐桌的全产业链质量管理，将TQM和精益思维工具应用于食品领域。' },
+            { title: '食品安全与标准', desc: '深入了解国际食品安全标准（ISO 22000、HACCP、BRC、IFS）和欧盟法规。' },
+            { title: '国际管理', desc: '农食企业国际化的管理能力，重点关注出口、营销和市场进入策略。' },
+            { title: '创新与Food 5.0', desc: '应用于食品领域的新兴技术和数字创新：可追溯性、区块链、物联网和供应链可持续性。' },
+          ].map(obj => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{obj.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{obj.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">历届</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">自2021年已举办三届</h2>
+        <div class="space-y-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-neon font-mono text-sm font-bold">I</span>
+              <div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">2021/2022学年</h3>
+                <p class="text-sm text-dark-400">首届，招收意大利和国际学生。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-cyan font-mono text-sm font-bold">II</span>
+              <div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">2022/2023学年</h3>
+                <p class="text-sm text-dark-400">第二届，获得商会和ICE国际化支持。</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <div class="flex items-center gap-3">
+              <span class="text-gold font-mono text-sm font-bold">III</span>
+              <div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">2023/2024学年</h3>
+                <p class="text-sm text-dark-400">第三届，扩大企业合作伙伴，聚焦Food 5.0。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">3</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">届</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-cyan">12</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">个月</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">EN</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">语言</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">一级</p>
+            <p class="text-xs text-dark-400 mt-1 font-mono uppercase">硕士</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <a href="https://www.unime.it/didattica/post-laurea/master-e-corsi-di-perfezionamento/total-quality-international-management-food" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          UniME官方页面
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

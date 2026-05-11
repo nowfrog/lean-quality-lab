@@ -1,0 +1,299 @@
+---
+import '../styles/global.css';
+import type { Lang } from '../i18n/translations';
+import { useTranslations, getLocalePath, getAlternateLinks } from '../i18n/utils';
+
+interface Props {
+  title: string;
+  lang?: Lang;
+}
+
+const { title, lang = 'it' } = Astro.props;
+const t = useTranslations(lang);
+const prefix = lang === 'it' ? '' : `/${lang}`;
+const alternates = getAlternateLinks(Astro.url.pathname);
+
+const navItems = [
+  { key: 'nav.laboratorio' as const, path: '/laboratorio' },
+  { key: 'nav.team' as const, path: '/team' },
+  { key: 'nav.notizie' as const, path: '/notizie' },
+  { key: 'nav.progetti' as const, path: '/progetti' },
+  { key: 'nav.pubblicazioni' as const, path: '/pubblicazioni' },
+  { key: 'nav.contatti' as const, path: '/contatti' },
+];
+
+const langSwitchItems = [
+  { code: 'it' as Lang, label: 'IT' },
+  { code: 'en' as Lang, label: 'EN' },
+  { code: 'zh' as Lang, label: '中' },
+];
+---
+
+<!DOCTYPE html>
+<html lang={lang === 'zh' ? 'zh-CN' : lang}>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lean & Quality Solutions Lab | Università di Messina" />
+  <meta name="generator" content={Astro.generator} />
+  {alternates.map(alt => (
+    <link rel="alternate" hreflang={alt.lang === 'zh' ? 'zh-CN' : alt.lang} href={alt.href} />
+  ))}
+  <title>{title}</title>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 glass transition-all duration-500" id="site-header">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Lab logo (left) -->
+        <a href={prefix + '/'} class="flex items-center gap-3 group">
+          <div class="relative w-10 h-10">
+            <div class="absolute inset-0 rounded-lg bg-neon/20 blur-md group-hover:bg-neon/40 transition-all duration-500"></div>
+            <div class="relative w-10 h-10 rounded-lg bg-dark-900 border border-neon/30 flex items-center justify-center group-hover:border-neon/60 transition-all">
+              <span class="text-neon font-bold font-[family-name:var(--font-display)] text-lg">Q</span>
+            </div>
+          </div>
+          <div class="hidden sm:block">
+            <span class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 group-hover:text-neon transition-colors">LQS</span>
+            <span class="text-xs text-dark-400 block leading-tight font-mono tracking-wider">LAB</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-1">
+          {navItems.map(item => (
+            <a href={prefix + item.path} class="px-3 py-2 text-sm font-medium text-dark-300 hover:text-neon rounded-lg hover:bg-neon/5 transition-all duration-300 relative group">
+              {t(item.key)}
+              <span class="absolute bottom-0 left-3 right-3 h-px bg-neon scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+          ))}
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center gap-3">
+          <!-- Institutional logo -->
+          <a href="https://economia.unime.it" target="_blank" rel="noopener" class="hidden sm:block opacity-70 hover:opacity-100 transition-opacity">
+            <img src="/images/logo-economia.png" alt="Dipartimento di Economia | UniME" class="h-8 w-auto invert brightness-90" />
+          </a>
+          <div class="hidden sm:block w-px h-6 bg-dark-700"></div>
+          <!-- Language switch -->
+          {langSwitchItems.filter(l => l.code !== lang).map(l => (
+            <a href={getLocalePath(l.code, Astro.url.pathname.replace(/^\/(en|zh)/, '') || '/')}
+               class="px-2.5 py-1 text-xs font-mono font-bold border border-dark-600 hover:border-neon/50 rounded-md hover:bg-neon/5 hover:text-neon transition-all duration-300 text-dark-400">
+              {l.label}
+            </a>
+          ))}
+
+          <!-- Theme toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-dark-800 transition-colors text-dark-400 hover:text-neon" aria-label="Toggle theme">
+            <svg class="w-5 h-5 theme-icon-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="w-5 h-5 theme-icon-light hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="5"></circle>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-dark-800 transition-colors text-dark-300" aria-label="Menu">
+            <svg class="w-6 h-6" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"></path>
+            </svg>
+            <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="lg:hidden hidden pb-6 pt-2">
+        <div class="flex flex-col gap-1 border-t border-dark-700/50 pt-4">
+          {navItems.map(item => (
+            <a href={prefix + item.path} class="px-4 py-3 text-sm font-medium text-dark-300 hover:text-neon rounded-lg hover:bg-neon/5 transition-all duration-300">
+              {t(item.key)}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="h-16 lg:h-20"></div>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    menuBtn?.addEventListener('click', () => {
+      const hidden = mobileMenu?.classList.toggle('hidden');
+      iconOpen?.classList.toggle('hidden', !hidden);
+      iconClose?.classList.toggle('hidden', hidden);
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconDark = document.querySelector('.theme-icon-dark');
+    const iconLight = document.querySelector('.theme-icon-light');
+    function syncIcons() {
+      const isLight = document.documentElement.classList.contains('light');
+      iconDark?.classList.toggle('hidden', isLight);
+      iconLight?.classList.toggle('hidden', !isLight);
+    }
+    // Init theme from localStorage (default: light)
+    if (localStorage.getItem('theme') !== 'dark') {
+      document.documentElement.classList.add('light');
+    }
+    syncIcons();
+    themeToggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      const isLight = document.documentElement.classList.contains('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      syncIcons();
+    });
+
+    // Header shadow on scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header?.classList.add('shadow-lg', 'shadow-dark-950/50');
+      } else {
+        header?.classList.remove('shadow-lg', 'shadow-dark-950/50');
+      }
+    });
+
+    // Scroll progress
+    const progress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (progress && total > 0) {
+        progress.style.width = `${(window.scrollY / total) * 100}%`;
+      }
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="relative border-t border-dark-800">
+    <div class="gradient-line"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <!-- Brand + UniME -->
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-dark-800 border border-neon/20 flex items-center justify-center">
+              <span class="text-neon font-bold font-[family-name:var(--font-display)] text-lg">Q</span>
+            </div>
+            <div>
+              <span class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100">LQS Lab</span>
+              <span class="text-xs text-dark-500 block font-mono">UniME</span>
+            </div>
+          </div>
+          <p class="text-sm text-dark-400 leading-relaxed" set:html={t('footer.description')} />
+          <!-- UniME logo -->
+          <div class="mt-6 pt-6 border-t border-dark-800">
+            <a href="https://www.unime.it" target="_blank" rel="noopener" class="inline-block opacity-70 hover:opacity-100 transition-opacity">
+              <img src="/images/unime-logo.png" alt="Università degli Studi di Messina" class="h-12 w-auto brightness-90 invert" loading="lazy" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Site links -->
+        <div>
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wider text-dark-300 mb-4">{t('footer.links')}</h3>
+          <ul class="space-y-2.5">
+            {navItems.slice(0, 5).map(item => (
+              <li>
+                <a href={prefix + item.path} class="text-sm text-dark-400 hover:text-neon transition-colors duration-300">
+                  {t(item.key)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Institutional links -->
+        <div>
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wider text-dark-300 mb-4">Istituzione</h3>
+          <ul class="space-y-2.5">
+            <li><a href="https://www.unime.it" target="_blank" rel="noopener" class="text-sm text-dark-400 hover:text-neon transition-colors duration-300">Università di Messina</a></li>
+            <li><a href="https://economia.unime.it" target="_blank" rel="noopener" class="text-sm text-dark-400 hover:text-neon transition-colors duration-300">Dipartimento di Economia</a></li>
+            <li><a href="https://unifind.unime.it/resource/laboratory/LAB-0347" target="_blank" rel="noopener" class="text-sm text-dark-400 hover:text-neon transition-colors duration-300">Scheda UniFind</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts -->
+        <div>
+          <h3 class="font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wider text-dark-300 mb-4">{t('footer.contacts')}</h3>
+          <div class="space-y-2.5 text-sm text-dark-400">
+            <p>Piazza Pugliatti, 1</p>
+            <p>98122 Messina (ME), Italia</p>
+            <p><a href="mailto:giuseppe.ioppolo@unime.it" class="hover:text-neon transition-colors duration-300">giuseppe.ioppolo@unime.it</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gradient-line mt-12 mb-8"></div>
+
+      <!-- Bottom bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-dark-500">
+        <p>&copy; 2026 LQS Lab | Università degli Studi di Messina</p>
+        <div class="flex items-center gap-4">
+          <a href={prefix + '/privacy'} class="hover:text-neon transition-colors">Privacy Policy</a>
+          <a href={prefix + '/cookie'} class="hover:text-neon transition-colors">Cookie Policy</a>
+          <span class="font-mono">{t('footer.rights')}</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[9999] p-4 bg-dark-900/95 backdrop-blur border-t border-dark-700 hidden">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4">
+      <p class="text-sm text-dark-400 flex-1">
+        Questo sito utilizza solo cookie tecnici necessari al funzionamento. Non utilizziamo cookie di profilazione o di terze parti.
+      </p>
+      <button id="cookie-accept" class="px-5 py-2 bg-neon text-dark-950 text-sm font-bold rounded-lg hover:shadow-lg hover:shadow-neon/25 transition-all shrink-0">
+        OK, ho capito
+      </button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('cookie-consent')) {
+      document.getElementById('cookie-banner')?.classList.remove('hidden');
+    }
+    document.getElementById('cookie-accept')?.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'true');
+      document.getElementById('cookie-banner')?.classList.add('hidden');
+    });
+  </script>
+
+  <!-- Lenis smooth scroll -->
+  <script>
+    import Lenis from 'lenis';
+    const lenis = new Lenis({ duration: 1.2, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    function raf(time: number) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  </script>
+</body>
+</html>

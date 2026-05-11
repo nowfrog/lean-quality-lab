@@ -1,0 +1,340 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'it';
+---
+
+<BaseLayout title="GAL Tirreno Eolie | LQS Lab UniME" lang={lang}>
+  <!-- Hero con copertina -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/eolie.jpg" alt="" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">Sviluppo locale</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">GAL Tirreno Eolie</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">Ripensare il Territorio, valorizzare la biodiversità, promuovere i prodotti tipici. Piano di Sviluppo Locale per i comuni del partenariato.</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Info box -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Tipo</span>
+            <p class="text-dark-100 font-mono mt-1">GAL / LEADER</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Comuni</span>
+            <p class="text-dark-100 font-mono mt-1">12 + 7 isole</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Convenzione</span>
+            <p class="text-dark-100 font-mono mt-1">CNR-ISMED</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Framework</span>
+            <p class="text-dark-100 font-mono mt-1">PSR 2014-2020</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Il progetto -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Il Progetto</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Tirreno-Eolie 2030</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">Il progetto <strong class="text-dark-100">"Tirreno-Eolie 2030 - Ripensare il Territorio, valorizzare la biodiversità, promuovere i prodotti tipici"</strong> nasce nell'ambito della Convenzione Operativa di Collaborazione Scientifica tra il CNR-ISMED e il GAL Tirreno, con il coinvolgimento dell'Università degli Studi di Messina - Dipartimento di Economia.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">Il Lean & Quality Solutions Lab ha prodotto uno studio scientifico territoriale che coinvolge tutti i Comuni del GAL Tirreno-Eolie, con un'analisi approfondita del contesto ambientale, socioeconomico, storico-culturale e infrastrutturale, culminando nella redazione del Piano di Sviluppo Locale.</p>
+        <p class="text-dark-400 leading-relaxed">Il territorio emerge come destinazione turistica di pregio, caratterizzata da un ambiente naturale, ambientale e culturale unico al mondo. La visione strategica prevede la salvaguardia del patrimonio naturalistico delle aree protette insieme alla valorizzazione turistica della costa, sviluppando il settore florovivaistico e integrandolo con l'agro-industria locale.</p>
+      </div>
+
+      <!-- Territorio -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Il Territorio</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Costa tirrenica e arcipelago eoliano</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">Il territorio del GAL Tirreno-Eolie comprende la fascia costiera tirrenica della Provincia di Messina e l'arcipelago delle Isole Eolie, patrimonio UNESCO dal 2000. Un ambiente unico al mondo, caratterizzato da elevato pregio ambientale e naturale, bassa antropizzazione e una forte identità culturale.</p>
+        <p class="text-dark-400 leading-relaxed mb-6">La zona tirrenica si distingue per la sua eccezionale qualità ambientale e naturalistica. In passato proponeva foreste classificabili come parte del piano basale mediterraneo, prevalentemente composte da lecci e roverelle. Le produzioni agricole sono orientate al consumo locale, fatta eccezione per i vini, i vini liquorosi e i capperi.</p>
+
+        <!-- Foto panoramica territorio -->
+        <div class="rounded-2xl overflow-hidden border border-dark-700 mb-6">
+          <img src="/images/projects/gal-tirreno/lipari-da-vulcano.jpg" alt="Panorama di Lipari e dell'arcipelago eoliano visto da Vulcano" class="w-full h-80 object-cover" loading="lazy" />
+          <div class="p-4 bg-dark-900">
+            <p class="text-xs text-dark-400 italic">Veduta panoramica dell'arcipelago eoliano e di Lipari dal cratere di Vulcano. Foto: Wikimedia Commons, CC BY-SA 3.0.</p>
+          </div>
+        </div>
+
+        <!-- Elenco comuni -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Comuni tirrenici (12)</h3>
+            <p class="text-xs text-dark-400 mt-2">Milazzo, Pace del Mela, San Filippo del Mela, Santa Lucia del Mela, Condrò, Gualtieri Sicaminò, Torregrotta, Valdina, Venetico, Barcellona Pozzo di Gotto, Merì, Terme Vigliatore</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 text-sm">Isole Eolie (7 isole - Comune di Lipari + Salina)</h3>
+            <p class="text-xs text-dark-400 mt-2">Lipari, Vulcano, Salina (Santa Marina Salina, Malfa, Leni), Stromboli, Panarea, Filicudi, Alicudi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analisi SWOT -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Analisi</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Analisi SWOT del territorio</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">L'analisi territoriale ha evidenziato le caratteristiche distintive del comprensorio, il potenziale turistico legato a un segmento di mercato in crescita, e i vincoli legati alla situazione attuale di infrastrutture e servizi.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-dark-900 border border-neon/20 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-neon text-sm mb-3">Punti di forza</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li class="flex gap-2"><span class="text-neon mt-0.5">+</span>Elevato pregio ambientale e naturale</li>
+              <li class="flex gap-2"><span class="text-neon mt-0.5">+</span>Bassa antropizzazione</li>
+              <li class="flex gap-2"><span class="text-neon mt-0.5">+</span>Superfici agricole estese e prodotti di qualità</li>
+              <li class="flex gap-2"><span class="text-neon mt-0.5">+</span>Forte identità culturale del territorio</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-red-500/20 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-red-400 text-sm mb-3">Punti di debolezza</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li class="flex gap-2"><span class="text-red-400 mt-0.5">-</span>Sistema produttivo debole</li>
+              <li class="flex gap-2"><span class="text-red-400 mt-0.5">-</span>Calo demografico nei comuni interni</li>
+              <li class="flex gap-2"><span class="text-red-400 mt-0.5">-</span>Difficile accessibilità ai parchi e zone naturali</li>
+              <li class="flex gap-2"><span class="text-red-400 mt-0.5">-</span>Scarso raccordo tra turismo e agricoltura</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-cyan/20 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-cyan text-sm mb-3">Opportunità</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li class="flex gap-2"><span class="text-cyan mt-0.5">+</span>Attrattività delle aree protette per turismo ad alto reddito</li>
+              <li class="flex gap-2"><span class="text-cyan mt-0.5">+</span>Filiera di qualità turismo-agricoltura</li>
+              <li class="flex gap-2"><span class="text-cyan mt-0.5">+</span>Capacità rigenerativa della fascia costiera</li>
+              <li class="flex gap-2"><span class="text-cyan mt-0.5">+</span>Marketing territoriale per prodotti d'area certificati</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-orange-500/20 rounded-xl p-5">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-orange-400 text-sm mb-3">Minacce</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li class="flex gap-2"><span class="text-orange-400 mt-0.5">!</span>Perdita di attrattività per scarsa attenzione ambientale</li>
+              <li class="flex gap-2"><span class="text-orange-400 mt-0.5">!</span>Inquinamento e deterioramento della biodiversità</li>
+              <li class="flex gap-2"><span class="text-orange-400 mt-0.5">!</span>Conflitto turismo di massa vs naturalistico</li>
+              <li class="flex gap-2"><span class="text-orange-400 mt-0.5">!</span>Sfruttamento non governato delle aree</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto Salina -->
+      <div class="reveal mb-16">
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/gal-tirreno/salina-landscape.jpg" alt="Paesaggio dell'isola di Salina con vista sulle Eolie" class="w-full h-72 object-cover" loading="lazy" />
+          <div class="p-4 bg-dark-900">
+            <p class="text-xs text-dark-400 italic">L'isola di Salina e l'arcipelago eoliano: vegetazione mediterranea, fichi d'India e il blu del Tirreno. Foto: Wikimedia Commons, CC BY-SA 4.0.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metodologia -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Metodologia</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Approccio scientifico multilivello</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">Lo studio adotta una metodologia rigorosa di analisi territoriale strutturata in quattro dimensioni complementari, con approfondimenti sulla biodiversità alle Eolie e nei comuni della fascia tirrenica, sul florovivaismo e sul sistema turistico.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { icon: '01', title: 'Territorio e Ambiente', desc: 'Urbanistica dei paesi del GAL, infrastrutture e trasporti, architettura storica e di pregio, mappatura bagli e borghi abbandonati, aree protette (riserve naturali, SIC, ZPS). Approfondimento sulla biodiversità alle Eolie e nella fascia tirrenica.' },
+            { icon: '02', title: 'Tessuto Produttivo', desc: 'Numero, posizione e dimensione delle aziende per settore: agricolo, industriale, terziario. Approfondimenti su turismo (posti letto, strutture alberghiere ed extralberghiere) e florovivaismo (numero, dimensione, posizionamento).' },
+            { icon: '03', title: 'Quadro Economico e Sociale', desc: 'Numero di abitanti, età, livello culturale, economico, disoccupazione. Analisi per ciascun comune del partenariato con indicatori demografici e socio-economici dettagliati.' },
+            { icon: '04', title: 'Storia e Tradizioni', desc: 'Evoluzione storica economica e sociale dei territori delle Eolie, della fascia costiera e peloritana. Focus sugli antichi mestieri e tradizioni esistenti e scomparsi, cenni geologici e mitologici.' },
+          ].map(item => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{item.icon}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{item.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Sentiero Italia -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Connessioni</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Il Sentiero Italia e il turismo escursionistico</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">La connessione con il progetto Sentiero Italia (SI) rappresenta una grande opportunità di marketing territoriale. L'analisi ha evidenziato come, nonostante numerosi itinerari escursionistici (tappe SI-V27, SI-V28, SI-V29), non esista ancora una connessione diretta con le tappe sicule del Sentiero Italia, un potenziale da cogliere per l'eco-escursionismo/turismo.</p>
+
+      </div>
+
+      <!-- Foto Eolie affiancate -->
+      <div class="reveal mb-16 grid grid-cols-2 gap-4">
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/gal-tirreno/stromboli-eruption.jpg" alt="Eruzione dello Stromboli di notte" class="w-full h-72 object-cover object-center" loading="lazy" />
+          <div class="p-4 bg-dark-900">
+            <p class="text-xs text-dark-400 italic">Eruzione notturna dello Stromboli, il "faro del Mediterraneo". Foto: Wikimedia Commons, CC BY-SA 2.5.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/gal-tirreno/eolie-mare.jpg" alt="Le Isole Eolie viste dal mare Tirreno" class="w-full h-72 object-cover" loading="lazy" />
+          <div class="p-4 bg-dark-900">
+            <p class="text-xs text-dark-400 italic">Le Eolie dal mare: crocevia di rotte turistiche e sentieri escursionistici. Foto: Wikimedia Commons, CC BY-SA 4.0.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategia -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Strategia</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Visione strategica per lo sviluppo sostenibile</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">La visione strategica si fonda su un principio guida: <em class="text-dark-100">la salvaguardia dell'ambiente per sfruttare al meglio il settore turistico ed i settori emergenti</em>. Questo approccio integra il mercato del turismo naturalistico con il sistema agro-industriale del messinese e il patrimonio culturale locale.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Territorio e aree protette</h3>
+            <p class="text-sm text-dark-400 mt-2">Rafforzamento e qualificazione del territorio e delle aree protette, preservando il patrimonio naturale costiero e garantendo un utilizzo sostenibile per uno sviluppo duraturo.</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Turismo sostenibile</h3>
+            <p class="text-sm text-dark-400 mt-2">Sviluppo di servizi turistici e forme ricettive non convenzionali (B&B, alberghi diffusi, borghi), con Club del Prodotto eco-turistico e ospitalità di qualità nelle aree interne.</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Filiera agro-turistica</h3>
+            <p class="text-sm text-dark-400 mt-2">Potenziamento della catena agro-turistica integrando florovivaismo, enogastronomia (Malvasia, Faro, Mamertino), artigianato e patrimonio culturale siciliano.</p>
+          </div>
+        </div>
+
+        <!-- Obiettivi specifici -->
+        <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 mb-4">Obiettivi specifici del Piano</h3>
+        <div class="space-y-3">
+          {[
+            'Favorire i settori emergenti (florovivaistico) valorizzando le infrastrutture esistenti e la connessione costa-entroterra',
+            'Incentivare strutture ricettive e servizi turistici di qualità nelle aree interne',
+            'Diversificare l\'offerta turistica per destagionalizzare i flussi e permettere soggiorni di media-lunga durata',
+            'Integrare strutture ricettive e servizi turistici con il sistema agro-alimentare e il patrimonio culturale',
+            'Realizzare marketing mirato per il turismo naturalistico e ambientale ad alto valore aggiunto',
+            'Coinvolgere la comunità locale e gli operatori economici nel dialogo sullo sviluppo sostenibile',
+          ].map((obj, i) => (
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 rounded-lg bg-dark-800 border border-neon/20 flex items-center justify-center shrink-0">
+                <span class="text-neon font-mono text-xs font-bold">{i + 1}</span>
+              </div>
+              <p class="text-sm text-dark-400 pt-1">{obj}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Operazioni -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Operazioni</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Linee di intervento</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">Il programma prevede azioni a lungo termine suddivise in interventi pionieristici, in base alla loro priorità, fattibilità e realizzabilità.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { icon: '01', title: 'Valorizzazione aree protette', desc: 'Piano completo per il turismo con percorsi e passerelle in legno, sensibilizzazione ambientale, gestione siti Natura 2000 e marketing delle aree marine (Capo Milazzo, Isole Eolie).' },
+            { icon: '02', title: 'Sentiero Italia', desc: 'Connessione dei percorsi naturalistici esistenti con il progetto Sentiero Italia, creando un\'opportunità unica per l\'eco-escursionismo a portata nazionale e internazionale.' },
+            { icon: '03', title: 'Ospitalità non tradizionale', desc: 'Alberghi diffusi in centri storici e borghi, Club del Prodotto eco-turistico (cicloturismo, birdwatching, trekking, diving), carta dei servizi eco-label.' },
+            { icon: '04', title: 'Mobilità ecologica', desc: 'Autobus ibridi, stazioni di ricarica solare, centri di scambio intermodali, piste ciclabili, bike sharing e percorsi escursionistici con punti panoramici.' },
+            { icon: '05', title: 'Filiera agro-turistica', desc: '"Via del gusto" per prodotti enogastronomici, percorsi di ecologia industriale e archeologia mineraria, eco-design con ceramica e terracotta tradizionali.' },
+            { icon: '06', title: 'Marketing territoriale', desc: 'Certificazione EMAS, marchio eco-turistico, Green Public Procurement, adesione a reti come "I borghi più belli d\'Italia" e consorzi promozionali.' },
+          ].map(item => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{item.icon}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{item.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Output -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Output</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Prodotti della ricerca</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">Il progetto ha generato una serie articolata di deliverable scientifici e operativi a supporto della pianificazione strategica del territorio.</p>
+
+        <!-- Copertine documenti -->
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="/images/projects/gal-tirreno/cover-rapporto-001.png" alt="Copertina Rapporto sullo Stato del Sistema Territoriale" class="w-full h-full object-cover object-top" loading="lazy" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Rapporto Territoriale</h3>
+              <p class="text-xs text-dark-400 mt-1">Rapporto sullo Stato del Sistema Territoriale. Studio scientifico multilivello completo di tutti i comuni del partenariato.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700 bg-dark-900 flex flex-col">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="/images/projects/gal-tirreno/cover-psl-01.png" alt="Copertina Piano di Sviluppo Locale" class="w-full h-full object-cover object-top" loading="lazy" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Piano di Sviluppo Locale</h3>
+              <p class="text-xs text-dark-400 mt-1">Documento strategico con linee guida, obiettivi, operazioni di sviluppo sostenibile e contributo negoziale degli stakeholder.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pubblicazioni scientifiche -->
+        <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 mb-4">Pubblicazioni scientifiche</h3>
+        <div class="space-y-4">
+          {[
+            { title: 'Governance and Local Development: The Tirreno-Eolie Management Plan', authors: 'Ioppolo G., Caristi G., D\'Alessandro C., Bongiorno A., Szopik-Depczyńska K.', journal: 'Springer Proceedings in Complexity', year: '2026', doi: '10.1007/978-3-031-78623-5_46' },
+            { title: 'Territorial Development Domain Versus Digital Transformation and Society 5.0: The Tirreno-Eolie LAG Experience', authors: 'D\'Alessandro C., Szopik-Depczyńska K., Bongiorno A., Caristi G., Ioppolo G.', journal: 'Springer Proceedings in Business and Economics', year: '2025', doi: '10.1007/978-3-031-80692-6_30' },
+            { title: 'Sustainable Futures: Navigating Environmental Challenges Through Local Governance in the Tirreno-Eolie Area', authors: 'D\'Alessandro C., Ioppolo G., Bongiorno A., Caristi G., Szopik-Depczyńska K.', journal: 'Contemporary Studies in Economic and Financial Analysis', year: '2025', doi: '10.1108/S1569-375920250000117003' },
+          ].map(pub => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+              <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">{pub.title}</h4>
+              <p class="text-sm text-dark-400 mt-2">{pub.authors}</p>
+              <div class="flex flex-wrap items-center gap-3 mt-3">
+                <span class="text-sm text-cyan italic">{pub.journal}</span>
+                <span class="text-xs font-mono text-dark-500">{pub.year}</span>
+              </div>
+              {pub.doi && (
+                <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+                  DOI: {pub.doi}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Team</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Gruppo di lavoro</h2>
+        <div class="bg-dark-900 border border-dark-700 rounded-xl p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">Coordinamento scientifico</h3>
+              <ul class="space-y-2 text-sm text-dark-400">
+                <li><span class="text-neon font-mono text-xs">Coord.</span> Prof. Giuseppe Ioppolo</li>
+                <li>Prof. Giuseppe Caristi</li>
+                <li>Prof. Michele Limosani</li>
+                <li>Prof.ssa Katarzyna Szopik-Depczyńska</li>
+                <li>Prof. Shapour Heidarkhani</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">Ricercatori</h3>
+              <ul class="space-y-2 text-sm text-dark-400">
+                <li>Dott. Alberto Bongiorno</li>
+                <li>Dott.ssa Valeria Isgrò</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link -->
+      <div class="reveal reveal-delay-2">
+        <a href="https://galtirrenoeolie.it" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          Sito web GAL Tirreno Eolie
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

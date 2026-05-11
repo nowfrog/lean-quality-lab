@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LQS Lab — Neon Hybrid">
+  <title>LQS Lab — Neon Hybrid</title>
+  <!--
+    Concept: stessa costruzione del LQ Monogram (04) ri-colorata per il mood
+    dark/neon del sito live — utile se vuoi tenere coerenza con il look attuale
+    del sito invece di andare sul registro più istituzionale.
+    Palette: neon #00ff88 su dark-950 #030712, L in grigio neutro.
+  -->
+  <rect width="240" height="240" rx="24" fill="#030712"/>
+  <g fill="none" stroke-width="22" stroke-linecap="square" stroke-linejoin="miter">
+    <polyline points="41,36 41,204 134,204" stroke="#6b7280"/>
+    <circle cx="156" cy="120" r="58" stroke="#00ff88"/>
+    <line x1="196" y1="161" x2="222" y2="187" stroke="#00ff88"/>
+  </g>
+</svg>

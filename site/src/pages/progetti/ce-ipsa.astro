@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'it';
+---
+
+<BaseLayout title="CE_IPSA | LQS Lab UniME" lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/projects/ce-ipsa/header.jpg" alt="Area Industriale Fosso Imperatore" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="inline-block bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+      <span class="text-white font-mono text-sm tracking-widest uppercase">PRIN 2022 PNRR | NextGenerationEU</span>
+      <h1 class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-4 leading-tight">CE_IPSA</h1>
+      <p class="text-lg text-white/80 mt-6 max-w-2xl">A Development Model for Circular Economy between Industrial Parks and Surroundings Areas</p>
+    </div></div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <section class="py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Info box -->
+      <div class="reveal bg-dark-900 border border-dark-700 rounded-2xl p-6 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Codice</span>
+            <p class="text-dark-100 font-mono mt-1">P20227NFA4</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Budget</span>
+            <p class="text-dark-100 font-mono mt-1">&euro;266.000</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">Durata</span>
+            <p class="text-dark-100 font-mono mt-1">24 mesi (2023-2026)</p>
+          </div>
+          <div>
+            <span class="text-xs font-mono text-dark-500 uppercase">CUP</span>
+            <p class="text-dark-100 font-mono mt-1 text-xs">UniOr C53D23008770001<br/>UniMe J53D23016630001</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Il Progetto -->
+      <div class="reveal mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Il Progetto</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Economia Circolare e Simbiosi Industriale</h2>
+        <p class="text-dark-400 leading-relaxed mb-4">Il progetto <strong class="text-dark-100">CE_IPsa</strong> studia l'implementazione della Simbiosi Industriale (IS) e dell'Economia Circolare (CE) per aumentare l'efficienza delle risorse, la sostenibilit&agrave; ambientale e sociale e la competitivit&agrave; economica nelle aree produttive.</p>
+        <p class="text-dark-400 leading-relaxed mb-4">CE_IPsa costruisce un <strong class="text-dark-100">Modello di Sviluppo</strong> per i parchi industriali (IP) combinando la <em class="text-dark-200">Grounded Theory</em> con l'Analisi Costi-Benefici e l'ottimizzazione multi-obiettivo. Il parco industriale diventa il soggetto di riferimento con flussi di risorse in entrata e in uscita; le aree circostanti diventano potenziali fornitori di materie prime secondarie e destinazioni per sottoprodotti (riutilizzo vs smaltimento).</p>
+        <p class="text-dark-400 leading-relaxed">Il percorso di ricerca si articola in cinque fasi operative (RA1-RA5), dalla revisione teorica della letteratura fino allo sviluppo di un sistema di supporto decisionale (DSS) per policy-maker e imprenditori.</p>
+      </div>
+
+      <!-- Case Study: Fosso Imperatore -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-gold font-mono text-xs tracking-widest uppercase">Caso Studio</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Parco Industriale di Fosso Imperatore</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">Il caso studio &egrave; il Parco Industriale di Nocera Inferiore, gestito dal <strong class="text-dark-100">Consorzio di Imprese di Fosso Imperatore</strong>, in Campania. Un contesto ideale per studiare la simbiosi industriale e l'economia circolare in aree geograficamente limitate: chiudere i cicli produttivi &egrave; pi&ugrave; realizzabile in contesti piccoli e ben definiti rispetto alla scala nazionale.</p>
+
+        <!-- Due immagini affiancate -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/casestudy1.jpg" alt="Parco Industriale Fosso Imperatore - vista 1" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/casestudy2.jpg" alt="Parco Industriale Fosso Imperatore - vista 2" class="w-full h-72 object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Immagine a tutta larghezza -->
+        <div class="rounded-2xl overflow-hidden border border-dark-700">
+          <img src="/images/projects/ce-ipsa/casestudy3.jpg" alt="Panoramica del Parco Industriale Fosso Imperatore" class="w-full h-80 object-cover" loading="lazy" />
+          <div class="p-4 bg-dark-900">
+            <p class="text-xs text-dark-400 italic">Parco Industriale di Fosso Imperatore, Nocera Inferiore (SA) | area di studio del progetto CE_IPSA.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workshop / Stakeholder -->
+      <div class="reveal reveal-delay-1 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Coinvolgimento</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-4">Workshop e stakeholder engagement</h2>
+        <p class="text-dark-400 leading-relaxed mb-6">Il progetto prevede attivit&agrave; di coinvolgimento diretto degli stakeholder territoriali attraverso workshop, tavole rotonde e sessioni di confronto con imprenditori, amministratori e ricercatori per co-progettare il modello di sviluppo circolare.</p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/ceipsa-stakeholder-workshop-speakers.jpeg" alt="Relatori al workshop stakeholder CE_IPSA" class="w-full h-72 object-cover" loading="lazy" />
+            <div class="p-4 bg-dark-900">
+              <p class="text-xs text-dark-400 italic">Sessione plenaria del workshop con gli stakeholder del territorio.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-dark-700">
+            <img src="/images/projects/ce-ipsa/ceipsa-panel-discussion-circular-economy.jpeg" alt="Tavola rotonda sull'economia circolare CE_IPSA" class="w-full h-72 object-cover" loading="lazy" />
+            <div class="p-4 bg-dark-900">
+              <p class="text-xs text-dark-400 italic">Tavola rotonda sull'economia circolare e la simbiosi industriale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Activities -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-cyan font-mono text-xs tracking-widest uppercase">Attivit&agrave; di Ricerca</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Le cinque fasi operative</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { code: 'RA1', title: 'Revisione teorica della letteratura', desc: 'Revisione sistematica della letteratura su Simbiosi Industriale e Economia Circolare: pianificazione, monitoraggio e valutazione degli interventi nei parchi industriali.' },
+            { code: 'RA2', title: 'Analisi del contesto', desc: 'Mappatura del tessuto produttivo del parco industriale selezionato e delle aree circostanti: flussi di risorse, attori economici, infrastrutture e potenziali sinergie.' },
+            { code: 'RA3', title: 'Definizione del Modello di Sviluppo', desc: 'Costruzione del Development Model che integra Grounded Theory, Analisi Costi-Benefici e ottimizzazione multi-obiettivo per la transizione circolare del parco industriale.' },
+            { code: 'RA4', title: 'Definizione del Piano di Sviluppo', desc: 'Elaborazione del Development Plan operativo per implementare la transizione circolare nel territorio, con obiettivi, tempistiche e indicatori di performance.' },
+            { code: 'RA5', title: 'Sviluppo del DSS', desc: 'Sviluppo di un Decision Support System (sistema di supporto decisionale) per policy-maker e imprenditori, a supporto delle scelte strategiche di economia circolare.' },
+          ].map(ra => (
+            <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-colors">
+              <span class="text-xs font-mono text-neon font-bold">{ra.code}</span>
+              <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mt-1">{ra.title}</h3>
+              <p class="text-sm text-dark-400 mt-2">{ra.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">&euro;266K</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">Budget</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-cyan">2</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">Unit&agrave; di Ricerca</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-gold">10</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">Ricercatori</p>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6 text-center">
+            <p class="font-[family-name:var(--font-display)] text-3xl font-bold text-neon">9</p>
+            <p class="text-xs font-mono text-dark-500 mt-2 uppercase">Pubblicazioni</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Output / Pubblicazioni -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Output</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Pubblicazioni</h2>
+        <div class="space-y-4">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+            <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">Industrial Symbiosis Networks in Italian Industrial Parks: The Case of Fosso Imperatore</h4>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">Springer</span>
+              <span class="text-xs font-mono text-dark-500">2026</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">Book Chapter</span>
+            </div>
+            <a href="https://doi.org/10.1007/978-3-032-09062-1_10" target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+              DOI: 10.1007/978-3-032-09062-1_10
+            </a>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+            <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A Circular Land Use Model for Reconciling Industrial Expansion with Agricultural Heritage</h4>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">Sustainability</span>
+              <span class="text-xs font-mono text-dark-500">2025</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">Article</span>
+            </div>
+            <a href="https://doi.org/10.3390/su17198830" target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+              DOI: 10.3390/su17198830
+            </a>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-5 hover:border-neon/20 transition-all">
+            <h4 class="font-[family-name:var(--font-display)] font-bold text-dark-100">A Development Model for Circular Economy Between Industrial Parks and Surroundings Areas: The Reverse Logistics Strategic Approach</h4>
+            <div class="flex flex-wrap items-center gap-3 mt-3">
+              <span class="text-sm text-cyan italic">Springer</span>
+              <span class="text-xs font-mono text-dark-500">2025</span>
+              <span class="px-2 py-0.5 text-xs rounded-md bg-dark-800 border border-dark-700 text-dark-400 font-mono">Book Chapter</span>
+            </div>
+            <a href="https://doi.org/10.1007/978-3-031-80692-6_24" target="_blank" rel="noopener" class="inline-block mt-3 text-xs font-mono text-dark-500 hover:text-neon transition-colors">
+              DOI: 10.1007/978-3-031-80692-6_24
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="reveal reveal-delay-2 mb-16">
+        <span class="text-neon font-mono text-xs tracking-widest uppercase">Team</span>
+        <h2 class="font-[family-name:var(--font-display)] text-2xl font-bold text-dark-100 mt-3 mb-6">Gruppo di lavoro</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">Napoli L'Orientale (Lead)</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li><span class="text-neon font-mono text-xs">PI</span> Roberta Arbolino</li>
+              <li>Alessandra De Chiara</li>
+              <li>Antonio Lopes</li>
+              <li>Luisa De Simone</li>
+              <li><span class="text-dark-500 font-mono text-xs">Reclutata</span> Antonio Licastro</li>
+              <li><span class="text-dark-500 font-mono text-xs">Reclutata</span> Maria Coscia</li>
+            </ul>
+          </div>
+          <div class="bg-dark-900 border border-dark-700 rounded-xl p-6">
+            <h3 class="font-[family-name:var(--font-display)] font-bold text-dark-100 mb-3">UniME</h3>
+            <ul class="space-y-2 text-sm text-dark-400">
+              <li><span class="text-cyan font-mono text-xs">co-PI</span> Giuseppe Ioppolo</li>
+              <li>Grazia Calabr&ograve;</li>
+              <li>Giuseppe Caristi</li>
+              <li><span class="text-dark-500 font-mono text-xs">Reclutata</span> Carlotta D'Alessandro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link -->
+      <div class="reveal reveal-delay-2">
+        <a href="https://ceipsapnrr.github.io" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 border border-dark-600 hover:border-neon/50 text-dark-300 hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          Visita il sito dedicato
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

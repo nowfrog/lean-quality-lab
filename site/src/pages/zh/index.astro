@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+const lang = 'zh';
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={t('home.title')} lang={lang}>
+  <!-- Hero -->
+  <section class="relative py-24 lg:py-36 overflow-hidden" id="hero">
+    <div class="absolute inset-0">
+      <img src="/images/hero-economia.jpg" alt="墨西拿大学经济系" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-block bg-white/10 backdrop-blur-lg rounded-2xl p-8 sm:p-10 border border-white/20">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 mb-8">
+        <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+        <span class="text-white text-sm font-mono">{t('home.badge')}</span>
+      </div>
+      <h1 class="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-[1.1] mb-8">
+        <span class="block">{t('home.h1.1')}</span>
+        <span class="block text-shimmer py-1">{t('home.h1.2')}</span>
+        <span class="block">{t('home.h1.3')}</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-white leading-relaxed mb-10 max-w-2xl">{t('home.desc')}</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#about" class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 bg-neon text-dark-950 font-bold rounded-lg transition-all hover:shadow-lg hover:shadow-neon/25 text-sm">
+          {t('home.cta.research')}
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="/zh/progetti" class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 hover:border-neon/50 text-white hover:text-neon font-medium rounded-lg transition-all hover:bg-neon/5 text-sm">
+          {t('home.cta.projects')}
+        </a>
+      </div>
+      </div>
+    </div>
+  </section>
+  <div class="gradient-line"></div>
+
+  <!-- About -->
+  <section class="py-24 lg:py-32 relative" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="text-neon font-mono text-sm tracking-widest uppercase reveal">{t('home.about.label')}</span>
+        <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mt-4 mb-8 reveal reveal-delay-1">{t('home.about.title')}</h2>
+        <p class="text-lg text-dark-400 leading-relaxed reveal reveal-delay-2">{t('home.about.text')}</p>
+        <a href="/zh/team" class="inline-flex items-center gap-2 mt-6 text-sm font-mono text-neon hover:text-neon/80 transition-colors reveal reveal-delay-3">
+          了解团队 &rarr;
+        </a>
+
+        <!-- Team avatars -->
+        <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center items-start gap-6 sm:gap-8 mt-12 reveal reveal-delay-3">
+          <!-- Coordinator - larger -->
+          <a href="/zh/team#ioppolo" class="flex flex-col items-center gap-2 group">
+            <div class="relative">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-neon/40 group-hover:border-neon transition-all duration-300 bg-dark-800 shadow-lg shadow-neon/10">
+                <img src="/images/team/ioppolo.jpg" alt="G. Ioppolo" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-dark-900 border border-neon/30 rounded-full">
+                <span class="text-[10px] font-mono text-neon uppercase tracking-wider">协调员</span>
+              </div>
+            </div>
+            <span class="text-sm text-dark-300 group-hover:text-neon transition-colors font-medium text-center leading-tight mt-2">Giuseppe Ioppolo<br/>教授</span>
+          </a>
+
+          <!-- Other members -->
+          {([
+            { name: "Carlotta D'Alessandro", surname: '博士', initials: 'CD', img: '/images/team/dalessandro.jpg', id: 'dalessandro' },
+            { name: 'Antonio Licastro', surname: '博士', initials: 'AL', img: '/images/team/licastro.jpg', id: 'licastro' },
+            { name: 'Andrea Morana', surname: '博士', initials: 'AM', id: 'morana' },
+          ]).map(m => (
+            <a href={`/zh/team#${m.id}`} class="flex flex-col items-center gap-2 group">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-dark-700 group-hover:border-neon/50 transition-all duration-300 bg-dark-800">
+                {m.img ? (
+                  <img src={m.img} alt={`${m.name} ${m.surname}`} class="w-full h-full object-cover" loading="lazy" />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="font-[family-name:var(--font-display)] text-lg font-bold text-dark-500 group-hover:text-neon/50 transition-colors">{m.initials}</span>
+                  </div>
+                )}
+              </div>
+              <span class="text-xs text-dark-500 group-hover:text-neon transition-colors font-mono text-center leading-tight">{m.name}<br/>{m.surname}</span>
+            </a>
+          ))}
+
+          <!-- International collaboration -->
+          <a href="/zh/team#szopik" class="col-span-2 sm:col-span-1 justify-self-center flex flex-col items-center gap-2 group">
+            <div class="relative">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-cyan/30 group-hover:border-cyan transition-all duration-300 bg-dark-800">
+                <img src="/images/team/szopik.jpg" alt="K. Szopik-Depczyńska" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-dark-900 border border-cyan/30 rounded-full">
+                <span class="text-[9px] font-mono text-cyan uppercase tracking-wider whitespace-nowrap">国际合作</span>
+              </div>
+            </div>
+            <span class="text-xs text-dark-500 group-hover:text-cyan transition-colors font-mono text-center leading-tight mt-2">Katarzyna Szopik<br/>-Depczyńska 教授</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="gradient-line max-w-7xl mx-auto"></div>
+
+  <!-- Research -->
+  <section class="py-24 lg:py-32 relative grid-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-neon font-mono text-sm tracking-widest uppercase reveal">{t('home.research.label')}</span>
+        <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mt-4 reveal reveal-delay-1">{t('home.research.title')}</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {(['lean','tqm','ce','i50','local','health'] as const).map((key, i) => (
+          <div class={`reveal reveal-delay-${Math.min(i+1,5)}`}>
+            <div class="group relative bg-dark-900 border border-dark-700 rounded-2xl p-6 card-hover overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-neon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative z-10">
+                <div class="w-12 h-12 rounded-xl bg-dark-800 border border-dark-600 group-hover:border-neon/30 flex items-center justify-center mb-5 transition-all duration-300">
+                  <span class="text-dark-400 group-hover:text-neon transition-colors duration-300 text-lg font-bold font-mono">{String(i+1).padStart(2,'0')}</span>
+                </div>
+                <h3 class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 mb-2 group-hover:text-neon transition-colors duration-300">{t(`research.${key}.title` as any)}</h3>
+                <p class="text-sm text-dark-400 leading-relaxed">{t(`research.${key}.desc` as any)}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10 reveal">
+        <a href="/zh/laboratorio#ricerca" class="inline-flex items-center gap-2 text-sm font-mono text-neon hover:text-neon/80 transition-colors">
+          深入了解研究领域 &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="gradient-line max-w-7xl mx-auto"></div>
+
+  <!-- Numbers -->
+  <section class="py-24 lg:py-32 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-neon font-mono text-sm tracking-widest uppercase reveal">{t('home.impact.label')}</span>
+        <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mt-4 reveal reveal-delay-1">{t('home.impact.title')}</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        {([
+          { target: 4, label: 'counter.years', link: '' },
+          { target: 6, label: 'counter.projects', link: '/zh/progetti' },
+          { target: 27, label: 'counter.publications', link: '/zh/pubblicazioni' },
+          { target: 4, label: 'counter.members', link: '/zh/team' },
+        ] as {target:number,label:string,link:string}[]).map((item, i) => (
+          <a href={item.link || '#'} class={`reveal reveal-delay-${i+1} text-center p-8 rounded-2xl bg-dark-900 border border-dark-700 card-hover block`}>
+            <div class="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-dark-100 counter-value" data-target={item.target}>0</div>
+            <div class="text-sm text-dark-400 mt-3 font-medium">{t(item.label as any)}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <div class="gradient-line max-w-7xl mx-auto"></div>
+
+  <!-- Projects -->
+  <section class="py-24 lg:py-32 relative grid-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-neon font-mono text-sm tracking-widest uppercase reveal">{t('home.projects.label')}</span>
+        <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mt-4 reveal reveal-delay-1">{t('home.projects.title')}</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {([
+          { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022 | NextGenerationEU', desc: '意大利历史小镇可持续循环经济转型决策支持系统', budget: '€250.000', period: '2024-2027', img: '/images/projects/h-sma-ce/header.jpg' },
+          { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN | NextGenerationEU', desc: '工业园区与周边地区之间循环经济的发展模式', budget: '€266.000', period: '2023-2026', img: '/images/projects/ce-ipsa/header.jpg' },
+          { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: '地方发展', desc: '西西里岛东北部第勒尼安海和伊奥利亚群岛地区发展的地方行动小组。', img: '/images/projects/gal-tirreno/header.jpg' },
+          { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: '地方发展', desc: '埃特纳火山和阿尔坎塔拉河谷地区发展的地方行动小组。', img: '/images/projects/gal-etna/header.png' },
+        ]).map((p, i) => (
+          <div class={`reveal reveal-delay-${i+1}`}>
+            <a href={`/zh/progetti/${p.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl card-hover overflow-hidden">
+              <img src={p.img} alt={p.name} class="w-full h-40 object-cover" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-[family-name:var(--font-display)] font-bold text-xl text-dark-100 group-hover:text-neon transition-colors duration-300">{p.name}</h3>
+                    <span class="inline-flex items-center gap-1.5 mt-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-neon/50"></span>
+                      <span class="text-xs font-mono text-neon/70 tracking-wide uppercase">{p.type}</span>
+                    </span>
+                  </div>
+                  <div class="w-10 h-10 rounded-lg bg-dark-800 border border-dark-600 group-hover:border-neon/30 flex items-center justify-center transition-all duration-300 shrink-0">
+                    <svg class="w-4 h-4 text-dark-500 group-hover:text-neon transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                </div>
+                <p class="text-sm text-dark-400 leading-relaxed mb-4">{p.desc}</p>
+                {p.budget && <div class="flex gap-4 pt-4 border-t border-dark-700/50"><span class="text-xs font-mono text-dark-500"><span class="text-neon/60">$</span> {p.budget}</span><span class="text-xs font-mono text-dark-500"><span class="text-neon/60">@</span> {p.period}</span></div>}
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10 reveal">
+        <a href="/zh/progetti" class="inline-flex items-center gap-2 text-sm font-mono text-neon hover:text-neon/80 transition-colors">
+          查看所有项目 &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon/5 rounded-full blur-[120px]"></div></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mb-8 reveal">{t('home.cta.collaborate')}</h2>
+      <a href="/zh/contatti" class="magnetic-btn inline-flex items-center gap-3 px-10 py-4 bg-neon text-dark-950 font-bold rounded-lg transition-all hover:shadow-lg hover:shadow-neon/25 text-lg reveal reveal-delay-1">
+        {t('home.cta.contact')}
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const counters = document.querySelectorAll('.counter-value');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target as HTMLElement;
+        const target = parseInt(el.dataset.target || '0');
+        let current = 0;
+        const increment = target / 40;
+        const timer = setInterval(() => { current += increment; if (current >= target) { current = target; clearInterval(timer); } el.textContent = Math.round(current).toString(); }, 40);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => counterObserver.observe(el));
+</script>

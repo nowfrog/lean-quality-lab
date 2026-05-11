@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+const lang = 'it';
+---
+
+<BaseLayout title="Cookie Policy | LQS Lab UniME" lang={lang}>
+  <PageHero label="Legal" title="Cookie Policy" />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose-dark">
+      <div class="space-y-8 text-dark-400 leading-relaxed">
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cosa sono i cookie</h2>
+          <p>I cookie sono piccoli file di testo che i siti web inviano al browser dell'utente durante la navigazione. Vengono memorizzati sul dispositivo e ritrasmessi al sito nelle visite successive.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookie utilizzati da questo sito</h2>
+          <p>Questo sito utilizza esclusivamente <strong class="text-dark-100">cookie tecnici</strong> necessari al corretto funzionamento, che non richiedono il consenso preventivo dell'utente ai sensi dell'art. 122 del D.Lgs. 196/2003 e del Provvedimento del Garante dell'8 maggio 2014.</p>
+
+          <div class="mt-4 bg-dark-900 border border-dark-700 rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-700">
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Cookie</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Tipo</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Durata</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Finalità</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-dark-800">
+                  <td class="p-3 font-mono text-neon/70">cookie-consent</td>
+                  <td class="p-3">Tecnico</td>
+                  <td class="p-3">Permanente</td>
+                  <td class="p-3">Memorizza la presa visione del banner cookie</td>
+                </tr>
+                <tr class="border-b border-dark-800">
+                  <td class="p-3 font-mono text-neon/70">theme</td>
+                  <td class="p-3">Tecnico</td>
+                  <td class="p-3">Permanente</td>
+                  <td class="p-3">Memorizza la preferenza tema chiaro/scuro</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookie di terze parti</h2>
+          <p>Questo sito <strong class="text-dark-100">non utilizza</strong> cookie di profilazione, cookie analitici di terze parti, né cookie pubblicitari. La mappa nella pagina contatti è fornita tramite OpenStreetMap (embed iframe) che non installa cookie sul dispositivo dell'utente.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Come disabilitare i cookie</h2>
+          <p>L'utente può gestire le preferenze relative ai cookie direttamente nel proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito (es. il tema scelto non verrà mantenuto).</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Riferimenti normativi</h2>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Regolamento UE 2016/679 (GDPR)</li>
+            <li>D.Lgs. 196/2003 (Codice Privacy) e successive modifiche</li>
+            <li>Provvedimento del Garante per la protezione dei dati personali dell'8 maggio 2014</li>
+            <li>Linee guida cookie e altri strumenti di tracciamento | 10 giugno 2021</li>
+          </ul>
+        </div>
+
+        <p class="text-xs text-dark-500 font-mono">Ultimo aggiornamento: maggio 2026</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

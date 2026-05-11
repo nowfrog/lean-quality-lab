@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+const lang = 'zh';
+---
+
+<BaseLayout title="隐私政策 | LQS Lab UniME" lang={lang}>
+  <PageHero label="法律" title="隐私政策" />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-dark-400 leading-relaxed">
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">数据控制者</h2>
+          <p>墨西拿大学 | 经济学系<br/>
+          Piazza Pugliatti, 1 | 98122 Messina (ME), 意大利<br/>
+          电子邮件：<a href="mailto:giuseppe.ioppolo@unime.it" class="text-neon hover:underline">giuseppe.ioppolo@unime.it</a></p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">收集的数据类型</h2>
+          <p>本网站不会自动收集个人数据。用户通过联系表单自愿提供的任何个人数据（姓名、电子邮件、消息）仅用于回复请求，不会与第三方共享。</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">处理的法律依据</h2>
+          <p>通过联系表单提供的数据处理基于数据主体的同意（GDPR第6条第1款(a)），通过自愿提交消息表示同意。</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">数据保留</h2>
+          <p>通过联系表单提供的数据仅在满足请求所需的最短时间内保留，随后将被删除。</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">数据主体权利</h2>
+          <p>根据欧盟法规2016/679（GDPR）第15-22条，数据主体有权：</p>
+          <ul class="list-disc list-inside space-y-1 mt-2">
+            <li>访问其个人数据</li>
+            <li>请求更正或删除</li>
+            <li>限制或反对处理</li>
+            <li>请求数据可移植性</li>
+            <li>随时撤回同意</li>
+            <li>向意大利数据保护局提出投诉</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookie</h2>
+          <p>有关Cookie使用的信息，请参阅我们的<a href="/zh/cookie" class="text-neon hover:underline">Cookie政策</a>。</p>
+        </div>
+
+        <p class="text-xs text-dark-500 font-mono">最后更新：2026年5月</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

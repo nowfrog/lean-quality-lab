@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LQS Lab — LQ Monogram">
+  <title>LQS Lab — LQ Monogram</title>
+  <!--
+    Concept: monogramma L+Q costruito su griglia rigida, stile svizzero/Vignelli.
+    La L (Lean) è la struttura portante in antracite; la Q (Quality) è il cerchio
+    emerald che vi si appoggia. Zero metafore stratificate, una sola idea forte.
+    Palette: emerald #0ea968 + antracite #0f172a. Zero oro, zero neon.
+  -->
+  <g fill="none" stroke-width="22" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- L (Lean) -->
+    <polyline points="41,36 41,204 134,204" stroke="#0f172a"/>
+    <!-- Q (Quality) -->
+    <circle cx="156" cy="120" r="58" stroke="#0ea968"/>
+    <!-- Q tail -->
+    <line x1="196" y1="161" x2="222" y2="187" stroke="#0ea968"/>
+  </g>
+</svg>

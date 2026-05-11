@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+const lang = 'en';
+---
+
+<BaseLayout title="Cookie Policy | LQS Lab UniME" lang={lang}>
+  <PageHero label="Legal" title="Cookie Policy" />
+  <section class="py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 text-dark-400 leading-relaxed">
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">What are cookies</h2>
+          <p>Cookies are small text files that websites send to the user's browser during navigation. They are stored on the device and retransmitted to the site on subsequent visits.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Cookies used by this site</h2>
+          <p>This site uses only <strong class="text-dark-100">technical cookies</strong> necessary for proper operation, which do not require prior user consent under applicable EU regulations.</p>
+
+          <div class="mt-4 bg-dark-900 border border-dark-700 rounded-xl overflow-hidden">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-700">
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Cookie</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Type</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Duration</th>
+                  <th class="text-left p-3 text-dark-300 font-mono text-xs">Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-dark-800">
+                  <td class="p-3 font-mono text-neon/70">cookie-consent</td>
+                  <td class="p-3">Technical</td>
+                  <td class="p-3">Persistent</td>
+                  <td class="p-3">Stores acknowledgment of the cookie banner</td>
+                </tr>
+                <tr class="border-b border-dark-800">
+                  <td class="p-3 font-mono text-neon/70">theme</td>
+                  <td class="p-3">Technical</td>
+                  <td class="p-3">Persistent</td>
+                  <td class="p-3">Stores light/dark theme preference</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Third-party cookies</h2>
+          <p>This site <strong class="text-dark-100">does not use</strong> profiling cookies, third-party analytics cookies, or advertising cookies. The map on the contacts page is provided via OpenStreetMap (iframe embed) which does not install cookies on the user's device.</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">How to disable cookies</h2>
+          <p>Users can manage cookie preferences directly in their browser settings. Disabling technical cookies may affect some site functionality (e.g., the chosen theme will not be retained).</p>
+        </div>
+
+        <div>
+          <h2 class="font-[family-name:var(--font-display)] text-xl font-bold text-dark-100 mb-3">Legal references</h2>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Regulation (EU) 2016/679 (GDPR)</li>
+            <li>Italian Legislative Decree 196/2003 (Privacy Code)</li>
+            <li>Italian Data Protection Authority guidelines on cookies | June 10, 2021</li>
+          </ul>
+        </div>
+
+        <p class="text-xs text-dark-500 font-mono">Last updated: May 2026</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
