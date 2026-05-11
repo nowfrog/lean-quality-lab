@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { useTranslations } from '../i18n/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const lang = 'it';
 const t = useTranslations(lang);
 
@@ -15,7 +16,7 @@ const members = [
     bio: 'Ingegnere civile per l\'ambiente con focus su sostenibilità e gestione ambientale, è Professore Ordinario di Scienze Merceologiche e Docente di Tecnologia dei Cicli Produttivi e TQM presso il Dipartimento di Economia dell\'Università di Messina. È membro della Scuola Dottorale di Economics, Management and Statistics. È Delegato del Rettore per i Rapporti con le Imprese del Territorio. In qualità di Editor-in-Chief della rivista Sustainability, una delle principali riviste internazionali sul tema della sostenibilità, ha svolto il ruolo di referee per l\'Italia e l\'Europa in numerosi comitati scientifici di conferenze internazionali. Come Visiting Professor ha tenuto lezioni presso Tsinghua University (Pechino, Cina), BJTU MBA (Pechino, Cina), Tokyo University (Tokyo, Giappone) e Santa Barbara University (California, USA). È PI di diversi programmi internazionali ed è particolarmente attivo in Cina. Ha partecipato a programmi di ricerca nazionali e internazionali come Interreg e Horizon. Infine, ha svolto attività di coordinamento di processi in progetti di ingegneria e pianificazione territoriale, sia in Italia (Isole Eolie, Sardegna, Valle d\'Agrò, ecc.) che all\'estero (Tunisia, Croazia, ecc.).',
     tags: ['Economia Circolare', 'Ecologia Industriale', 'Sviluppo Sostenibile', 'Gestione Ambientale', 'Pianificazione Territoriale'],
     initials: 'GI',
-    img: '/images/team/ioppolo.jpg',
+    img: `${base}/images/team/ioppolo.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=36097581800' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0003-0262-8435' },
@@ -32,7 +33,7 @@ const members = [
     bio: 'Dottoressa di ricerca in Economics, Management and Statistics con focus su Sostenibilità ed Economia Circolare presso l\'Università di Messina. La sua ricerca è dedicata ad affrontare questioni critiche nella sostenibilità e a promuovere pratiche di economia circolare, lavorando verso un futuro più sostenibile e circolare. Attualmente è Guest Editor per una rivista scientifica internazionale.',
     tags: ['Sostenibilità', 'Economia Circolare', 'Sviluppo Sostenibile', 'Gestione dell\'Innovazione Sostenibile', 'Ecologia Industriale'],
     initials: 'CD',
-    img: '/images/team/dalessandro.jpg',
+    img: `${base}/images/team/dalessandro.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=58534571400' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0002-7361-4201' },
@@ -48,7 +49,7 @@ const members = [
     bio: 'Assegnista di ricerca presso il Dipartimento di Scienze Umane e Sociali dell\'Università di Napoli "L\'Orientale". Ha conseguito il dottorato con lode nel 2025 presso l\'Università di Messina, Dipartimento di Economia. Le sue aree di competenza includono econometria, Life Cycle Assessment (LCA), ecologia industriale e scienza della sostenibilità, con focus sulle sfide ambientali critiche nei sistemi agricoli e territoriali. I suoi interessi di ricerca attuali includono lo sviluppo di metodologie di valutazione accessibili per le transizioni di sostenibilità nelle piccole comunità, l\'integrazione di tecnologie digitali nei sistemi di monitoraggio ambientale e l\'avanzamento delle basi teoriche delle applicazioni di economia circolare in contesti agricoli.',
     tags: ['Econometria', 'Life Cycle Assessment', 'Ecologia Industriale', 'Scienza della Sostenibilità', 'Economia Circolare'],
     initials: 'AL',
-    img: '/images/team/licastro.jpg',
+    img: `${base}/images/team/licastro.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=57278726700' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0002-4735-6237' },
@@ -76,7 +77,7 @@ const collaborators = [
     bio: 'Professoressa Associata in Management presso l\'Università di Szczecin (Polonia), svolge il ruolo di Senior Researcher in Gestione dell\'Innovazione Sostenibile per il progetto H-SMA-CE. Il suo lavoro si concentra sull\'analisi dell\'innovazione tecnologica, sulle metodologie di economia circolare e sugli strumenti di valutazione ambientale per i piccoli centri storici, supportando lo sviluppo e il testing del DSS. Co-autrice frequente con il Prof. Ioppolo, vanta circa 170 pubblicazioni su Journal of Cleaner Production, Land Use Policy, Ecological Indicators. Co-autrice del libro "Total Quality Management and Lean Thinking 5.0" (Routledge, 2024).',
     tags: ['Innovation Management', 'R&D', 'Sostenibilità', 'CSR'],
     initials: 'KS',
-    img: '/images/team/szopik.jpg',
+    img: `${base}/images/team/szopik.jpg`,
     links: [
       { label: 'Scholar', url: 'https://scholar.google.pl/citations?user=lL4k3n0AAAAJ&hl=pl' },
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Katarzyna-Szopik-Depczynska' },

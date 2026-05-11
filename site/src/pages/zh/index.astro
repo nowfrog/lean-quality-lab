@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { useTranslations } from '../../i18n/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const lang = 'zh';
 const t = useTranslations(lang);
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title={t('home.title')} lang={lang}>
@@ -67,8 +67,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
           <!-- Other members -->
           {([
-            { name: "Carlotta D'Alessandro", surname: '博士', initials: 'CD', img: '/images/team/dalessandro.jpg', id: 'dalessandro' },
-            { name: 'Antonio Licastro', surname: '博士', initials: 'AL', img: '/images/team/licastro.jpg', id: 'licastro' },
+            { name: "Carlotta D'Alessandro", surname: '博士', initials: 'CD', img: `${base}/images/team/dalessandro.jpg`, id: 'dalessandro' },
+            { name: 'Antonio Licastro', surname: '博士', initials: 'AL', img: `${base}/images/team/licastro.jpg`, id: 'licastro' },
             { name: 'Andrea Morana', surname: '博士', initials: 'AM', id: 'morana' },
           ]).map(m => (
             <a href={`/zh/team#${m.id}`} class="flex flex-col items-center gap-2 group">
@@ -168,10 +168,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         {([
-          { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022 | NextGenerationEU', desc: '意大利历史小镇可持续循环经济转型决策支持系统', budget: '€250.000', period: '2024-2027', img: '/images/projects/h-sma-ce/header.jpg' },
-          { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN | NextGenerationEU', desc: '工业园区与周边地区之间循环经济的发展模式', budget: '€266.000', period: '2023-2026', img: '/images/projects/ce-ipsa/header.jpg' },
-          { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: '地方发展', desc: '西西里岛东北部第勒尼安海和伊奥利亚群岛地区发展的地方行动小组。', img: '/images/projects/gal-tirreno/header.jpg' },
-          { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: '地方发展', desc: '埃特纳火山和阿尔坎塔拉河谷地区发展的地方行动小组。', img: '/images/projects/gal-etna/header.png' },
+          { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022 | NextGenerationEU', desc: '意大利历史小镇可持续循环经济转型决策支持系统', budget: '€250.000', period: '2024-2027', img: `${base}/images/projects/h-sma-ce/header.jpg` },
+          { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN | NextGenerationEU', desc: '工业园区与周边地区之间循环经济的发展模式', budget: '€266.000', period: '2023-2026', img: `${base}/images/projects/ce-ipsa/header.jpg` },
+          { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: '地方发展', desc: '西西里岛东北部第勒尼安海和伊奥利亚群岛地区发展的地方行动小组。', img: `${base}/images/projects/gal-tirreno/header.jpg` },
+          { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: '地方发展', desc: '埃特纳火山和阿尔坎塔拉河谷地区发展的地方行动小组。', img: `${base}/images/projects/gal-etna/header.png` },
         ]).map((p, i) => (
           <div class={`reveal reveal-delay-${i+1}`}>
             <a href={`/zh/progetti/${p.slug}`} class="group relative block bg-dark-900 border border-dark-700 rounded-2xl card-hover overflow-hidden">

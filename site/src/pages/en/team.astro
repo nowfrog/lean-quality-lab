@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import { useTranslations } from '../../i18n/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const lang = 'en';
 const t = useTranslations(lang);
 
@@ -15,7 +16,7 @@ const members = [
     bio: 'Giuseppe Ioppolo is a Civil Engineer for Environment with a focus on sustainability and environmental management, he is a Full Professor of Commodities Science, and a Lecturer in the Technology of Production Cycles and TQM, Department of Economics, University of Messina. He is a member of the Doctoral School of Economics, Management, and Statistics. He is Delegate of the Rector for Relations with Local Enterprises. As Editor-in-Chief of the journal Sustainability, one of the leading international journals on the topic of sustainability, he has served as a referee for Italy and Europe in numerous scientific committees at international conferences. As a Visiting Professor, he has lectured at Tsinghua University (Beijing, China), BJTU MBA (Beijing, China), Tokyo University (Tokyo, Japan), and Santa Barbara University (California, USA). He is the PI for several international programs and is particularly active in China. He has participated in national and international research programs such as Interreg and Horizon. Finally, he has carried out process coordination activities in engineering and spatial planning projects, both in Italy (such as the Aeolian Islands, Sardinia, Valle d\'Agrò, etc.) and abroad (Tunisia, Croatia, etc.).',
     tags: ['Circular Economy', 'Industrial Ecology', 'Sustainable Development', 'Environmental Management', 'Regional Planning'],
     initials: 'GI',
-    img: '/images/team/ioppolo.jpg',
+    img: `${base}/images/team/ioppolo.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=36097581800' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0003-0262-8435' },
@@ -32,7 +33,7 @@ const members = [
     bio: 'Carlotta D\'Alessandro holds a Ph.D. in Economics, Management and Statistics with a focus on Sustainability and Circular Economy from the University of Messina. Her research is dedicated to addressing critical issues in sustainability and promoting circular economy practices, working towards a more sustainable and circular future. She is currently serving as a Guest Editor for an international scientific journal.',
     tags: ['Sustainability', 'Circular Economy', 'Sustainable Development', 'Sustainable Innovation Management', 'Industrial Ecology'],
     initials: 'CD',
-    img: '/images/team/dalessandro.jpg',
+    img: `${base}/images/team/dalessandro.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=58534571400' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0002-7361-4201' },
@@ -48,7 +49,7 @@ const members = [
     bio: 'Antonio Licastro is currently employed as a research fellow at the Department of Human and Social Sciences, University of Naples "L\'Orientale". He completed his PhD with laude in 2025 at the University of Messina, Department of Economics. His areas of expertise are econometrics, Life Cycle Assessment (LCA), industrial ecology, and sustainability science, with focus on critical environmental challenges in agricultural and territorial systems. Current research interests include developing accessible assessment methodologies for sustainability transitions in small communities, integrating digital technologies in environmental monitoring systems, and advancing the theoretical foundations of circular economy applications in agricultural contexts.',
     tags: ['Econometrics', 'Life Cycle Assessment', 'Industrial Ecology', 'Sustainability Science', 'Circular Economy'],
     initials: 'AL',
-    img: '/images/team/licastro.jpg',
+    img: `${base}/images/team/licastro.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=57278726700' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0002-4735-6237' },
@@ -76,7 +77,7 @@ const collaborators = [
     bio: 'Associate Professor in Management at the University of Szczecin (Poland), serves as Senior Researcher in Sustainable Innovation Management for the H-SMA-CE project. Her work focuses on technological innovation analysis, circular economy methodologies, and environmental assessment tools for Historical Small Towns, supporting DSS development and testing. Frequent co-author with Prof. Ioppolo, with around 170 publications in Journal of Cleaner Production, Land Use Policy, Ecological Indicators. Co-author of "Total Quality Management and Lean Thinking 5.0" (Routledge, 2024).',
     tags: ['Innovation Management', 'R&D', 'Sustainability', 'CSR'],
     initials: 'KS',
-    img: '/images/team/szopik.jpg',
+    img: `${base}/images/team/szopik.jpg`,
     links: [
       { label: 'Scholar', url: 'https://scholar.google.pl/citations?user=lL4k3n0AAAAJ&hl=pl' },
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Katarzyna-Szopik-Depczynska' },

@@ -2,16 +2,17 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHero from '../../../components/PageHero.astro';
 import { useTranslations } from '../../../i18n/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const lang = 'zh';
 const t = useTranslations(lang);
 
 const projects = [
-  { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022, NextGenerationEU', desc: '意大利历史小镇可持续循环经济转型决策支持系统', budget: '€250.000', period: '2024-2027', img: '/images/projects/h-sma-ce/header.jpg' },
-  { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN, NextGenerationEU', desc: '工业园区与周边地区之间循环经济的发展模式', budget: '€266.000', period: '2023-2026', img: '/images/projects/ce-ipsa/header.jpg' },
-  { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: '地方发展', desc: '西西里岛东北部第勒尼安海和伊奥利亚群岛地区发展的地方行动小组。', img: '/images/projects/gal-tirreno/header.jpg' },
-  { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: '地方发展', desc: '埃特纳火山和阿尔坎塔拉河谷地区发展的地方行动小组。', img: '/images/projects/gal-etna/header.png' },
-  { slug: 'metablue', name: 'MeTaBlue', type: 'DMO', desc: 'Messina Taormina Costa Blu — 爱奥尼亚海岸可持续发展统一模式。', img: '/images/projects/metablue/riviera-jonica.jpg' },
-  { slug: 'master-food', name: 'Master Food, Quality & International Management', type: '教育', desc: '食品、质量与国际管理一级硕士 — 墨西拿大学经济系。', img: '/images/projects/master-food/header.jpg' },
+  { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022, NextGenerationEU', desc: '意大利历史小镇可持续循环经济转型决策支持系统', budget: '€250.000', period: '2024-2027', img: `${base}/images/projects/h-sma-ce/header.jpg` },
+  { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN, NextGenerationEU', desc: '工业园区与周边地区之间循环经济的发展模式', budget: '€266.000', period: '2023-2026', img: `${base}/images/projects/ce-ipsa/header.jpg` },
+  { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: '地方发展', desc: '西西里岛东北部第勒尼安海和伊奥利亚群岛地区发展的地方行动小组。', img: `${base}/images/projects/gal-tirreno/header.jpg` },
+  { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: '地方发展', desc: '埃特纳火山和阿尔坎塔拉河谷地区发展的地方行动小组。', img: `${base}/images/projects/gal-etna/header.png` },
+  { slug: 'metablue', name: 'MeTaBlue', type: 'DMO', desc: 'Messina Taormina Costa Blu — 爱奥尼亚海岸可持续发展统一模式。', img: `${base}/images/projects/metablue/riviera-jonica.jpg` },
+  { slug: 'master-food', name: 'Master Food, Quality & International Management', type: '教育', desc: '食品、质量与国际管理一级硕士 — 墨西拿大学经济系。', img: `${base}/images/projects/master-food/header.jpg` },
 ];
 ---
 

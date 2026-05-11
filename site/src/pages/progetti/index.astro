@@ -2,16 +2,17 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import { useTranslations } from '../../i18n/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const lang = 'it';
 const t = useTranslations(lang);
 
 const projects = [
-  { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022, NextGenerationEU', desc: 'A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns', budget: '€250.000', period: '2024-2027', img: '/images/projects/h-sma-ce/header.jpg' },
-  { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN, NextGenerationEU', desc: 'A Development Model for Circular Economy between Industrial Parks and Surrounding Areas', budget: '€266.000', period: '2023-2026', img: '/images/projects/ce-ipsa/header.jpg' },
-  { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: 'Sviluppo locale', desc: 'Gruppo di Azione Locale per lo sviluppo del territorio tirrenico ed eoliano della Sicilia nord-orientale.', img: '/images/projects/gal-tirreno/header.jpg' },
-  { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: 'Sviluppo locale', desc: "Gruppo di Azione Locale per lo sviluppo dell'area etnea e della Valle dell'Alcantara.", img: '/images/projects/gal-etna/header.png' },
-  { slug: 'metablue', name: 'MeTaBlue', type: 'DMO', desc: 'Messina Taormina Costa Blu — Un modello unitario di sviluppo sostenibile per la Riviera Jonica.', img: '/images/projects/metablue/riviera-jonica.jpg' },
-  { slug: 'master-food', name: 'Master Food, Quality & International Management', type: 'Formazione', desc: 'Master di I livello in Food, Quality and International Management — Dipartimento di Economia, UniME.', img: '/images/projects/master-food/header.jpg' },
+  { slug: 'h-sma-ce', name: 'H-SMA-CE', type: 'PRIN 2022, NextGenerationEU', desc: 'A Decision Support System for Sustainable Circular Economy Transition in Italian Historical Small Towns', budget: '€250.000', period: '2024-2027', img: `${base}/images/projects/h-sma-ce/header.jpg` },
+  { slug: 'ce-ipsa', name: 'CE_IPSA', type: 'PRIN, NextGenerationEU', desc: 'A Development Model for Circular Economy between Industrial Parks and Surrounding Areas', budget: '€266.000', period: '2023-2026', img: `${base}/images/projects/ce-ipsa/header.jpg` },
+  { slug: 'gal-tirreno-eolie', name: 'GAL Tirreno Eolie', type: 'Sviluppo locale', desc: 'Gruppo di Azione Locale per lo sviluppo del territorio tirrenico ed eoliano della Sicilia nord-orientale.', img: `${base}/images/projects/gal-tirreno/header.jpg` },
+  { slug: 'gal-etna-alcantara', name: 'GAL Etna-Alcantara', type: 'Sviluppo locale', desc: "Gruppo di Azione Locale per lo sviluppo dell'area etnea e della Valle dell'Alcantara.", img: `${base}/images/projects/gal-etna/header.png` },
+  { slug: 'metablue', name: 'MeTaBlue', type: 'DMO', desc: 'Messina Taormina Costa Blu — Un modello unitario di sviluppo sostenibile per la Riviera Jonica.', img: `${base}/images/projects/metablue/riviera-jonica.jpg` },
+  { slug: 'master-food', name: 'Master Food, Quality & International Management', type: 'Formazione', desc: 'Master di I livello in Food, Quality and International Management — Dipartimento di Economia, UniME.', img: `${base}/images/projects/master-food/header.jpg` },
 ];
 ---
 

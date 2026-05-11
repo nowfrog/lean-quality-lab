@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import { useTranslations } from '../../i18n/utils';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const lang = 'zh';
 const t = useTranslations(lang);
 
@@ -15,7 +16,7 @@ const members = [
     bio: 'Giuseppe Ioppolo是一位专注于可持续性和环境管理的环境土木工程师，现任墨西拿大学经济学系商品学正教授，讲授生产周期技术和全面质量管理课程。他是经济学、管理学和统计学博士学院成员，同时担任校长授权的地方企业关系代表。作为Sustainability期刊主编, , 可持续性领域领先的国际期刊之一，他在众多国际会议科学委员会中担任意大利和欧洲的评审。作为访问教授，他曾在清华大学（北京）、北京交通大学MBA（北京）、东京大学（东京）和圣巴巴拉大学（加利福尼亚）授课。他是多个国际项目的PI，在中国尤为活跃。他参与了Interreg和Horizon等国内外研究项目。此外，他在意大利（如埃奥利群岛、撒丁岛、阿格罗山谷等）和海外（突尼斯、克罗地亚等）的工程和空间规划项目中开展了过程协调活动。',
     tags: ['循环经济', '产业生态学', '可持续发展', '环境管理', '区域规划'],
     initials: 'GI',
-    img: '/images/team/ioppolo.jpg',
+    img: `${base}/images/team/ioppolo.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=36097581800' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0003-0262-8435' },
@@ -32,7 +33,7 @@ const members = [
     bio: '在墨西拿大学获得经济学、管理学和统计学博士学位，研究方向为可持续性与循环经济。她的研究致力于解决可持续性中的关键问题，推动循环经济实践，朝着更可持续和循环的未来努力。目前担任一家国际科学期刊的客座编辑。',
     tags: ['可持续性', '循环经济', '可持续发展', '可持续创新管理', '产业生态学'],
     initials: 'CD',
-    img: '/images/team/dalessandro.jpg',
+    img: `${base}/images/team/dalessandro.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=58534571400' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0002-7361-4201' },
@@ -48,7 +49,7 @@ const members = [
     bio: '目前在那不勒斯"东方"大学人文社会科学系担任研究员。2025年在墨西拿大学经济学系以优异成绩获得博士学位。研究领域包括计量经济学、生命周期评估（LCA）、产业生态学和可持续发展科学，重点关注农业和区域系统中的关键环境挑战。当前研究方向包括开发小型社区可持续转型的可达评估方法论、在环境监测系统中整合数字技术，以及推进循环经济在农业领域应用的理论基础。',
     tags: ['计量经济学', '生命周期评估', '产业生态学', '可持续发展科学', '循环经济'],
     initials: 'AL',
-    img: '/images/team/licastro.jpg',
+    img: `${base}/images/team/licastro.jpg`,
     links: [
       { label: 'Scopus', url: 'https://www.scopus.com/authid/detail.uri?authorId=57278726700' },
       { label: 'ORCID', url: 'https://orcid.org/0000-0002-4735-6237' },
@@ -76,7 +77,7 @@ const collaborators = [
     bio: '波兰什切青大学管理学副教授，担任H-SMA-CE项目可持续创新管理高级研究员。她的工作聚焦于技术创新分析、循环经济方法论以及历史小城镇的环境评估工具，支持决策支持系统的开发与测试。Ioppolo教授的频繁合作者，在Journal of Cleaner Production、Land Use Policy、Ecological Indicators等期刊发表约170篇论文。"Total Quality Management and Lean Thinking 5.0"一书的合著者（Routledge, 2024）。',
     tags: ['创新管理', '研发', '可持续性', '企业社会责任'],
     initials: 'KS',
-    img: '/images/team/szopik.jpg',
+    img: `${base}/images/team/szopik.jpg`,
     links: [
       { label: 'Scholar', url: 'https://scholar.google.pl/citations?user=lL4k3n0AAAAJ&hl=pl' },
       { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Katarzyna-Szopik-Depczynska' },
