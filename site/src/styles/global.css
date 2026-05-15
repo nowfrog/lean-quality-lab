@@ -138,7 +138,7 @@ html.light .grid-bg {
   100% { background-position: 200%; }
 }
 .text-shimmer {
-  background: linear-gradient(90deg, var(--color-neon), var(--color-cyan), var(--color-neon));
+  background: linear-gradient(90deg, #66ffbb, var(--color-cyan), #66ffbb);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
