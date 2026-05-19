@@ -111,7 +111,7 @@ const t = useTranslations(lang);
         <h2 class="font-[family-name:var(--font-display)] text-3xl sm:text-5xl font-bold text-dark-100 mt-4 reveal reveal-delay-1">{t('home.research.title')}</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {(['lean','tqm','ce','i50','local','health'] as const).map((key, i) => (
+        {(['i50','tqm','ce','local','health'] as const).map((key, i) => (
           <div class={`reveal reveal-delay-${Math.min(i+1, 5)}`}>
             <div class="group relative bg-dark-900 border border-dark-700 rounded-2xl p-6 card-hover overflow-hidden">
               <div class="absolute inset-0 bg-gradient-to-br from-neon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

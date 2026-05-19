@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import { useTranslations } from '../../i18n/utils';
 const lang = 'en';
 const t = useTranslations(lang);
-const areas = ['lean','tqm','ce','i50','local','health'] as const;
+const areas = ['i50','tqm','ce','local','health'] as const;
 ---
 
 <BaseLayout title={t('lab.title')} lang={lang}>

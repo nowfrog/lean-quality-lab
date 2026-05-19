@@ -48,18 +48,15 @@ export const ui = {
     'home.cta.contact': 'Contattaci',
 
     // Research areas
-    'research.lean.title': 'Lean Manufacturing',
-    'research.lean.desc': 'Ottimizzazione dei processi produttivi attraverso l\'eliminazione degli sprechi e la creazione di valore.',
-    'research.lean.full': 'Il Lean Manufacturing è un approccio sistematico alla gestione della produzione che mira a ridurre gli sprechi (muda) e massimizzare il valore per il cliente. Il laboratorio studia l\'applicazione dei principi lean in contesti manifatturieri e di servizio, con particolare attenzione all\'integrazione con le tecnologie dell\'Industry 4.0 e 5.0.',
     'research.tqm.title': 'Total Quality Management',
     'research.tqm.desc': 'Gestione integrata della qualità per il miglioramento continuo delle organizzazioni.',
     'research.tqm.full': 'Il TQM è una filosofia gestionale che coinvolge tutti i livelli dell\'organizzazione nel perseguimento della qualità. La ricerca del laboratorio si concentra sull\'evoluzione dei modelli di qualità, i sistemi di certificazione ISO, e l\'integrazione della qualità con la sostenibilità ambientale e sociale.',
     'research.ce.title': 'Economia Circolare',
     'research.ce.desc': 'Modelli economici rigenerativi per la transizione verso sistemi sostenibili.',
     'research.ce.full': 'L\'economia circolare rappresenta un cambio di paradigma rispetto al modello lineare take-make-dispose. Il laboratorio studia modelli di transizione circolare per imprese e territori, con particolare attenzione ai piccoli centri storici italiani e ai parchi industriali.',
-    'research.i50.title': 'Industry 5.0',
-    'research.i50.desc': 'Integrazione di tecnologie avanzate con un approccio human-centric alla produzione.',
-    'research.i50.full': 'L\'Industry 5.0 pone al centro la collaborazione uomo-macchina, la resilienza e la sostenibilità. La ricerca del laboratorio esplora come le tecnologie avanzate (IoT, AI, digital twin) possano essere integrate con un approccio human-centric per creare sistemi produttivi più equi e sostenibili.',
+    'research.i50.title': 'Industry 5.0 & Lean Manufacturing',
+    'research.i50.desc': 'Tecnologie avanzate human-centric integrate con i principi lean per produzioni efficienti, resilienti e sostenibili.',
+    'research.i50.full': 'L\'Industry 5.0 pone al centro la collaborazione uomo-macchina, la resilienza e la sostenibilità, integrandosi naturalmente con il Lean Manufacturing — approccio sistematico volto alla riduzione degli sprechi (muda) e alla massimizzazione del valore per il cliente. La ricerca del laboratorio esplora come tecnologie avanzate (IoT, AI, digital twin) e principi lean possano essere combinati in contesti manifatturieri e di servizio per creare sistemi produttivi più equi, snelli e sostenibili.',
     'research.local.title': 'Sviluppo Locale Sostenibile',
     'research.local.desc': 'Strategie di sviluppo territoriale basate sulla valorizzazione delle risorse locali.',
     'research.local.full': 'Lo sviluppo locale sostenibile si concentra sulla valorizzazione delle risorse endogene dei territori. Il laboratorio collabora con Gruppi di Azione Locale (GAL) in Sicilia per promuovere strategie di sviluppo basate su agricoltura, turismo, cultura e innovazione sociale.',
@@ -106,7 +103,7 @@ export const ui = {
     'research.title': 'Ricerca | LQS Lab UniME',
     'research.label': 'Research',
     'research.h1': 'Aree di Ricerca',
-    'research.subtitle': 'Sei pilastri di ricerca interdisciplinare per la qualità, la sostenibilità e l\'innovazione.',
+    'research.subtitle': 'Cinque pilastri di ricerca interdisciplinare per la qualità, la sostenibilità e l\'innovazione.',
 
     // Team page
     'team.title': 'Team | LQS Lab UniME',
@@ -208,18 +205,15 @@ export const ui = {
     'home.cta.contact': 'Contact us',
 
     // Research areas
-    'research.lean.title': 'Lean Manufacturing',
-    'research.lean.desc': 'Optimizing production processes through waste elimination and value creation.',
-    'research.lean.full': 'Lean Manufacturing is a systematic approach to production management that aims to reduce waste (muda) and maximize customer value. The lab studies the application of lean principles in manufacturing and service contexts, with particular focus on integration with Industry 4.0 and 5.0 technologies.',
     'research.tqm.title': 'Total Quality Management',
     'research.tqm.desc': 'Integrated quality management for continuous organizational improvement.',
     'research.tqm.full': 'TQM is a management philosophy that involves all levels of the organization in the pursuit of quality. The lab\'s research focuses on the evolution of quality models, ISO certification systems, and the integration of quality with environmental and social sustainability.',
     'research.ce.title': 'Circular Economy',
     'research.ce.desc': 'Regenerative economic models for the transition to sustainable systems.',
     'research.ce.full': 'The circular economy represents a paradigm shift from the linear take-make-dispose model. The lab studies circular transition models for enterprises and territories, with particular attention to Italian historical small towns and industrial parks.',
-    'research.i50.title': 'Industry 5.0',
-    'research.i50.desc': 'Integration of advanced technologies with a human-centric approach to production.',
-    'research.i50.full': 'Industry 5.0 places human-machine collaboration, resilience and sustainability at its core. The lab\'s research explores how advanced technologies (IoT, AI, digital twin) can be integrated with a human-centric approach to create more equitable and sustainable production systems.',
+    'research.i50.title': 'Industry 5.0 & Lean Manufacturing',
+    'research.i50.desc': 'Human-centric advanced technologies integrated with lean principles for efficient, resilient and sustainable production.',
+    'research.i50.full': 'Industry 5.0 places human-machine collaboration, resilience and sustainability at its core, naturally integrating with Lean Manufacturing — a systematic approach aimed at reducing waste (muda) and maximizing customer value. The lab\'s research explores how advanced technologies (IoT, AI, digital twin) and lean principles can be combined in manufacturing and service contexts to create more equitable, lean and sustainable production systems.',
     'research.local.title': 'Sustainable Local Development',
     'research.local.desc': 'Territorial development strategies based on local resource enhancement.',
     'research.local.full': 'Sustainable local development focuses on enhancing endogenous territorial resources. The lab collaborates with Local Action Groups (GAL) in Sicily to promote development strategies based on agriculture, tourism, culture and social innovation.',
@@ -266,7 +260,7 @@ export const ui = {
     'research.title': 'Research | LQS Lab UniME',
     'research.label': 'Research',
     'research.h1': 'Research Areas',
-    'research.subtitle': 'Six pillars of interdisciplinary research for quality, sustainability and innovation.',
+    'research.subtitle': 'Five pillars of interdisciplinary research for quality, sustainability and innovation.',
 
     // Team page
     'team.title': 'Team | LQS Lab UniME',
@@ -368,18 +362,15 @@ export const ui = {
     'home.cta.contact': '联系我们',
 
     // Research areas
-    'research.lean.title': '精益制造',
-    'research.lean.desc': '通过消除浪费和创造价值来优化生产流程。',
-    'research.lean.full': '精益制造是一种系统化的生产管理方法，旨在减少浪费（muda）并最大化客户价值。实验室研究精益原则在制造业和服务业中的应用，特别关注与工业4.0和5.0技术的整合。',
     'research.tqm.title': '全面质量管理',
     'research.tqm.desc': '用于组织持续改进的综合质量管理。',
     'research.tqm.full': '全面质量管理是一种涉及组织各层级追求质量的管理哲学。实验室的研究集中于质量模型的演进、ISO认证体系，以及质量与环境和社会可持续性的整合。',
     'research.ce.title': '循环经济',
     'research.ce.desc': '面向可持续系统转型的再生经济模式。',
     'research.ce.full': '循环经济代表了对线性"获取-制造-处置"模式的范式转变。实验室研究企业和地区的循环转型模式，特别关注意大利历史小镇和工业园区。',
-    'research.i50.title': '工业5.0',
-    'research.i50.desc': '以人为本的先进技术与生产的融合。',
-    'research.i50.full': '工业5.0将人机协作、韧性和可持续性置于核心地位。实验室的研究探索如何将先进技术（物联网、人工智能、数字孪生）与以人为本的方法整合，创建更公平和可持续的生产系统。',
+    'research.i50.title': '工业5.0与精益制造',
+    'research.i50.desc': '以人为本的先进技术与精益原则相结合，实现高效、有韧性且可持续的生产。',
+    'research.i50.full': '工业5.0将人机协作、韧性和可持续性置于核心地位，并与精益制造自然融合——后者是一种旨在减少浪费（muda）并最大化客户价值的系统化方法。实验室的研究探索如何将先进技术（物联网、人工智能、数字孪生）与精益原则结合，应用于制造业和服务业，创建更公平、更精简、更可持续的生产系统。',
     'research.local.title': '可持续地方发展',
     'research.local.desc': '基于地方资源价值化的地域发展战略。',
     'research.local.full': '可持续地方发展专注于增强地区内生资源的价值。实验室与西西里的地方行动小组（GAL）合作，推进基于农业、旅游、文化和社会创新的发展战略。',
@@ -426,7 +417,7 @@ export const ui = {
     'research.title': '研究 | LQS Lab UniME',
     'research.label': '研究',
     'research.h1': '研究领域',
-    'research.subtitle': '质量、可持续性和创新的六大跨学科研究支柱。',
+    'research.subtitle': '质量、可持续性和创新的五大跨学科研究支柱。',
 
     // Team page
     'team.title': '团队 | LQS Lab UniME',
