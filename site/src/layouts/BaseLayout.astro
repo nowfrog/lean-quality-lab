@@ -51,17 +51,17 @@ const langSwitchItems = [
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <!-- Lab logo (left) -->
-        <a href={prefix + '/'} class="flex items-center gap-3 group">
-          <div class="relative w-10 h-10">
-            <div class="absolute inset-0 rounded-lg bg-neon/20 blur-md group-hover:bg-neon/40 transition-all duration-500"></div>
-            <div class="relative w-10 h-10 rounded-lg bg-dark-900 border border-neon/30 flex items-center justify-center group-hover:border-neon/60 transition-all">
-              <span class="text-neon font-bold font-[family-name:var(--font-display)] text-lg">Q</span>
-            </div>
-          </div>
-          <div class="hidden sm:block">
-            <span class="font-[family-name:var(--font-display)] font-bold text-lg text-dark-100 group-hover:text-neon transition-colors">LQS</span>
-            <span class="text-xs text-dark-400 block leading-tight font-mono tracking-wider">LAB</span>
-          </div>
+        <a href={prefix + '/'} class="flex items-center group" aria-label="Lean & Quality Solutions Lab - Home">
+          <img
+            src={`${base}/images/logo-lqs.svg`}
+            alt="Lean & Quality Solutions Lab"
+            class="logo-light h-10 lg:h-12 w-auto transition-opacity group-hover:opacity-80"
+          />
+          <img
+            src={`${base}/images/logo-lqs-dark.svg`}
+            alt="Lean & Quality Solutions Lab"
+            class="logo-dark h-10 lg:h-12 w-auto transition-opacity group-hover:opacity-80"
+          />
         </a>
 
         <!-- Desktop Navigation -->
